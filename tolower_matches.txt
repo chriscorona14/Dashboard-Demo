@@ -1,0 +1,267 @@
+3403-
+3404:        const name = file.name.toLowerCase();
+3405-
+--
+3793-    accountSearch.addEventListener("input", (e) => {
+3794:      const query = e.target.value.toLowerCase();
+3795-
+--
+3817-            if (firstCell) {
+3818:              const accountName = firstCell.textContent.toLowerCase();
+3819-              if (accountName.includes(query)) {
+--
+3852-            if (titleEl) {
+3853:              const accountName = titleEl.textContent.toLowerCase();
+3854-              if (accountName.includes(query)) {
+--
+5013-      const segmentsList = Object.entries(segments).filter(([name]) => {
+5014:        const norm = name.toLowerCase();
+5015-        return (
+--
+5225-          ([cat]) =>
+5226:            !cat.toLowerCase().includes("opex") &&
+5227:            !cat.toLowerCase().includes("extraordinarios") &&
+5228:            !cat.toLowerCase().includes("utilidad"),
+5229-        );
+--
+5383-      isYear2025(d) &&
+5384:      (d.date.toLowerCase().includes("dic") ||
+5385:        d.date.toLowerCase().includes("dec")),
+5386-  );
+--
+5786-        .toString()
+5787:        .toLowerCase()
+5788-        .normalize("NFD")
+--
+5956-              (String(r.concept || "")
+5957:                .toLowerCase()
+5958-                .includes("beneficio neto") ||
+5959-                String(r.concept || "")
+5960:                  .toLowerCase()
+5961-                  .includes("ganancia del periodo")),
+--
+5998-          .toString()
+5999:          .toLowerCase()
+6000-          .normalize("NFD")
+--
+6287-      const conceptName = row.concept;
+6288:      const normConcept = conceptName.toLowerCase();
+6289-
+--
+6364-            String(r.concept || "")
+6365:              .toLowerCase()
+6366:              .includes(c?.label?.toLowerCase() || "") ||
+6367:            String(r.concept || "").toLowerCase() === c.key.toLowerCase(),
+6368-        );
+--
+6382-            String(r.concept || "")
+6383:              .toLowerCase()
+6384-              .includes("cobrar")
+--
+6402-            String(r.concept || "")
+6403:              .toLowerCase()
+6404-              .includes("pagar")
+--
+6422-            String(r.concept || "")
+6423:              .toLowerCase()
+6424-              .includes("inventario")
+--
+6517-          const c = String(rw.concept || "")
+6518:            .toLowerCase()
+6519-            .trim();
+--
+6538-            if (
+6539:              String(key).toLowerCase().trim() ===
+6540:              String(gItem.date).toLowerCase().trim()
+6541-            ) {
+--
+6563-          for (let key in r.values) {
+6564:            const kl = String(key).toLowerCase();
+6565-            if (
+--
+6593-          const c = String(rw.concept || "")
+6594:            .toLowerCase()
+6595-            .trim();
+--
+6612-            if (
+6613:              String(key).toLowerCase().trim() ===
+6614:              String(gItem.date).toLowerCase().trim()
+6615-            ) {
+--
+6635-          for (let key in r.values) {
+6636:            const kl = String(key).toLowerCase();
+6637-            if (
+--
+6667-    // Fallback: compare month and year using isYear2025/isYear2026 and month name
+6668:    const normDate = (gItem.date || "").toLowerCase();
+6669-    const shortMonths = [
+--
+6734-        isYear2025(d) &&
+6735:        (d.date.toLowerCase().includes("dic") ||
+6736:          d.date.toLowerCase().includes("dec")),
+6737-    );
+--
+6783-        } else {
+6784:          const norm = (gItem.date || "").toLowerCase();
+6785-          const shortMonths = [
+--
+7025-  for (let i = idxLast; i >= 0; i--) {
+7026:    const lbl = String(data.labels[i]).toLowerCase();
+7027-    if ((lbl.includes("dic") || lbl.includes("dec")) && i !== idxLast) {
+--
+7039-  const headerCol2Select = document.getElementById("cxpResumenCol2");
+7040:  if (headerCol1Select) headerCol1Select.textContent = lblDec.toLowerCase();
+7041:  if (headerCol2Select) headerCol2Select.textContent = lblLast.toLowerCase();
+7042-
+--
+7665-      isYear2025(d) &&
+7666:      (d.date.toLowerCase().includes("dic") ||
+7667:        d.date.toLowerCase().includes("dec")),
+7668-  );
+--
+7911-    dicData.date &&
+7912:    (dicData.date.toLowerCase().includes("dic") ||
+7913:      dicData.date.toLowerCase().includes("dec"));
+7914-  if (dicData && dicData.cashflowDetail && isPrevYearDec) {
+--
+8107-            String(r.concept || "")
+8108:              .toLowerCase()
+8109-              .includes("margen bruto"),
+--
+8113-          let cLabel = rows[i].concept
+8114:            ? rows[i].concept.trim().toLowerCase()
+8115-            : "";
+--
+8140-        // Try to find matching month-year without caring about format
+8141:        const sDate = searchDate.toLowerCase().replace(/[^a-z0-9]/g, "");
+8142-        for (let k in rowObj.values) {
+8143:          const kStr = k.toLowerCase().replace(/[^a-z0-9]/g, "");
+8144-          if (kStr.includes(sDate) || sDate.includes(kStr) || kStr === sDate) {
+--
+8153-          r.concept &&
+8154:          r.concept.trim().toLowerCase() === kw &&
+8155-          !String(r.concept || "")
+8156:            .toLowerCase()
+8157-            .includes("acumulada"),
+--
+8167-          String(r.concept || "")
+8168:            .toLowerCase()
+8169-            .includes(kw) &&
+8170-          !String(r.concept || "")
+8171:            .toLowerCase()
+8172-            .includes("acumulada"),
+--
+9041-      if (Math.abs(devPct) > 0.15) {
+9042:        const labelLower = row?.label?.toLowerCase() || "";
+9043-        const isExpense =
+--
+9308-            if (Math.abs(devPct) > 0.15) {
+9309:              const conceptLower = (concept || "").toLowerCase();
+9310-              const isExpense =
+--
+9343-
+9344:      const labelLower = (concept || "").toLowerCase();
+9345-      const isTotal =
+--
+9357-        concept.startsWith("\t") ||
+9358:        (concept || "").toLowerCase().includes("costos ") ||
+9359:        (concept || "").toLowerCase().includes("gastos ") ||
+9360:        (concept || "").toLowerCase().includes("impuestos") ||
+9361-        normConcept.includes("diferencial cambiario") ||
+--
+12930-        const consejoSheet = workbook.SheetNames.find((n) =>
+12931:          n.toLowerCase().includes("consejo"),
+12932-        );
+--
+12945-                const term = String(c || "")
+12946:                  .toLowerCase()
+12947-                  .trim();
+--
+13033-        consejoSheetName = workbook.SheetNames.find((n) =>
+13034:          n.toLowerCase().includes("consejo"),
+13035-        );
+13036-        dataSheetName = workbook.SheetNames.find((n) =>
+13037:          n.toLowerCase().includes("data por mes"),
+13038-        );
+--
+13056-                const term = String(c || "")
+13057:                  .toLowerCase()
+13058-                  .trim();
+--
+13697-        row.some((cell) => {
+13698:          const text = String(cell).toLowerCase().trim();
+13699-          return (
+--
+13708-      if (!h) return;
+13709:      const text = String(h).toLowerCase().trim();
+13710-      if (text === "concepto" || text === "producto" || text === "descripción")
+--
+13777-        const headerText = String(h).trim();
+13778:        const textK = headerText.toLowerCase();
+13779-
+--
+13910-        (k) =>
+13911:          k.toLowerCase().includes("producto") ||
+13912:          k.toLowerCase().includes("descrip"),
+13913-      );
+--
+13915-
+13916:      let tipoKey = keys.find((k) => k.toLowerCase().includes("tipo"));
+13917-
+--
+13989-
+13990:        let textK = String(k).trim().toLowerCase();
+13991-        let val = parseFloat(String(r[k]).replace(/,/g, ""));
+--
+14028-          const match = textK.match(/^([a-z]{3})[-\/ ]?(\d{2,4})$/);
+14029:          if (match && monthsMap[match[1].toLowerCase()]) {
+14030-            let y = match[2];
+14031-            if (y.length === 2) y = "20" + y;
+14032:            dateStr = `${y}-${monthsMap[match[1].toLowerCase()]}`;
+14033-            isDate = true;
+--
+14111-        if (!h) return;
+14112:        const text = String(h).toLowerCase().trim();
+14113-        let isProdMatch =
+--
+14149-          String(headers[0] || "")
+14150:            .toLowerCase()
+14151-            .replace(/\./g, "")
+--
+14338-          let dateStr = k;
+14339:          let textK = String(k).trim().toLowerCase();
+14340-
+--
+14367-            const match = textK.match(regex);
+14368:            if (match && monthsMap[match[1].toLowerCase()]) {
+14369-              let y = match[2];
+14370-              if (y.length === 2) y = "20" + y;
+14371:              dateStr = `${y}-${monthsMap[match[1].toLowerCase()]}`;
+14372-              isDate = true;
+--
+14533-        const consejoSheet = workbook.SheetNames.find((n) =>
+14534:          n.toLowerCase().includes("consejo"),
+14535-        );
+--
+14547-                    String(c || "")
+14548:                      .toLowerCase()
+14549-                      .trim() === "producto" ||
+14550-                    String(c || "")
+14551:                      .toLowerCase()
+14552-                      .trim() === "descripción",
+--
+15246-    for (let i = 0; i < histHeaders.length; i++) {
+15247:      let val = String(histHeaders[i]).toLowerCase().trim();
+15248-      if (val === "period") periodColIdx = i;
+--
+15439-      if (anaRows[r] && anaRows[r][0]) {
+15440:        let rowStr = String(anaRows[r][0]).toLowerCase().trim();
+15441-        if (
+--
+16070-          ];
+16071:          const lower = item.date.toLowerCase();
+16072-          const found = MESES_SEARCH.findIndex((mes) => lower.includes(mes));
+--
+16448-          const mMatch = String(item.date)
+16449:            .toLowerCase()
+16450-            .match(/([a-z]+) (\d{4})/);

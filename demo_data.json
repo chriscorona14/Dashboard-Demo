@@ -1,0 +1,6751 @@
+{
+  "globalFinancialData": [
+    {
+      "date": "Ene 2026",
+      "Periodo": "01-2026",
+      "sortDate": "2026-01-01T00:00:00.000Z",
+      "_isMock": true,
+      "kpis": {
+        "ingresos": 125,
+        "ebitda": 37.5,
+        "cashflow": 6.606249999999999,
+        "utilidadNeta": 22.35625,
+        "margenBruto": 0.6,
+        "realIngresos": 125,
+        "pptoIngresos": 128,
+        "varIngresos": -0.0234375,
+        "ebitdaRate": 0.3,
+        "realEbitda": 37.5,
+        "pptoEbitda": 38.4
+      },
+      "trend": {
+        "ingresos": 125,
+        "ebitda": 37.5,
+        "cashflow": 6.606249999999999,
+        "utilidadNeta": 22.35625
+      },
+      "balance": {
+        "deudaTotal": 475,
+        "ebitdaLTM": 450,
+        "efectivo": 71.60625,
+        "roa": 0.040529363110008265,
+        "roe": 0.049680555555555554,
+        "ccc": 14,
+        "fullRows": [
+          {
+            "cuenta": "Efectivo y Equivalentes",
+            "group": "Activo Corriente",
+            "Real": 71.60625,
+            "PPTO": 75.18656250000001
+          },
+          {
+            "cuenta": "Cuentas por Cobrar",
+            "group": "Activo Corriente",
+            "Real": 15,
+            "PPTO": 15.36
+          },
+          {
+            "cuenta": "Inventarios",
+            "group": "Activo Corriente",
+            "Real": 10,
+            "PPTO": 10.240000000000002
+          },
+          {
+            "cuenta": "Otros Activos Corrientes",
+            "group": "Activo Corriente",
+            "Real": 3.75,
+            "PPTO": 3.84
+          },
+          {
+            "cuenta": "Activos Fijos Netos",
+            "group": "Activo No Corriente",
+            "Real": 420,
+            "PPTO": 422
+          },
+          {
+            "cuenta": "Otros Activos No Corrientes",
+            "group": "Activo No Corriente",
+            "Real": 35,
+            "PPTO": 35
+          },
+          {
+            "cuenta": "Cuentas por Pagar",
+            "group": "Pasivo Corriente",
+            "Real": 7.5,
+            "PPTO": 7.68
+          },
+          {
+            "cuenta": "Deuda CP",
+            "group": "Pasivo Corriente",
+            "Real": 60,
+            "PPTO": 60
+          },
+          {
+            "cuenta": "Otros Pasivos Corrientes",
+            "group": "Pasivo Corriente",
+            "Real": 5,
+            "PPTO": 5.12
+          },
+          {
+            "cuenta": "Deuda LP",
+            "group": "Pasivo No Corriente",
+            "Real": 415,
+            "PPTO": 415
+          },
+          {
+            "cuenta": "Otros Pasivos LP",
+            "group": "Pasivo No Corriente",
+            "Real": 25,
+            "PPTO": 25
+          },
+          {
+            "cuenta": "Capital Social",
+            "group": "Patrimonio",
+            "Real": 300,
+            "PPTO": 300
+          },
+          {
+            "cuenta": "Utilidades Acumuladas",
+            "group": "Patrimonio",
+            "Real": 150,
+            "PPTO": 150
+          }
+        ]
+      },
+      "cashflowDetail": {
+        "beginning": 65,
+        "cxc": -3.75,
+        "inv": -1.875,
+        "cxp": 2.5,
+        "wc": -3.125,
+        "taxes": -8.26875,
+        "extraordinary": 0,
+        "operating": 26.10625,
+        "capex": -12,
+        "netDebt": -5,
+        "interest": -2.5,
+        "dividends": 0,
+        "financing": -7.5,
+        "change": 6.606249999999999,
+        "ending": 71.60625,
+        "dso": 28,
+        "dio": 24,
+        "dpo": 38,
+        "ccc": 14
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 125,
+          "Costo de Ventas": 50,
+          "Margen Bruto": 75,
+          "OPEX": 37.5,
+          "EBITDA": 37.5,
+          "Depreciación": 4.375,
+          "EBIT": 33.125,
+          "Impuestos": 8.26875,
+          "Utilidad Neta": 22.35625
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 12.5,
+          "Gastos de Mercadeo": 11.25,
+          "Gastos de Ventas": 8.75,
+          "Gastos de Logística": 5
+        },
+        "segments": {
+          "Agua 500ml": 43.75,
+          "Agua 1L": 31.25,
+          "Agua 5G": 25,
+          "Agua 20L": 15,
+          "Bebida Energética": 10
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 125,
+            "PPTO": 128,
+            "AA": 110,
+            "YoY": 0.13636363636363635,
+            "PPTO_Var": -0.0234375
+          },
+          {
+            "cuenta": "Costo de Ventas",
+            "type": "Costo de Ventas",
+            "Real": 50,
+            "PPTO": 51.2,
+            "AA": 44,
+            "YoY": 0.13636363636363635,
+            "PPTO_Var": -0.023437500000000056
+          },
+          {
+            "cuenta": "Margen Bruto",
+            "type": "Margen Bruto",
+            "Real": 75,
+            "PPTO": 76.8,
+            "AA": 66,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Gastos Administrativos",
+            "type": "OPEX",
+            "Real": 12.5,
+            "PPTO": 12.8,
+            "AA": 11,
+            "YoY": 0.13636363636363635,
+            "PPTO_Var": -0.023437500000000056
+          },
+          {
+            "cuenta": "Gastos de Mercadeo",
+            "type": "OPEX",
+            "Real": 11.25,
+            "PPTO": 11.52,
+            "AA": 9.9,
+            "YoY": 0.13636363636363633,
+            "PPTO_Var": -0.023437499999999965
+          },
+          {
+            "cuenta": "Gastos de Ventas",
+            "type": "OPEX",
+            "Real": 8.75,
+            "PPTO": 8.96,
+            "AA": 7.700000000000001,
+            "YoY": 0.13636363636363621,
+            "PPTO_Var": -0.023437500000000094
+          },
+          {
+            "cuenta": "Gastos de Logística",
+            "type": "OPEX",
+            "Real": 5,
+            "PPTO": 5.12,
+            "AA": 4.4,
+            "YoY": 0.13636363636363627,
+            "PPTO_Var": -0.02343750000000002
+          },
+          {
+            "cuenta": "EBITDA",
+            "type": "EBITDA",
+            "Real": 37.5,
+            "PPTO": 38.4,
+            "AA": 33,
+            "YoY": 0.13636363636363635,
+            "PPTO_Var": -0.023437499999999965
+          },
+          {
+            "cuenta": "Depreciación y Amortización",
+            "type": "D&A",
+            "Real": 4.375,
+            "PPTO": 4.48,
+            "AA": 3.8500000000000005,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Intereses Netos",
+            "type": "Financiero",
+            "Real": -2.5,
+            "PPTO": -2.56,
+            "AA": -2.2,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Utilidad Neta",
+            "type": "Utilidad",
+            "Real": 22.35625,
+            "PPTO": 16.64,
+            "AA": 14.3,
+            "YoY": 0.5633741258741257,
+            "PPTO_Var": 0.3435246394230768
+          }
+        ]
+      },
+      "deudaMetrics": {
+        "tasaDop": 0.135,
+        "tasaUsd": 0.075,
+        "tasaCambio": 58.5,
+        "deudaNetaUsd": 6.895619658119658,
+        "deudaNetaBancUSD": 8.11965811965812,
+        "covenantLean": 0.8964305555555556,
+        "apalancamiento": 1.0555555555555556,
+        "capacidadPago": 0.9473684210526315,
+        "razonCorriente": 3.8491666666666666,
+        "cajaEfectivo": 71.60625,
+        "deudaTotal": 475,
+        "debtDetail": {
+          "bancaTotal": 474.99999999999994,
+          "relacionadaTotal": 0,
+          "deudaTotal": 475,
+          "efectivo": 71.60625,
+          "deudaNeta": 403.39375,
+          "deudaNetaUSD": 6.895619658119658,
+          "tasaDOP": 0.135,
+          "bancos": {
+            "Banco Popular": 197.91666666666666,
+            "Banco Santa Cruz": 138.54166666666666,
+            "Scotiabank": 98.95833333333333,
+            "Loganville": 39.583333333333336
+          },
+          "tasasPorBanco": {
+            "Banco Popular": 0.145,
+            "Banco Santa Cruz": 0.13,
+            "Scotiabank": 0.115,
+            "Loganville": 0.1
+          }
+        }
+      },
+      "integrity": {
+        "gap": 0,
+        "isBalanced": true
+      }
+    },
+    {
+      "date": "Feb 2026",
+      "Periodo": "02-2026",
+      "sortDate": "2026-02-01T00:00:00.000Z",
+      "_isMock": true,
+      "kpis": {
+        "ingresos": 118.5,
+        "ebitda": 35.54999999999999,
+        "cashflow": 5.378724999999993,
+        "utilidadNeta": 21.19372499999999,
+        "margenBruto": 0.6,
+        "realIngresos": 118.5,
+        "pptoIngresos": 122,
+        "varIngresos": -0.028688524590163935,
+        "ebitdaRate": 0.29999999999999993,
+        "realEbitda": 35.54999999999999,
+        "pptoEbitda": 36.59999999999999
+      },
+      "trend": {
+        "ingresos": 118.5,
+        "ebitda": 35.54999999999999,
+        "cashflow": 5.378724999999993,
+        "utilidadNeta": 21.19372499999999
+      },
+      "balance": {
+        "deudaTotal": 470,
+        "ebitdaLTM": 426.5999999999999,
+        "efectivo": 76.98497499999999,
+        "roa": 0.038139820138199686,
+        "roe": 0.045594022183423184,
+        "ccc": 15,
+        "fullRows": [
+          {
+            "cuenta": "Efectivo y Equivalentes",
+            "group": "Activo Corriente",
+            "Real": 76.98497499999999,
+            "PPTO": 80.83422374999999
+          },
+          {
+            "cuenta": "Cuentas por Cobrar",
+            "group": "Activo Corriente",
+            "Real": 14.219999999999999,
+            "PPTO": 14.639999999999999
+          },
+          {
+            "cuenta": "Inventarios",
+            "group": "Activo Corriente",
+            "Real": 9.480000000000002,
+            "PPTO": 9.760000000000002
+          },
+          {
+            "cuenta": "Otros Activos Corrientes",
+            "group": "Activo Corriente",
+            "Real": 3.5549999999999997,
+            "PPTO": 3.6599999999999997
+          },
+          {
+            "cuenta": "Activos Fijos Netos",
+            "group": "Activo No Corriente",
+            "Real": 422,
+            "PPTO": 424
+          },
+          {
+            "cuenta": "Otros Activos No Corrientes",
+            "group": "Activo No Corriente",
+            "Real": 35,
+            "PPTO": 35
+          },
+          {
+            "cuenta": "Cuentas por Pagar",
+            "group": "Pasivo Corriente",
+            "Real": 7.11,
+            "PPTO": 7.32
+          },
+          {
+            "cuenta": "Deuda CP",
+            "group": "Pasivo Corriente",
+            "Real": 60,
+            "PPTO": 60
+          },
+          {
+            "cuenta": "Otros Pasivos Corrientes",
+            "group": "Pasivo Corriente",
+            "Real": 4.74,
+            "PPTO": 4.88
+          },
+          {
+            "cuenta": "Deuda LP",
+            "group": "Pasivo No Corriente",
+            "Real": 410,
+            "PPTO": 410
+          },
+          {
+            "cuenta": "Otros Pasivos LP",
+            "group": "Pasivo No Corriente",
+            "Real": 25,
+            "PPTO": 25
+          },
+          {
+            "cuenta": "Capital Social",
+            "group": "Patrimonio",
+            "Real": 300,
+            "PPTO": 300
+          },
+          {
+            "cuenta": "Utilidades Acumuladas",
+            "group": "Patrimonio",
+            "Real": 164.83560749999998,
+            "PPTO": 160.98
+          }
+        ]
+      },
+      "cashflowDetail": {
+        "beginning": 71.60625,
+        "cxc": -3.5549999999999997,
+        "inv": -1.7774999999999999,
+        "cxp": 2.37,
+        "wc": -2.9624999999999995,
+        "taxes": -7.838774999999997,
+        "extraordinary": 0,
+        "operating": 24.748724999999993,
+        "capex": -12,
+        "netDebt": -5,
+        "interest": -2.37,
+        "dividends": 0,
+        "financing": -7.37,
+        "change": 5.378724999999993,
+        "ending": 76.98497499999999,
+        "dso": 29,
+        "dio": 25,
+        "dpo": 39,
+        "ccc": 15
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 118.5,
+          "Costo de Ventas": 47.400000000000006,
+          "Margen Bruto": 71.1,
+          "OPEX": 35.550000000000004,
+          "EBITDA": 35.54999999999999,
+          "Depreciación": 4.1475,
+          "EBIT": 31.40249999999999,
+          "Impuestos": 7.838774999999997,
+          "Utilidad Neta": 21.19372499999999
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 11.850000000000001,
+          "Gastos de Mercadeo": 10.665,
+          "Gastos de Ventas": 8.295,
+          "Gastos de Logística": 4.74
+        },
+        "segments": {
+          "Agua 500ml": 41.474999999999994,
+          "Agua 1L": 29.625,
+          "Agua 5G": 23.700000000000003,
+          "Agua 20L": 14.219999999999999,
+          "Bebida Energética": 9.48
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 118.5,
+            "PPTO": 122,
+            "AA": 104.28,
+            "YoY": 0.13636363636363635,
+            "PPTO_Var": -0.028688524590163935
+          },
+          {
+            "cuenta": "Costo de Ventas",
+            "type": "Costo de Ventas",
+            "Real": 47.400000000000006,
+            "PPTO": 48.800000000000004,
+            "AA": 41.712,
+            "YoY": 0.1363636363636364,
+            "PPTO_Var": -0.028688524590163904
+          },
+          {
+            "cuenta": "Margen Bruto",
+            "type": "Margen Bruto",
+            "Real": 71.1,
+            "PPTO": 73.19999999999999,
+            "AA": 62.568,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Gastos Administrativos",
+            "type": "OPEX",
+            "Real": 11.850000000000001,
+            "PPTO": 12.200000000000001,
+            "AA": 10.428,
+            "YoY": 0.1363636363636364,
+            "PPTO_Var": -0.028688524590163904
+          },
+          {
+            "cuenta": "Gastos de Mercadeo",
+            "type": "OPEX",
+            "Real": 10.665,
+            "PPTO": 10.98,
+            "AA": 9.3852,
+            "YoY": 0.13636363636363635,
+            "PPTO_Var": -0.02868852459016405
+          },
+          {
+            "cuenta": "Gastos de Ventas",
+            "type": "OPEX",
+            "Real": 8.295,
+            "PPTO": 8.540000000000001,
+            "AA": 7.299600000000001,
+            "YoY": 0.13636363636363624,
+            "PPTO_Var": -0.028688524590164046
+          },
+          {
+            "cuenta": "Gastos de Logística",
+            "type": "OPEX",
+            "Real": 4.74,
+            "PPTO": 4.88,
+            "AA": 4.1712,
+            "YoY": 0.13636363636363646,
+            "PPTO_Var": -0.02868852459016387
+          },
+          {
+            "cuenta": "EBITDA",
+            "type": "EBITDA",
+            "Real": 35.54999999999999,
+            "PPTO": 36.59999999999999,
+            "AA": 31.284,
+            "YoY": 0.13636363636363608,
+            "PPTO_Var": -0.028688524590163866
+          },
+          {
+            "cuenta": "Depreciación y Amortización",
+            "type": "D&A",
+            "Real": 4.1475,
+            "PPTO": 4.2700000000000005,
+            "AA": 3.6498000000000004,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Intereses Netos",
+            "type": "Financiero",
+            "Real": -2.37,
+            "PPTO": -2.44,
+            "AA": -2.0856,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Utilidad Neta",
+            "type": "Utilidad",
+            "Real": 21.19372499999999,
+            "PPTO": 15.860000000000001,
+            "AA": 13.5564,
+            "YoY": 0.5633741258741252,
+            "PPTO_Var": 0.33630044136191606
+          }
+        ]
+      },
+      "deudaMetrics": {
+        "tasaDop": 0.135,
+        "tasaUsd": 0.075,
+        "tasaCambio": 58.5,
+        "deudaNetaUsd": 6.718205555555556,
+        "deudaNetaBancUSD": 8.034188034188034,
+        "covenantLean": 0.9212729137365216,
+        "apalancamiento": 1.1017346460384438,
+        "capacidadPago": 0.9076595744680849,
+        "razonCorriente": 4.275901312705109,
+        "cajaEfectivo": 76.98497499999999,
+        "deudaTotal": 470,
+        "debtDetail": {
+          "bancaTotal": 469.99999999999994,
+          "relacionadaTotal": 0,
+          "deudaTotal": 470,
+          "efectivo": 76.98497499999999,
+          "deudaNeta": 393.01502500000004,
+          "deudaNetaUSD": 6.718205555555556,
+          "tasaDOP": 0.135,
+          "bancos": {
+            "Banco Popular": 195.83333333333331,
+            "Banco Santa Cruz": 137.08333333333331,
+            "Scotiabank": 97.91666666666666,
+            "Loganville": 39.16666666666667
+          },
+          "tasasPorBanco": {
+            "Banco Popular": 0.145,
+            "Banco Santa Cruz": 0.13,
+            "Scotiabank": 0.115,
+            "Loganville": 0.1
+          }
+        }
+      },
+      "integrity": {
+        "gap": 0,
+        "isBalanced": true
+      }
+    },
+    {
+      "date": "Mar 2026",
+      "Periodo": "03-2026",
+      "sortDate": "2026-03-01T00:00:00.000Z",
+      "_isMock": true,
+      "kpis": {
+        "ingresos": 132,
+        "ebitda": 39.59999999999999,
+        "cashflow": 7.92819999999999,
+        "utilidadNeta": 23.60819999999999,
+        "margenBruto": 0.5999999999999999,
+        "realIngresos": 132,
+        "pptoIngresos": 130,
+        "varIngresos": 0.015384615384615385,
+        "ebitdaRate": 0.2999999999999999,
+        "realEbitda": 39.59999999999999,
+        "pptoEbitda": 39
+      },
+      "trend": {
+        "ingresos": 132,
+        "ebitda": 39.59999999999999,
+        "cashflow": 7.92819999999999,
+        "utilidadNeta": 23.60819999999999
+      },
+      "balance": {
+        "deudaTotal": 465,
+        "ebitdaLTM": 475.1999999999998,
+        "efectivo": 84.91317499999998,
+        "roa": 0.041687534463594265,
+        "roe": 0.04887305179149848,
+        "ccc": 16,
+        "fullRows": [
+          {
+            "cuenta": "Efectivo y Equivalentes",
+            "group": "Activo Corriente",
+            "Real": 84.91317499999998,
+            "PPTO": 89.15883374999999
+          },
+          {
+            "cuenta": "Cuentas por Cobrar",
+            "group": "Activo Corriente",
+            "Real": 15.84,
+            "PPTO": 15.6
+          },
+          {
+            "cuenta": "Inventarios",
+            "group": "Activo Corriente",
+            "Real": 10.560000000000002,
+            "PPTO": 10.4
+          },
+          {
+            "cuenta": "Otros Activos Corrientes",
+            "group": "Activo Corriente",
+            "Real": 3.96,
+            "PPTO": 3.9
+          },
+          {
+            "cuenta": "Activos Fijos Netos",
+            "group": "Activo No Corriente",
+            "Real": 424,
+            "PPTO": 426
+          },
+          {
+            "cuenta": "Otros Activos No Corrientes",
+            "group": "Activo No Corriente",
+            "Real": 35,
+            "PPTO": 35
+          },
+          {
+            "cuenta": "Cuentas por Pagar",
+            "group": "Pasivo Corriente",
+            "Real": 7.92,
+            "PPTO": 7.8
+          },
+          {
+            "cuenta": "Deuda CP",
+            "group": "Pasivo Corriente",
+            "Real": 60,
+            "PPTO": 60
+          },
+          {
+            "cuenta": "Otros Pasivos Corrientes",
+            "group": "Pasivo Corriente",
+            "Real": 5.28,
+            "PPTO": 5.2
+          },
+          {
+            "cuenta": "Deuda LP",
+            "group": "Pasivo No Corriente",
+            "Real": 405,
+            "PPTO": 405
+          },
+          {
+            "cuenta": "Otros Pasivos LP",
+            "group": "Pasivo No Corriente",
+            "Real": 25,
+            "PPTO": 25
+          },
+          {
+            "cuenta": "Capital Social",
+            "group": "Patrimonio",
+            "Real": 300,
+            "PPTO": 300
+          },
+          {
+            "cuenta": "Utilidades Acumuladas",
+            "group": "Patrimonio",
+            "Real": 183.05147999999997,
+            "PPTO": 173.4
+          }
+        ]
+      },
+      "cashflowDetail": {
+        "beginning": 76.98497499999999,
+        "cxc": -3.96,
+        "inv": -1.98,
+        "cxp": 2.64,
+        "wc": -3.2999999999999994,
+        "taxes": -8.731799999999998,
+        "extraordinary": 0,
+        "operating": 27.56819999999999,
+        "capex": -12,
+        "netDebt": -5,
+        "interest": -2.64,
+        "dividends": 0,
+        "financing": -7.640000000000001,
+        "change": 7.92819999999999,
+        "ending": 84.91317499999998,
+        "dso": 30,
+        "dio": 26,
+        "dpo": 40,
+        "ccc": 16
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 132,
+          "Costo de Ventas": 52.800000000000004,
+          "Margen Bruto": 79.19999999999999,
+          "OPEX": 39.6,
+          "EBITDA": 39.59999999999999,
+          "Depreciación": 4.62,
+          "EBIT": 34.97999999999999,
+          "Impuestos": 8.731799999999998,
+          "Utilidad Neta": 23.60819999999999
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 13.200000000000001,
+          "Gastos de Mercadeo": 11.879999999999999,
+          "Gastos de Ventas": 9.24,
+          "Gastos de Logística": 5.28
+        },
+        "segments": {
+          "Agua 500ml": 46.199999999999996,
+          "Agua 1L": 33,
+          "Agua 5G": 26.400000000000002,
+          "Agua 20L": 15.84,
+          "Bebida Energética": 10.56
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 132,
+            "PPTO": 130,
+            "AA": 116.16,
+            "YoY": 0.1363636363636364,
+            "PPTO_Var": 0.015384615384615385
+          },
+          {
+            "cuenta": "Costo de Ventas",
+            "type": "Costo de Ventas",
+            "Real": 52.800000000000004,
+            "PPTO": 52,
+            "AA": 46.464,
+            "YoY": 0.1363636363636365,
+            "PPTO_Var": 0.015384615384615467
+          },
+          {
+            "cuenta": "Margen Bruto",
+            "type": "Margen Bruto",
+            "Real": 79.19999999999999,
+            "PPTO": 78,
+            "AA": 69.696,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Gastos Administrativos",
+            "type": "OPEX",
+            "Real": 13.200000000000001,
+            "PPTO": 13,
+            "AA": 11.616,
+            "YoY": 0.1363636363636365,
+            "PPTO_Var": 0.015384615384615467
+          },
+          {
+            "cuenta": "Gastos de Mercadeo",
+            "type": "OPEX",
+            "Real": 11.879999999999999,
+            "PPTO": 11.7,
+            "AA": 10.4544,
+            "YoY": 0.1363636363636363,
+            "PPTO_Var": 0.015384615384615361
+          },
+          {
+            "cuenta": "Gastos de Ventas",
+            "type": "OPEX",
+            "Real": 9.24,
+            "PPTO": 9.100000000000001,
+            "AA": 8.1312,
+            "YoY": 0.13636363636363644,
+            "PPTO_Var": 0.01538461538461525
+          },
+          {
+            "cuenta": "Gastos de Logística",
+            "type": "OPEX",
+            "Real": 5.28,
+            "PPTO": 5.2,
+            "AA": 4.6464,
+            "YoY": 0.13636363636363644,
+            "PPTO_Var": 0.015384615384615398
+          },
+          {
+            "cuenta": "EBITDA",
+            "type": "EBITDA",
+            "Real": 39.59999999999999,
+            "PPTO": 39,
+            "AA": 34.848,
+            "YoY": 0.13636363636363602,
+            "PPTO_Var": 0.015384615384615056
+          },
+          {
+            "cuenta": "Depreciación y Amortización",
+            "type": "D&A",
+            "Real": 4.62,
+            "PPTO": 4.550000000000001,
+            "AA": 4.0656,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Intereses Netos",
+            "type": "Financiero",
+            "Real": -2.64,
+            "PPTO": -2.6,
+            "AA": -2.3232,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Utilidad Neta",
+            "type": "Utilidad",
+            "Real": 23.60819999999999,
+            "PPTO": 16.900000000000002,
+            "AA": 15.1008,
+            "YoY": 0.5633741258741252,
+            "PPTO_Var": 0.3969349112426028
+          }
+        ]
+      },
+      "deudaMetrics": {
+        "tasaDop": 0.135,
+        "tasaUsd": 0.075,
+        "tasaCambio": 58.5,
+        "deudaNetaUsd": 6.4972106837606844,
+        "deudaNetaBancUSD": 7.948717948717948,
+        "covenantLean": 0.7998460122053875,
+        "apalancamiento": 0.9785353535353539,
+        "capacidadPago": 1.0219354838709673,
+        "razonCorriente": 4.240453493265992,
+        "cajaEfectivo": 84.91317499999998,
+        "deudaTotal": 465,
+        "debtDetail": {
+          "bancaTotal": 464.99999999999994,
+          "relacionadaTotal": 0,
+          "deudaTotal": 465,
+          "efectivo": 84.91317499999998,
+          "deudaNeta": 380.08682500000003,
+          "deudaNetaUSD": 6.4972106837606844,
+          "tasaDOP": 0.135,
+          "bancos": {
+            "Banco Popular": 193.74999999999997,
+            "Banco Santa Cruz": 135.62499999999997,
+            "Scotiabank": 96.87499999999999,
+            "Loganville": 38.75000000000001
+          },
+          "tasasPorBanco": {
+            "Banco Popular": 0.145,
+            "Banco Santa Cruz": 0.13,
+            "Scotiabank": 0.115,
+            "Loganville": 0.1
+          }
+        }
+      },
+      "integrity": {
+        "gap": 0,
+        "isBalanced": true
+      }
+    },
+    {
+      "date": "Abr 2026",
+      "Periodo": "04-2026",
+      "sortDate": "2026-04-01T00:00:00.000Z",
+      "_isMock": true,
+      "kpis": {
+        "ingresos": 128,
+        "ebitda": 38.4,
+        "cashflow": 7.172799999999993,
+        "utilidadNeta": 22.8928,
+        "margenBruto": 0.6,
+        "realIngresos": 128,
+        "pptoIngresos": 132,
+        "varIngresos": -0.030303030303030304,
+        "ebitdaRate": 0.3,
+        "realEbitda": 38.4,
+        "pptoEbitda": 39.59999999999999
+      },
+      "trend": {
+        "ingresos": 128,
+        "ebitda": 38.4,
+        "cashflow": 7.172799999999993,
+        "utilidadNeta": 22.8928
+      },
+      "balance": {
+        "deudaTotal": 460,
+        "ebitdaLTM": 460.79999999999995,
+        "efectivo": 92.08597499999998,
+        "roa": 0.03997443799806692,
+        "roe": 0.04596256691363355,
+        "ccc": 17,
+        "fullRows": [
+          {
+            "cuenta": "Efectivo y Equivalentes",
+            "group": "Activo Corriente",
+            "Real": 92.08597499999998,
+            "PPTO": 96.69027374999997
+          },
+          {
+            "cuenta": "Cuentas por Cobrar",
+            "group": "Activo Corriente",
+            "Real": 15.36,
+            "PPTO": 15.84
+          },
+          {
+            "cuenta": "Inventarios",
+            "group": "Activo Corriente",
+            "Real": 10.240000000000002,
+            "PPTO": 10.560000000000002
+          },
+          {
+            "cuenta": "Otros Activos Corrientes",
+            "group": "Activo Corriente",
+            "Real": 3.84,
+            "PPTO": 3.96
+          },
+          {
+            "cuenta": "Activos Fijos Netos",
+            "group": "Activo No Corriente",
+            "Real": 426,
+            "PPTO": 428
+          },
+          {
+            "cuenta": "Otros Activos No Corrientes",
+            "group": "Activo No Corriente",
+            "Real": 35,
+            "PPTO": 35
+          },
+          {
+            "cuenta": "Cuentas por Pagar",
+            "group": "Pasivo Corriente",
+            "Real": 7.68,
+            "PPTO": 7.92
+          },
+          {
+            "cuenta": "Deuda CP",
+            "group": "Pasivo Corriente",
+            "Real": 60,
+            "PPTO": 60
+          },
+          {
+            "cuenta": "Otros Pasivos Corrientes",
+            "group": "Pasivo Corriente",
+            "Real": 5.12,
+            "PPTO": 5.28
+          },
+          {
+            "cuenta": "Deuda LP",
+            "group": "Pasivo No Corriente",
+            "Real": 400,
+            "PPTO": 400
+          },
+          {
+            "cuenta": "Otros Pasivos LP",
+            "group": "Pasivo No Corriente",
+            "Real": 25,
+            "PPTO": 25
+          },
+          {
+            "cuenta": "Capital Social",
+            "group": "Patrimonio",
+            "Real": 300,
+            "PPTO": 300
+          },
+          {
+            "cuenta": "Utilidades Acumuladas",
+            "group": "Patrimonio",
+            "Real": 198.07488,
+            "PPTO": 185.64
+          }
+        ]
+      },
+      "cashflowDetail": {
+        "beginning": 84.91317499999998,
+        "cxc": -3.84,
+        "inv": -1.92,
+        "cxp": 2.56,
+        "wc": -3.1999999999999997,
+        "taxes": -8.467200000000002,
+        "extraordinary": 0,
+        "operating": 26.732799999999994,
+        "capex": -12,
+        "netDebt": -5,
+        "interest": -2.56,
+        "dividends": 0,
+        "financing": -7.5600000000000005,
+        "change": 7.172799999999993,
+        "ending": 92.08597499999998,
+        "dso": 31,
+        "dio": 27,
+        "dpo": 41,
+        "ccc": 17
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 128,
+          "Costo de Ventas": 51.2,
+          "Margen Bruto": 76.8,
+          "OPEX": 38.4,
+          "EBITDA": 38.4,
+          "Depreciación": 4.48,
+          "EBIT": 33.92,
+          "Impuestos": 8.467200000000002,
+          "Utilidad Neta": 22.8928
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 12.8,
+          "Gastos de Mercadeo": 11.52,
+          "Gastos de Ventas": 8.96,
+          "Gastos de Logística": 5.12
+        },
+        "segments": {
+          "Agua 500ml": 44.8,
+          "Agua 1L": 32,
+          "Agua 5G": 25.6,
+          "Agua 20L": 15.36,
+          "Bebida Energética": 10.24
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 128,
+            "PPTO": 132,
+            "AA": 112.64,
+            "YoY": 0.13636363636363635,
+            "PPTO_Var": -0.030303030303030304
+          },
+          {
+            "cuenta": "Costo de Ventas",
+            "type": "Costo de Ventas",
+            "Real": 51.2,
+            "PPTO": 52.800000000000004,
+            "AA": 45.056000000000004,
+            "YoY": 0.13636363636363633,
+            "PPTO_Var": -0.030303030303030328
+          },
+          {
+            "cuenta": "Margen Bruto",
+            "type": "Margen Bruto",
+            "Real": 76.8,
+            "PPTO": 79.19999999999999,
+            "AA": 67.584,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Gastos Administrativos",
+            "type": "OPEX",
+            "Real": 12.8,
+            "PPTO": 13.200000000000001,
+            "AA": 11.264000000000001,
+            "YoY": 0.13636363636363633,
+            "PPTO_Var": -0.030303030303030328
+          },
+          {
+            "cuenta": "Gastos de Mercadeo",
+            "type": "OPEX",
+            "Real": 11.52,
+            "PPTO": 11.879999999999999,
+            "AA": 10.137599999999999,
+            "YoY": 0.13636363636363644,
+            "PPTO_Var": -0.03030303030303026
+          },
+          {
+            "cuenta": "Gastos de Ventas",
+            "type": "OPEX",
+            "Real": 8.96,
+            "PPTO": 9.24,
+            "AA": 7.884800000000001,
+            "YoY": 0.1363636363636363,
+            "PPTO_Var": -0.030303030303030234
+          },
+          {
+            "cuenta": "Gastos de Logística",
+            "type": "OPEX",
+            "Real": 5.12,
+            "PPTO": 5.28,
+            "AA": 4.5056,
+            "YoY": 0.13636363636363633,
+            "PPTO_Var": -0.030303030303030328
+          },
+          {
+            "cuenta": "EBITDA",
+            "type": "EBITDA",
+            "Real": 38.4,
+            "PPTO": 39.59999999999999,
+            "AA": 33.792,
+            "YoY": 0.13636363636363627,
+            "PPTO_Var": -0.030303030303030026
+          },
+          {
+            "cuenta": "Depreciación y Amortización",
+            "type": "D&A",
+            "Real": 4.48,
+            "PPTO": 4.62,
+            "AA": 3.9424000000000006,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Intereses Netos",
+            "type": "Financiero",
+            "Real": -2.56,
+            "PPTO": -2.64,
+            "AA": -2.2528,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Utilidad Neta",
+            "type": "Utilidad",
+            "Real": 22.8928,
+            "PPTO": 17.16,
+            "AA": 14.6432,
+            "YoY": 0.5633741258741259,
+            "PPTO_Var": 0.33407925407925415
+          }
+        ]
+      },
+      "deudaMetrics": {
+        "tasaDop": 0.135,
+        "tasaUsd": 0.075,
+        "tasaCambio": 58.5,
+        "deudaNetaUsd": 6.289128632478633,
+        "deudaNetaBancUSD": 7.863247863247861,
+        "covenantLean": 0.7984245334201391,
+        "apalancamiento": 0.998263888888889,
+        "capacidadPago": 1.0017391304347825,
+        "razonCorriente": 4.663453776041666,
+        "cajaEfectivo": 92.08597499999998,
+        "deudaTotal": 460,
+        "debtDetail": {
+          "bancaTotal": 459.9999999999999,
+          "relacionadaTotal": 0,
+          "deudaTotal": 460,
+          "efectivo": 92.08597499999998,
+          "deudaNeta": 367.91402500000004,
+          "deudaNetaUSD": 6.289128632478633,
+          "tasaDOP": 0.135,
+          "bancos": {
+            "Banco Popular": 191.66666666666663,
+            "Banco Santa Cruz": 134.16666666666663,
+            "Scotiabank": 95.83333333333331,
+            "Loganville": 38.33333333333334
+          },
+          "tasasPorBanco": {
+            "Banco Popular": 0.145,
+            "Banco Santa Cruz": 0.13,
+            "Scotiabank": 0.115,
+            "Loganville": 0.1
+          }
+        }
+      },
+      "integrity": {
+        "gap": 0,
+        "isBalanced": true
+      }
+    },
+    {
+      "date": "May 2026",
+      "Periodo": "05-2026",
+      "sortDate": "2026-05-01T00:00:00.000Z",
+      "_isMock": true,
+      "kpis": {
+        "ingresos": 135.5,
+        "ebitda": 40.64999999999999,
+        "cashflow": 8.58917499999999,
+        "utilidadNeta": 24.234174999999993,
+        "margenBruto": 0.6,
+        "realIngresos": 135.5,
+        "pptoIngresos": 133,
+        "varIngresos": 0.018796992481203006,
+        "ebitdaRate": 0.29999999999999993,
+        "realEbitda": 40.64999999999999,
+        "pptoEbitda": 39.9
+      },
+      "trend": {
+        "ingresos": 135.5,
+        "ebitda": 40.64999999999999,
+        "cashflow": 8.58917499999999,
+        "utilidadNeta": 24.234174999999993
+      },
+      "balance": {
+        "deudaTotal": 455,
+        "ebitdaLTM": 487.7999999999999,
+        "efectivo": 100.67514999999997,
+        "roa": 0.04158409122283267,
+        "roe": 0.04679715887644296,
+        "ccc": 14,
+        "fullRows": [
+          {
+            "cuenta": "Efectivo y Equivalentes",
+            "group": "Activo Corriente",
+            "Real": 100.67514999999997,
+            "PPTO": 105.70890749999998
+          },
+          {
+            "cuenta": "Cuentas por Cobrar",
+            "group": "Activo Corriente",
+            "Real": 16.259999999999998,
+            "PPTO": 15.959999999999999
+          },
+          {
+            "cuenta": "Inventarios",
+            "group": "Activo Corriente",
+            "Real": 10.840000000000002,
+            "PPTO": 10.64
+          },
+          {
+            "cuenta": "Otros Activos Corrientes",
+            "group": "Activo Corriente",
+            "Real": 4.0649999999999995,
+            "PPTO": 3.9899999999999998
+          },
+          {
+            "cuenta": "Activos Fijos Netos",
+            "group": "Activo No Corriente",
+            "Real": 428,
+            "PPTO": 430
+          },
+          {
+            "cuenta": "Otros Activos No Corrientes",
+            "group": "Activo No Corriente",
+            "Real": 35,
+            "PPTO": 35
+          },
+          {
+            "cuenta": "Cuentas por Pagar",
+            "group": "Pasivo Corriente",
+            "Real": 8.13,
+            "PPTO": 7.98
+          },
+          {
+            "cuenta": "Deuda CP",
+            "group": "Pasivo Corriente",
+            "Real": 60,
+            "PPTO": 60
+          },
+          {
+            "cuenta": "Otros Pasivos Corrientes",
+            "group": "Pasivo Corriente",
+            "Real": 5.42,
+            "PPTO": 5.32
+          },
+          {
+            "cuenta": "Deuda LP",
+            "group": "Pasivo No Corriente",
+            "Real": 395,
+            "PPTO": 395
+          },
+          {
+            "cuenta": "Otros Pasivos LP",
+            "group": "Pasivo No Corriente",
+            "Real": 25,
+            "PPTO": 25
+          },
+          {
+            "cuenta": "Capital Social",
+            "group": "Patrimonio",
+            "Real": 300,
+            "PPTO": 300
+          },
+          {
+            "cuenta": "Utilidades Acumuladas",
+            "group": "Patrimonio",
+            "Real": 217.85568999999998,
+            "PPTO": 197.88
+          }
+        ]
+      },
+      "cashflowDetail": {
+        "beginning": 92.08597499999998,
+        "cxc": -4.0649999999999995,
+        "inv": -2.0324999999999998,
+        "cxp": 2.71,
+        "wc": -3.3874999999999993,
+        "taxes": -8.963324999999998,
+        "extraordinary": 0,
+        "operating": 28.29917499999999,
+        "capex": -12,
+        "netDebt": -5,
+        "interest": -2.71,
+        "dividends": 0,
+        "financing": -7.71,
+        "change": 8.58917499999999,
+        "ending": 100.67514999999997,
+        "dso": 32,
+        "dio": 24,
+        "dpo": 42,
+        "ccc": 14
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 135.5,
+          "Costo de Ventas": 54.2,
+          "Margen Bruto": 81.3,
+          "OPEX": 40.650000000000006,
+          "EBITDA": 40.64999999999999,
+          "Depreciación": 4.742500000000001,
+          "EBIT": 35.90749999999999,
+          "Impuestos": 8.963324999999998,
+          "Utilidad Neta": 24.234174999999993
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 13.55,
+          "Gastos de Mercadeo": 12.195,
+          "Gastos de Ventas": 9.485000000000001,
+          "Gastos de Logística": 5.42
+        },
+        "segments": {
+          "Agua 500ml": 47.425,
+          "Agua 1L": 33.875,
+          "Agua 5G": 27.1,
+          "Agua 20L": 16.259999999999998,
+          "Bebida Energética": 10.84
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 135.5,
+            "PPTO": 133,
+            "AA": 119.24,
+            "YoY": 0.1363636363636364,
+            "PPTO_Var": 0.018796992481203006
+          },
+          {
+            "cuenta": "Costo de Ventas",
+            "type": "Costo de Ventas",
+            "Real": 54.2,
+            "PPTO": 53.2,
+            "AA": 47.696,
+            "YoY": 0.13636363636363646,
+            "PPTO_Var": 0.018796992481203006
+          },
+          {
+            "cuenta": "Margen Bruto",
+            "type": "Margen Bruto",
+            "Real": 81.3,
+            "PPTO": 79.8,
+            "AA": 71.544,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Gastos Administrativos",
+            "type": "OPEX",
+            "Real": 13.55,
+            "PPTO": 13.3,
+            "AA": 11.924,
+            "YoY": 0.13636363636363646,
+            "PPTO_Var": 0.018796992481203006
+          },
+          {
+            "cuenta": "Gastos de Mercadeo",
+            "type": "OPEX",
+            "Real": 12.195,
+            "PPTO": 11.969999999999999,
+            "AA": 10.731599999999998,
+            "YoY": 0.13636363636363655,
+            "PPTO_Var": 0.018796992481203128
+          },
+          {
+            "cuenta": "Gastos de Ventas",
+            "type": "OPEX",
+            "Real": 9.485000000000001,
+            "PPTO": 9.31,
+            "AA": 8.3468,
+            "YoY": 0.13636363636363652,
+            "PPTO_Var": 0.018796992481203083
+          },
+          {
+            "cuenta": "Gastos de Logística",
+            "type": "OPEX",
+            "Real": 5.42,
+            "PPTO": 5.32,
+            "AA": 4.7696,
+            "YoY": 0.13636363636363644,
+            "PPTO_Var": 0.01879699248120294
+          },
+          {
+            "cuenta": "EBITDA",
+            "type": "EBITDA",
+            "Real": 40.64999999999999,
+            "PPTO": 39.9,
+            "AA": 35.772,
+            "YoY": 0.1363636363636362,
+            "PPTO_Var": 0.01879699248120283
+          },
+          {
+            "cuenta": "Depreciación y Amortización",
+            "type": "D&A",
+            "Real": 4.742500000000001,
+            "PPTO": 4.655,
+            "AA": 4.1734,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Intereses Netos",
+            "type": "Financiero",
+            "Real": -2.71,
+            "PPTO": -2.66,
+            "AA": -2.3848,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Utilidad Neta",
+            "type": "Utilidad",
+            "Real": 24.234174999999993,
+            "PPTO": 17.29,
+            "AA": 15.501199999999999,
+            "YoY": 0.5633741258741255,
+            "PPTO_Var": 0.40162955465587014
+          }
+        ]
+      },
+      "deudaMetrics": {
+        "tasaDop": 0.135,
+        "tasaUsd": 0.075,
+        "tasaCambio": 58.5,
+        "deudaNetaUsd": 6.0568350427350435,
+        "deudaNetaBancUSD": 7.777777777777776,
+        "covenantLean": 0.7263732062320625,
+        "apalancamiento": 0.9327593275932762,
+        "capacidadPago": 1.0720879120879119,
+        "razonCorriente": 4.7943890938909375,
+        "cajaEfectivo": 100.67514999999997,
+        "deudaTotal": 455,
+        "debtDetail": {
+          "bancaTotal": 454.9999999999999,
+          "relacionadaTotal": 0,
+          "deudaTotal": 455,
+          "efectivo": 100.67514999999997,
+          "deudaNeta": 354.32485,
+          "deudaNetaUSD": 6.0568350427350435,
+          "tasaDOP": 0.135,
+          "bancos": {
+            "Banco Popular": 189.5833333333333,
+            "Banco Santa Cruz": 132.7083333333333,
+            "Scotiabank": 94.79166666666664,
+            "Loganville": 37.91666666666668
+          },
+          "tasasPorBanco": {
+            "Banco Popular": 0.145,
+            "Banco Santa Cruz": 0.13,
+            "Scotiabank": 0.115,
+            "Loganville": 0.1
+          }
+        }
+      },
+      "integrity": {
+        "gap": 0,
+        "isBalanced": true
+      }
+    },
+    {
+      "date": "Jun 2026",
+      "Periodo": "06-2026",
+      "sortDate": "2026-06-01T00:00:00.000Z",
+      "_isMock": true,
+      "kpis": {
+        "ingresos": 140,
+        "ebitda": 41.99999999999999,
+        "cashflow": 9.438999999999993,
+        "utilidadNeta": 25.038999999999998,
+        "margenBruto": 0.6,
+        "realIngresos": 140,
+        "pptoIngresos": 138.5,
+        "varIngresos": 0.010830324909747292,
+        "ebitdaRate": 0.29999999999999993,
+        "realEbitda": 41.99999999999999,
+        "pptoEbitda": 41.54999999999999
+      },
+      "trend": {
+        "ingresos": 140,
+        "ebitda": 41.99999999999999,
+        "cashflow": 9.438999999999993,
+        "utilidadNeta": 25.038999999999998
+      },
+      "balance": {
+        "deudaTotal": 450,
+        "ebitdaLTM": 503.9999999999999,
+        "efectivo": 110.11414999999997,
+        "roa": 0.04221615687300665,
+        "roe": 0.04657235883352414,
+        "ccc": 10,
+        "fullRows": [
+          {
+            "cuenta": "Efectivo y Equivalentes",
+            "group": "Activo Corriente",
+            "Real": 110.11414999999997,
+            "PPTO": 115.61985749999997
+          },
+          {
+            "cuenta": "Cuentas por Cobrar",
+            "group": "Activo Corriente",
+            "Real": 16.8,
+            "PPTO": 16.62
+          },
+          {
+            "cuenta": "Inventarios",
+            "group": "Activo Corriente",
+            "Real": 11.200000000000001,
+            "PPTO": 11.080000000000002
+          },
+          {
+            "cuenta": "Otros Activos Corrientes",
+            "group": "Activo Corriente",
+            "Real": 4.2,
+            "PPTO": 4.155
+          },
+          {
+            "cuenta": "Activos Fijos Netos",
+            "group": "Activo No Corriente",
+            "Real": 430,
+            "PPTO": 432
+          },
+          {
+            "cuenta": "Otros Activos No Corrientes",
+            "group": "Activo No Corriente",
+            "Real": 35,
+            "PPTO": 35
+          },
+          {
+            "cuenta": "Cuentas por Pagar",
+            "group": "Pasivo Corriente",
+            "Real": 8.4,
+            "PPTO": 8.31
+          },
+          {
+            "cuenta": "Deuda CP",
+            "group": "Pasivo Corriente",
+            "Real": 60,
+            "PPTO": 60
+          },
+          {
+            "cuenta": "Otros Pasivos Corrientes",
+            "group": "Pasivo Corriente",
+            "Real": 5.6000000000000005,
+            "PPTO": 5.54
+          },
+          {
+            "cuenta": "Deuda LP",
+            "group": "Pasivo No Corriente",
+            "Real": 390,
+            "PPTO": 390
+          },
+          {
+            "cuenta": "Otros Pasivos LP",
+            "group": "Pasivo No Corriente",
+            "Real": 25,
+            "PPTO": 25
+          },
+          {
+            "cuenta": "Capital Social",
+            "group": "Patrimonio",
+            "Real": 300,
+            "PPTO": 300
+          },
+          {
+            "cuenta": "Utilidades Acumuladas",
+            "group": "Patrimonio",
+            "Real": 237.63649999999998,
+            "PPTO": 212.325
+          }
+        ]
+      },
+      "cashflowDetail": {
+        "beginning": 100.67514999999997,
+        "cxc": -4.2,
+        "inv": -2.1,
+        "cxp": 2.8000000000000003,
+        "wc": -3.5000000000000004,
+        "taxes": -9.261,
+        "extraordinary": 0,
+        "operating": 29.238999999999994,
+        "capex": -12,
+        "netDebt": -5,
+        "interest": -2.8000000000000003,
+        "dividends": 0,
+        "financing": -7.800000000000001,
+        "change": 9.438999999999993,
+        "ending": 110.11414999999997,
+        "dso": 28,
+        "dio": 25,
+        "dpo": 43,
+        "ccc": 10
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 140,
+          "Costo de Ventas": 56,
+          "Margen Bruto": 84,
+          "OPEX": 42.00000000000001,
+          "EBITDA": 41.99999999999999,
+          "Depreciación": 4.9,
+          "EBIT": 37.099999999999994,
+          "Impuestos": 9.261,
+          "Utilidad Neta": 25.038999999999998
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 14,
+          "Gastos de Mercadeo": 12.6,
+          "Gastos de Ventas": 9.8,
+          "Gastos de Logística": 5.6000000000000005
+        },
+        "segments": {
+          "Agua 500ml": 49,
+          "Agua 1L": 35,
+          "Agua 5G": 28,
+          "Agua 20L": 16.8,
+          "Bebida Energética": 11.200000000000001
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 140,
+            "PPTO": 138.5,
+            "AA": 123.2,
+            "YoY": 0.13636363636363633,
+            "PPTO_Var": 0.010830324909747292
+          },
+          {
+            "cuenta": "Costo de Ventas",
+            "type": "Costo de Ventas",
+            "Real": 56,
+            "PPTO": 55.400000000000006,
+            "AA": 49.28,
+            "YoY": 0.13636363636363633,
+            "PPTO_Var": 0.010830324909747188
+          },
+          {
+            "cuenta": "Margen Bruto",
+            "type": "Margen Bruto",
+            "Real": 84,
+            "PPTO": 83.1,
+            "AA": 73.92,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Gastos Administrativos",
+            "type": "OPEX",
+            "Real": 14,
+            "PPTO": 13.850000000000001,
+            "AA": 12.32,
+            "YoY": 0.13636363636363633,
+            "PPTO_Var": 0.010830324909747188
+          },
+          {
+            "cuenta": "Gastos de Mercadeo",
+            "type": "OPEX",
+            "Real": 12.6,
+            "PPTO": 12.465,
+            "AA": 11.088,
+            "YoY": 0.1363636363636364,
+            "PPTO_Var": 0.010830324909747275
+          },
+          {
+            "cuenta": "Gastos de Ventas",
+            "type": "OPEX",
+            "Real": 9.8,
+            "PPTO": 9.695,
+            "AA": 8.624,
+            "YoY": 0.13636363636363638,
+            "PPTO_Var": 0.010830324909747335
+          },
+          {
+            "cuenta": "Gastos de Logística",
+            "type": "OPEX",
+            "Real": 5.6000000000000005,
+            "PPTO": 5.54,
+            "AA": 4.928,
+            "YoY": 0.1363636363636365,
+            "PPTO_Var": 0.010830324909747382
+          },
+          {
+            "cuenta": "EBITDA",
+            "type": "EBITDA",
+            "Real": 41.99999999999999,
+            "PPTO": 41.54999999999999,
+            "AA": 36.96,
+            "YoY": 0.13636363636363613,
+            "PPTO_Var": 0.010830324909747363
+          },
+          {
+            "cuenta": "Depreciación y Amortización",
+            "type": "D&A",
+            "Real": 4.9,
+            "PPTO": 4.8475,
+            "AA": 4.312,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Intereses Netos",
+            "type": "Financiero",
+            "Real": -2.8000000000000003,
+            "PPTO": -2.77,
+            "AA": -2.464,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Utilidad Neta",
+            "type": "Utilidad",
+            "Real": 25.038999999999998,
+            "PPTO": 18.005,
+            "AA": 16.016000000000002,
+            "YoY": 0.5633741258741256,
+            "PPTO_Var": 0.39066925853929463
+          }
+        ]
+      },
+      "deudaMetrics": {
+        "tasaDop": 0.135,
+        "tasaUsd": 0.075,
+        "tasaCambio": 58.5,
+        "deudaNetaUsd": 5.81001452991453,
+        "deudaNetaBancUSD": 7.692307692307691,
+        "covenantLean": 0.6743766865079367,
+        "apalancamiento": 0.892857142857143,
+        "capacidadPago": 1.1199999999999997,
+        "razonCorriente": 5.036275793650792,
+        "cajaEfectivo": 110.11414999999997,
+        "deudaTotal": 450,
+        "debtDetail": {
+          "bancaTotal": 449.9999999999999,
+          "relacionadaTotal": 0,
+          "deudaTotal": 450,
+          "efectivo": 110.11414999999997,
+          "deudaNeta": 339.88585,
+          "deudaNetaUSD": 5.81001452991453,
+          "tasaDOP": 0.135,
+          "bancos": {
+            "Banco Popular": 187.49999999999994,
+            "Banco Santa Cruz": 131.24999999999994,
+            "Scotiabank": 93.74999999999997,
+            "Loganville": 37.500000000000014
+          },
+          "tasasPorBanco": {
+            "Banco Popular": 0.145,
+            "Banco Santa Cruz": 0.13,
+            "Scotiabank": 0.115,
+            "Loganville": 0.1
+          }
+        }
+      },
+      "integrity": {
+        "gap": 0,
+        "isBalanced": true
+      }
+    },
+    {
+      "date": "Jul 2026",
+      "Periodo": "07-2026",
+      "sortDate": "2026-07-01T00:00:00.000Z",
+      "_isMock": true,
+      "kpis": {
+        "ingresos": 138,
+        "ebitda": 41.4,
+        "cashflow": 9.061300000000001,
+        "utilidadNeta": 24.6813,
+        "margenBruto": 0.6,
+        "realIngresos": 138,
+        "pptoIngresos": 140,
+        "varIngresos": -0.014285714285714285,
+        "ebitdaRate": 0.3,
+        "realEbitda": 41.4,
+        "pptoEbitda": 41.99999999999999
+      },
+      "trend": {
+        "ingresos": 138,
+        "ebitda": 41.4,
+        "cashflow": 9.061300000000001,
+        "utilidadNeta": 24.6813
+      },
+      "balance": {
+        "deudaTotal": 445,
+        "ebitdaLTM": 496.79999999999995,
+        "efectivo": 119.17544999999997,
+        "roa": 0.04101413575445791,
+        "roe": 0.04457832408995923,
+        "ccc": 17,
+        "fullRows": [
+          {
+            "cuenta": "Efectivo y Equivalentes",
+            "group": "Activo Corriente",
+            "Real": 119.17544999999997,
+            "PPTO": 125.13422249999998
+          },
+          {
+            "cuenta": "Cuentas por Cobrar",
+            "group": "Activo Corriente",
+            "Real": 16.56,
+            "PPTO": 16.8
+          },
+          {
+            "cuenta": "Inventarios",
+            "group": "Activo Corriente",
+            "Real": 11.040000000000001,
+            "PPTO": 11.200000000000001
+          },
+          {
+            "cuenta": "Otros Activos Corrientes",
+            "group": "Activo Corriente",
+            "Real": 4.14,
+            "PPTO": 4.2
+          },
+          {
+            "cuenta": "Activos Fijos Netos",
+            "group": "Activo No Corriente",
+            "Real": 432,
+            "PPTO": 434
+          },
+          {
+            "cuenta": "Otros Activos No Corrientes",
+            "group": "Activo No Corriente",
+            "Real": 35,
+            "PPTO": 35
+          },
+          {
+            "cuenta": "Cuentas por Pagar",
+            "group": "Pasivo Corriente",
+            "Real": 8.28,
+            "PPTO": 8.4
+          },
+          {
+            "cuenta": "Deuda CP",
+            "group": "Pasivo Corriente",
+            "Real": 60,
+            "PPTO": 60
+          },
+          {
+            "cuenta": "Otros Pasivos Corrientes",
+            "group": "Pasivo Corriente",
+            "Real": 5.5200000000000005,
+            "PPTO": 5.6000000000000005
+          },
+          {
+            "cuenta": "Deuda LP",
+            "group": "Pasivo No Corriente",
+            "Real": 385,
+            "PPTO": 385
+          },
+          {
+            "cuenta": "Otros Pasivos LP",
+            "group": "Pasivo No Corriente",
+            "Real": 25,
+            "PPTO": 25
+          },
+          {
+            "cuenta": "Capital Social",
+            "group": "Patrimonio",
+            "Real": 300,
+            "PPTO": 300
+          },
+          {
+            "cuenta": "Utilidades Acumuladas",
+            "group": "Patrimonio",
+            "Real": 253.66146,
+            "PPTO": 225.6
+          }
+        ]
+      },
+      "cashflowDetail": {
+        "beginning": 110.11414999999997,
+        "cxc": -4.14,
+        "inv": -2.07,
+        "cxp": 2.7600000000000002,
+        "wc": -3.449999999999999,
+        "taxes": -9.128700000000002,
+        "extraordinary": 0,
+        "operating": 28.8213,
+        "capex": -12,
+        "netDebt": -5,
+        "interest": -2.7600000000000002,
+        "dividends": 0,
+        "financing": -7.76,
+        "change": 9.061300000000001,
+        "ending": 119.17544999999997,
+        "dso": 29,
+        "dio": 26,
+        "dpo": 38,
+        "ccc": 17
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 138,
+          "Costo de Ventas": 55.2,
+          "Margen Bruto": 82.8,
+          "OPEX": 41.4,
+          "EBITDA": 41.4,
+          "Depreciación": 4.83,
+          "EBIT": 36.57,
+          "Impuestos": 9.128700000000002,
+          "Utilidad Neta": 24.6813
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 13.8,
+          "Gastos de Mercadeo": 12.42,
+          "Gastos de Ventas": 9.66,
+          "Gastos de Logística": 5.5200000000000005
+        },
+        "segments": {
+          "Agua 500ml": 48.3,
+          "Agua 1L": 34.5,
+          "Agua 5G": 27.6,
+          "Agua 20L": 16.56,
+          "Bebida Energética": 11.040000000000001
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 138,
+            "PPTO": 140,
+            "AA": 121.44,
+            "YoY": 0.13636363636363638,
+            "PPTO_Var": -0.014285714285714285
+          },
+          {
+            "cuenta": "Costo de Ventas",
+            "type": "Costo de Ventas",
+            "Real": 55.2,
+            "PPTO": 56,
+            "AA": 48.576,
+            "YoY": 0.1363636363636364,
+            "PPTO_Var": -0.014285714285714235
+          },
+          {
+            "cuenta": "Margen Bruto",
+            "type": "Margen Bruto",
+            "Real": 82.8,
+            "PPTO": 84,
+            "AA": 72.86399999999999,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Gastos Administrativos",
+            "type": "OPEX",
+            "Real": 13.8,
+            "PPTO": 14,
+            "AA": 12.144,
+            "YoY": 0.1363636363636364,
+            "PPTO_Var": -0.014285714285714235
+          },
+          {
+            "cuenta": "Gastos de Mercadeo",
+            "type": "OPEX",
+            "Real": 12.42,
+            "PPTO": 12.6,
+            "AA": 10.929599999999999,
+            "YoY": 0.13636363636363646,
+            "PPTO_Var": -0.014285714285714263
+          },
+          {
+            "cuenta": "Gastos de Ventas",
+            "type": "OPEX",
+            "Real": 9.66,
+            "PPTO": 9.8,
+            "AA": 8.5008,
+            "YoY": 0.13636363636363638,
+            "PPTO_Var": -0.014285714285714343
+          },
+          {
+            "cuenta": "Gastos de Logística",
+            "type": "OPEX",
+            "Real": 5.5200000000000005,
+            "PPTO": 5.6000000000000005,
+            "AA": 4.8576,
+            "YoY": 0.13636363636363652,
+            "PPTO_Var": -0.014285714285714297
+          },
+          {
+            "cuenta": "EBITDA",
+            "type": "EBITDA",
+            "Real": 41.4,
+            "PPTO": 41.99999999999999,
+            "AA": 36.431999999999995,
+            "YoY": 0.1363636363636365,
+            "PPTO_Var": -0.014285714285714153
+          },
+          {
+            "cuenta": "Depreciación y Amortización",
+            "type": "D&A",
+            "Real": 4.83,
+            "PPTO": 4.9,
+            "AA": 4.2504,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Intereses Netos",
+            "type": "Financiero",
+            "Real": -2.7600000000000002,
+            "PPTO": -2.8000000000000003,
+            "AA": -2.4288,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Utilidad Neta",
+            "type": "Utilidad",
+            "Real": 24.6813,
+            "PPTO": 18.2,
+            "AA": 15.7872,
+            "YoY": 0.5633741258741258,
+            "PPTO_Var": 0.35611538461538467
+          }
+        ]
+      },
+      "deudaMetrics": {
+        "tasaDop": 0.135,
+        "tasaUsd": 0.075,
+        "tasaCambio": 58.5,
+        "deudaNetaUsd": 5.569650427350428,
+        "deudaNetaBancUSD": 7.606837606837605,
+        "covenantLean": 0.6558465177133657,
+        "apalancamiento": 0.8957326892109502,
+        "capacidadPago": 1.1164044943820224,
+        "razonCorriente": 5.464390096618355,
+        "cajaEfectivo": 119.17544999999997,
+        "deudaTotal": 445,
+        "debtDetail": {
+          "bancaTotal": 444.9999999999999,
+          "relacionadaTotal": 0,
+          "deudaTotal": 445,
+          "efectivo": 119.17544999999997,
+          "deudaNeta": 325.82455000000004,
+          "deudaNetaUSD": 5.569650427350428,
+          "tasaDOP": 0.135,
+          "bancos": {
+            "Banco Popular": 185.4166666666666,
+            "Banco Santa Cruz": 129.7916666666666,
+            "Scotiabank": 92.7083333333333,
+            "Loganville": 37.08333333333335
+          },
+          "tasasPorBanco": {
+            "Banco Popular": 0.145,
+            "Banco Santa Cruz": 0.13,
+            "Scotiabank": 0.115,
+            "Loganville": 0.1
+          }
+        }
+      },
+      "integrity": {
+        "gap": 0,
+        "isBalanced": true
+      }
+    },
+    {
+      "date": "Ago 2026",
+      "Periodo": "08-2026",
+      "sortDate": "2026-08-01T00:00:00.000Z",
+      "_isMock": true,
+      "kpis": {
+        "ingresos": 145,
+        "ebitda": 43.50000000000001,
+        "cashflow": 10.383250000000002,
+        "utilidadNeta": 25.93325,
+        "margenBruto": 0.6,
+        "realIngresos": 145,
+        "pptoIngresos": 142,
+        "varIngresos": 0.02112676056338028,
+        "ebitdaRate": 0.30000000000000004,
+        "realEbitda": 43.50000000000001,
+        "pptoEbitda": 42.59999999999999
+      },
+      "trend": {
+        "ingresos": 145,
+        "ebitda": 43.50000000000001,
+        "cashflow": 10.383250000000002,
+        "utilidadNeta": 25.93325
+      },
+      "balance": {
+        "deudaTotal": 440,
+        "ebitdaLTM": 522.0000000000001,
+        "efectivo": 129.55869999999996,
+        "roa": 0.04226694202201029,
+        "roe": 0.044939294284166945,
+        "ccc": 18,
+        "fullRows": [
+          {
+            "cuenta": "Efectivo y Equivalentes",
+            "group": "Activo Corriente",
+            "Real": 129.55869999999996,
+            "PPTO": 136.03663499999996
+          },
+          {
+            "cuenta": "Cuentas por Cobrar",
+            "group": "Activo Corriente",
+            "Real": 17.4,
+            "PPTO": 17.04
+          },
+          {
+            "cuenta": "Inventarios",
+            "group": "Activo Corriente",
+            "Real": 11.600000000000001,
+            "PPTO": 11.360000000000001
+          },
+          {
+            "cuenta": "Otros Activos Corrientes",
+            "group": "Activo Corriente",
+            "Real": 4.35,
+            "PPTO": 4.26
+          },
+          {
+            "cuenta": "Activos Fijos Netos",
+            "group": "Activo No Corriente",
+            "Real": 434,
+            "PPTO": 436
+          },
+          {
+            "cuenta": "Otros Activos No Corrientes",
+            "group": "Activo No Corriente",
+            "Real": 35,
+            "PPTO": 35
+          },
+          {
+            "cuenta": "Cuentas por Pagar",
+            "group": "Pasivo Corriente",
+            "Real": 8.7,
+            "PPTO": 8.52
+          },
+          {
+            "cuenta": "Deuda CP",
+            "group": "Pasivo Corriente",
+            "Real": 60,
+            "PPTO": 60
+          },
+          {
+            "cuenta": "Otros Pasivos Corrientes",
+            "group": "Pasivo Corriente",
+            "Real": 5.8,
+            "PPTO": 5.68
+          },
+          {
+            "cuenta": "Deuda LP",
+            "group": "Pasivo No Corriente",
+            "Real": 380,
+            "PPTO": 380
+          },
+          {
+            "cuenta": "Otros Pasivos LP",
+            "group": "Pasivo No Corriente",
+            "Real": 25,
+            "PPTO": 25
+          },
+          {
+            "cuenta": "Capital Social",
+            "group": "Patrimonio",
+            "Real": 300,
+            "PPTO": 300
+          },
+          {
+            "cuenta": "Utilidades Acumuladas",
+            "group": "Patrimonio",
+            "Real": 277.072925,
+            "PPTO": 239.45999999999998
+          }
+        ]
+      },
+      "cashflowDetail": {
+        "beginning": 119.17544999999997,
+        "cxc": -4.35,
+        "inv": -2.175,
+        "cxp": 2.9,
+        "wc": -3.6249999999999996,
+        "taxes": -9.591750000000003,
+        "extraordinary": 0,
+        "operating": 30.283250000000002,
+        "capex": -12,
+        "netDebt": -5,
+        "interest": -2.9,
+        "dividends": 0,
+        "financing": -7.9,
+        "change": 10.383250000000002,
+        "ending": 129.55869999999996,
+        "dso": 30,
+        "dio": 27,
+        "dpo": 39,
+        "ccc": 18
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 145,
+          "Costo de Ventas": 58,
+          "Margen Bruto": 87,
+          "OPEX": 43.49999999999999,
+          "EBITDA": 43.50000000000001,
+          "Depreciación": 5.075,
+          "EBIT": 38.425000000000004,
+          "Impuestos": 9.591750000000003,
+          "Utilidad Neta": 25.93325
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 14.5,
+          "Gastos de Mercadeo": 13.049999999999999,
+          "Gastos de Ventas": 10.15,
+          "Gastos de Logística": 5.8
+        },
+        "segments": {
+          "Agua 500ml": 50.75,
+          "Agua 1L": 36.25,
+          "Agua 5G": 29,
+          "Agua 20L": 17.4,
+          "Bebida Energética": 11.6
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 145,
+            "PPTO": 142,
+            "AA": 127.6,
+            "YoY": 0.1363636363636364,
+            "PPTO_Var": 0.02112676056338028
+          },
+          {
+            "cuenta": "Costo de Ventas",
+            "type": "Costo de Ventas",
+            "Real": 58,
+            "PPTO": 56.800000000000004,
+            "AA": 51.04,
+            "YoY": 0.13636363636363638,
+            "PPTO_Var": 0.021126760563380205
+          },
+          {
+            "cuenta": "Margen Bruto",
+            "type": "Margen Bruto",
+            "Real": 87,
+            "PPTO": 85.19999999999999,
+            "AA": 76.55999999999999,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Gastos Administrativos",
+            "type": "OPEX",
+            "Real": 14.5,
+            "PPTO": 14.200000000000001,
+            "AA": 12.76,
+            "YoY": 0.13636363636363638,
+            "PPTO_Var": 0.021126760563380205
+          },
+          {
+            "cuenta": "Gastos de Mercadeo",
+            "type": "OPEX",
+            "Real": 13.049999999999999,
+            "PPTO": 12.78,
+            "AA": 11.483999999999998,
+            "YoY": 0.13636363636363644,
+            "PPTO_Var": 0.02112676056338025
+          },
+          {
+            "cuenta": "Gastos de Ventas",
+            "type": "OPEX",
+            "Real": 10.15,
+            "PPTO": 9.940000000000001,
+            "AA": 8.932,
+            "YoY": 0.13636363636363635,
+            "PPTO_Var": 0.021126760563380188
+          },
+          {
+            "cuenta": "Gastos de Logística",
+            "type": "OPEX",
+            "Real": 5.8,
+            "PPTO": 5.68,
+            "AA": 5.104,
+            "YoY": 0.1363636363636363,
+            "PPTO_Var": 0.021126760563380302
+          },
+          {
+            "cuenta": "EBITDA",
+            "type": "EBITDA",
+            "Real": 43.50000000000001,
+            "PPTO": 42.59999999999999,
+            "AA": 38.279999999999994,
+            "YoY": 0.13636363636363671,
+            "PPTO_Var": 0.021126760563380757
+          },
+          {
+            "cuenta": "Depreciación y Amortización",
+            "type": "D&A",
+            "Real": 5.075,
+            "PPTO": 4.970000000000001,
+            "AA": 4.466,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Intereses Netos",
+            "type": "Financiero",
+            "Real": -2.9,
+            "PPTO": -2.84,
+            "AA": -2.552,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Utilidad Neta",
+            "type": "Utilidad",
+            "Real": 25.93325,
+            "PPTO": 18.46,
+            "AA": 16.588,
+            "YoY": 0.5633741258741258,
+            "PPTO_Var": 0.4048347778981582
+          }
+        ]
+      },
+      "deudaMetrics": {
+        "tasaDop": 0.135,
+        "tasaUsd": 0.075,
+        "tasaCambio": 58.5,
+        "deudaNetaUsd": 5.30668888888889,
+        "deudaNetaBancUSD": 7.521367521367519,
+        "covenantLean": 0.5947151340996168,
+        "apalancamiento": 0.8429118773946358,
+        "capacidadPago": 1.1863636363636367,
+        "razonCorriente": 5.630601532567048,
+        "cajaEfectivo": 129.55869999999996,
+        "deudaTotal": 440,
+        "debtDetail": {
+          "bancaTotal": 439.99999999999983,
+          "relacionadaTotal": 0,
+          "deudaTotal": 440,
+          "efectivo": 129.55869999999996,
+          "deudaNeta": 310.44130000000007,
+          "deudaNetaUSD": 5.30668888888889,
+          "tasaDOP": 0.135,
+          "bancos": {
+            "Banco Popular": 183.33333333333326,
+            "Banco Santa Cruz": 128.33333333333326,
+            "Scotiabank": 91.66666666666663,
+            "Loganville": 36.666666666666686
+          },
+          "tasasPorBanco": {
+            "Banco Popular": 0.145,
+            "Banco Santa Cruz": 0.13,
+            "Scotiabank": 0.115,
+            "Loganville": 0.1
+          }
+        }
+      },
+      "integrity": {
+        "gap": 0,
+        "isBalanced": true
+      }
+    },
+    {
+      "date": "Sep 2026",
+      "Periodo": "09-2026",
+      "sortDate": "2026-09-01T00:00:00.000Z",
+      "_isMock": true,
+      "kpis": {
+        "ingresos": 142,
+        "ebitda": 42.59999999999999,
+        "cashflow": 9.816699999999994,
+        "utilidadNeta": 25.396699999999996,
+        "margenBruto": 0.5999999999999999,
+        "realIngresos": 142,
+        "pptoIngresos": 145,
+        "varIngresos": -0.020689655172413793,
+        "ebitdaRate": 0.29999999999999993,
+        "realEbitda": 42.59999999999999,
+        "pptoEbitda": 43.50000000000001
+      },
+      "trend": {
+        "ingresos": 142,
+        "ebitda": 42.59999999999999,
+        "cashflow": 9.816699999999994,
+        "utilidadNeta": 25.396699999999996
+      },
+      "balance": {
+        "deudaTotal": 435,
+        "ebitdaLTM": 511.1999999999998,
+        "efectivo": 139.37539999999996,
+        "roa": 0.040779870238933646,
+        "roe": 0.042883784432554896,
+        "ccc": 15,
+        "fullRows": [
+          {
+            "cuenta": "Efectivo y Equivalentes",
+            "group": "Activo Corriente",
+            "Real": 139.37539999999996,
+            "PPTO": 146.34416999999996
+          },
+          {
+            "cuenta": "Cuentas por Cobrar",
+            "group": "Activo Corriente",
+            "Real": 17.04,
+            "PPTO": 17.4
+          },
+          {
+            "cuenta": "Inventarios",
+            "group": "Activo Corriente",
+            "Real": 11.360000000000001,
+            "PPTO": 11.600000000000001
+          },
+          {
+            "cuenta": "Otros Activos Corrientes",
+            "group": "Activo Corriente",
+            "Real": 4.26,
+            "PPTO": 4.35
+          },
+          {
+            "cuenta": "Activos Fijos Netos",
+            "group": "Activo No Corriente",
+            "Real": 436,
+            "PPTO": 438
+          },
+          {
+            "cuenta": "Otros Activos No Corrientes",
+            "group": "Activo No Corriente",
+            "Real": 35,
+            "PPTO": 35
+          },
+          {
+            "cuenta": "Cuentas por Pagar",
+            "group": "Pasivo Corriente",
+            "Real": 8.52,
+            "PPTO": 8.7
+          },
+          {
+            "cuenta": "Deuda CP",
+            "group": "Pasivo Corriente",
+            "Real": 60,
+            "PPTO": 60
+          },
+          {
+            "cuenta": "Otros Pasivos Corrientes",
+            "group": "Pasivo Corriente",
+            "Real": 5.68,
+            "PPTO": 5.8
+          },
+          {
+            "cuenta": "Deuda LP",
+            "group": "Pasivo No Corriente",
+            "Real": 375,
+            "PPTO": 375
+          },
+          {
+            "cuenta": "Otros Pasivos LP",
+            "group": "Pasivo No Corriente",
+            "Real": 25,
+            "PPTO": 25
+          },
+          {
+            "cuenta": "Capital Social",
+            "group": "Patrimonio",
+            "Real": 300,
+            "PPTO": 300
+          },
+          {
+            "cuenta": "Utilidades Acumuladas",
+            "group": "Patrimonio",
+            "Real": 292.22151999999994,
+            "PPTO": 254.39999999999998
+          }
+        ]
+      },
+      "cashflowDetail": {
+        "beginning": 129.55869999999996,
+        "cxc": -4.26,
+        "inv": -2.13,
+        "cxp": 2.84,
+        "wc": -3.55,
+        "taxes": -9.393299999999998,
+        "extraordinary": 0,
+        "operating": 29.656699999999994,
+        "capex": -12,
+        "netDebt": -5,
+        "interest": -2.84,
+        "dividends": 0,
+        "financing": -7.84,
+        "change": 9.816699999999994,
+        "ending": 139.37539999999996,
+        "dso": 31,
+        "dio": 24,
+        "dpo": 40,
+        "ccc": 15
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 142,
+          "Costo de Ventas": 56.800000000000004,
+          "Margen Bruto": 85.19999999999999,
+          "OPEX": 42.6,
+          "EBITDA": 42.59999999999999,
+          "Depreciación": 4.970000000000001,
+          "EBIT": 37.62999999999999,
+          "Impuestos": 9.393299999999998,
+          "Utilidad Neta": 25.396699999999996
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 14.200000000000001,
+          "Gastos de Mercadeo": 12.78,
+          "Gastos de Ventas": 9.940000000000001,
+          "Gastos de Logística": 5.68
+        },
+        "segments": {
+          "Agua 500ml": 49.699999999999996,
+          "Agua 1L": 35.5,
+          "Agua 5G": 28.400000000000002,
+          "Agua 20L": 17.04,
+          "Bebida Energética": 11.36
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 142,
+            "PPTO": 145,
+            "AA": 124.96,
+            "YoY": 0.1363636363636364,
+            "PPTO_Var": -0.020689655172413793
+          },
+          {
+            "cuenta": "Costo de Ventas",
+            "type": "Costo de Ventas",
+            "Real": 56.800000000000004,
+            "PPTO": 58,
+            "AA": 49.984,
+            "YoY": 0.1363636363636364,
+            "PPTO_Var": -0.02068965517241372
+          },
+          {
+            "cuenta": "Margen Bruto",
+            "type": "Margen Bruto",
+            "Real": 85.19999999999999,
+            "PPTO": 87,
+            "AA": 74.976,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Gastos Administrativos",
+            "type": "OPEX",
+            "Real": 14.200000000000001,
+            "PPTO": 14.5,
+            "AA": 12.496,
+            "YoY": 0.1363636363636364,
+            "PPTO_Var": -0.02068965517241372
+          },
+          {
+            "cuenta": "Gastos de Mercadeo",
+            "type": "OPEX",
+            "Real": 12.78,
+            "PPTO": 13.049999999999999,
+            "AA": 11.2464,
+            "YoY": 0.13636363636363635,
+            "PPTO_Var": -0.02068965517241376
+          },
+          {
+            "cuenta": "Gastos de Ventas",
+            "type": "OPEX",
+            "Real": 9.940000000000001,
+            "PPTO": 10.15,
+            "AA": 8.747200000000001,
+            "YoY": 0.13636363636363635,
+            "PPTO_Var": -0.020689655172413703
+          },
+          {
+            "cuenta": "Gastos de Logística",
+            "type": "OPEX",
+            "Real": 5.68,
+            "PPTO": 5.8,
+            "AA": 4.9984,
+            "YoY": 0.13636363636363627,
+            "PPTO_Var": -0.020689655172413814
+          },
+          {
+            "cuenta": "EBITDA",
+            "type": "EBITDA",
+            "Real": 42.59999999999999,
+            "PPTO": 43.50000000000001,
+            "AA": 37.488,
+            "YoY": 0.13636363636363605,
+            "PPTO_Var": -0.020689655172414247
+          },
+          {
+            "cuenta": "Depreciación y Amortización",
+            "type": "D&A",
+            "Real": 4.970000000000001,
+            "PPTO": 5.075,
+            "AA": 4.373600000000001,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Intereses Netos",
+            "type": "Financiero",
+            "Real": -2.84,
+            "PPTO": -2.9,
+            "AA": -2.4992,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Utilidad Neta",
+            "type": "Utilidad",
+            "Real": 25.396699999999996,
+            "PPTO": 18.85,
+            "AA": 16.2448,
+            "YoY": 0.5633741258741255,
+            "PPTO_Var": 0.3473050397877981
+          }
+        ]
+      },
+      "deudaMetrics": {
+        "tasaDop": 0.135,
+        "tasaUsd": 0.075,
+        "tasaCambio": 58.5,
+        "deudaNetaUsd": 5.053411965811967,
+        "deudaNetaBancUSD": 7.435897435897432,
+        "covenantLean": 0.5782953834115809,
+        "apalancamiento": 0.8509389671361506,
+        "capacidadPago": 1.175172413793103,
+        "razonCorriente": 6.119538341158057,
+        "cajaEfectivo": 139.37539999999996,
+        "deudaTotal": 435,
+        "debtDetail": {
+          "bancaTotal": 434.9999999999998,
+          "relacionadaTotal": 0,
+          "deudaTotal": 435,
+          "efectivo": 139.37539999999996,
+          "deudaNeta": 295.62460000000004,
+          "deudaNetaUSD": 5.053411965811967,
+          "tasaDOP": 0.135,
+          "bancos": {
+            "Banco Popular": 181.24999999999991,
+            "Banco Santa Cruz": 126.87499999999993,
+            "Scotiabank": 90.62499999999996,
+            "Loganville": 36.25000000000002
+          },
+          "tasasPorBanco": {
+            "Banco Popular": 0.145,
+            "Banco Santa Cruz": 0.13,
+            "Scotiabank": 0.115,
+            "Loganville": 0.1
+          }
+        }
+      },
+      "integrity": {
+        "gap": 0,
+        "isBalanced": true
+      }
+    },
+    {
+      "date": "Oct 2026",
+      "Periodo": "10-2026",
+      "sortDate": "2026-10-01T00:00:00.000Z",
+      "_isMock": true,
+      "kpis": {
+        "ingresos": 148.5,
+        "ebitda": 44.54999999999999,
+        "cashflow": 11.044224999999992,
+        "utilidadNeta": 26.559224999999994,
+        "margenBruto": 0.6,
+        "realIngresos": 148.5,
+        "pptoIngresos": 146,
+        "varIngresos": 0.017123287671232876,
+        "ebitdaRate": 0.29999999999999993,
+        "realEbitda": 44.54999999999999,
+        "pptoEbitda": 43.8
+      },
+      "trend": {
+        "ingresos": 148.5,
+        "ebitda": 44.54999999999999,
+        "cashflow": 11.044224999999992,
+        "utilidadNeta": 26.559224999999994
+      },
+      "balance": {
+        "deudaTotal": 430,
+        "ebitdaLTM": 534.5999999999999,
+        "efectivo": 150.41962499999994,
+        "roa": 0.04181767332413952,
+        "roe": 0.043023214661971565,
+        "ccc": 16,
+        "fullRows": [
+          {
+            "cuenta": "Efectivo y Equivalentes",
+            "group": "Activo Corriente",
+            "Real": 150.41962499999994,
+            "PPTO": 157.94060624999995
+          },
+          {
+            "cuenta": "Cuentas por Cobrar",
+            "group": "Activo Corriente",
+            "Real": 17.82,
+            "PPTO": 17.52
+          },
+          {
+            "cuenta": "Inventarios",
+            "group": "Activo Corriente",
+            "Real": 11.880000000000003,
+            "PPTO": 11.680000000000001
+          },
+          {
+            "cuenta": "Otros Activos Corrientes",
+            "group": "Activo Corriente",
+            "Real": 4.455,
+            "PPTO": 4.38
+          },
+          {
+            "cuenta": "Activos Fijos Netos",
+            "group": "Activo No Corriente",
+            "Real": 438,
+            "PPTO": 440
+          },
+          {
+            "cuenta": "Otros Activos No Corrientes",
+            "group": "Activo No Corriente",
+            "Real": 35,
+            "PPTO": 35
+          },
+          {
+            "cuenta": "Cuentas por Pagar",
+            "group": "Pasivo Corriente",
+            "Real": 8.91,
+            "PPTO": 8.76
+          },
+          {
+            "cuenta": "Deuda CP",
+            "group": "Pasivo Corriente",
+            "Real": 60,
+            "PPTO": 60
+          },
+          {
+            "cuenta": "Otros Pasivos Corrientes",
+            "group": "Pasivo Corriente",
+            "Real": 5.94,
+            "PPTO": 5.84
+          },
+          {
+            "cuenta": "Deuda LP",
+            "group": "Pasivo No Corriente",
+            "Real": 370,
+            "PPTO": 370
+          },
+          {
+            "cuenta": "Otros Pasivos LP",
+            "group": "Pasivo No Corriente",
+            "Real": 25,
+            "PPTO": 25
+          },
+          {
+            "cuenta": "Capital Social",
+            "group": "Patrimonio",
+            "Real": 300,
+            "PPTO": 300
+          },
+          {
+            "cuenta": "Utilidades Acumuladas",
+            "group": "Patrimonio",
+            "Real": 317.32311749999997,
+            "PPTO": 268.26
+          }
+        ]
+      },
+      "cashflowDetail": {
+        "beginning": 139.37539999999996,
+        "cxc": -4.455,
+        "inv": -2.2275,
+        "cxp": 2.97,
+        "wc": -3.7125,
+        "taxes": -9.823274999999999,
+        "extraordinary": 0,
+        "operating": 31.014224999999993,
+        "capex": -12,
+        "netDebt": -5,
+        "interest": -2.97,
+        "dividends": 0,
+        "financing": -7.970000000000001,
+        "change": 11.044224999999992,
+        "ending": 150.41962499999994,
+        "dso": 32,
+        "dio": 25,
+        "dpo": 41,
+        "ccc": 16
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 148.5,
+          "Costo de Ventas": 59.400000000000006,
+          "Margen Bruto": 89.1,
+          "OPEX": 44.550000000000004,
+          "EBITDA": 44.54999999999999,
+          "Depreciación": 5.197500000000001,
+          "EBIT": 39.35249999999999,
+          "Impuestos": 9.823274999999999,
+          "Utilidad Neta": 26.559224999999994
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 14.850000000000001,
+          "Gastos de Mercadeo": 13.365,
+          "Gastos de Ventas": 10.395000000000001,
+          "Gastos de Logística": 5.94
+        },
+        "segments": {
+          "Agua 500ml": 51.974999999999994,
+          "Agua 1L": 37.125,
+          "Agua 5G": 29.700000000000003,
+          "Agua 20L": 17.82,
+          "Bebida Energética": 11.88
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 148.5,
+            "PPTO": 146,
+            "AA": 130.68,
+            "YoY": 0.1363636363636363,
+            "PPTO_Var": 0.017123287671232876
+          },
+          {
+            "cuenta": "Costo de Ventas",
+            "type": "Costo de Ventas",
+            "Real": 59.400000000000006,
+            "PPTO": 58.400000000000006,
+            "AA": 52.272000000000006,
+            "YoY": 0.13636363636363635,
+            "PPTO_Var": 0.017123287671232876
+          },
+          {
+            "cuenta": "Margen Bruto",
+            "type": "Margen Bruto",
+            "Real": 89.1,
+            "PPTO": 87.6,
+            "AA": 78.408,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Gastos Administrativos",
+            "type": "OPEX",
+            "Real": 14.850000000000001,
+            "PPTO": 14.600000000000001,
+            "AA": 13.068000000000001,
+            "YoY": 0.13636363636363635,
+            "PPTO_Var": 0.017123287671232876
+          },
+          {
+            "cuenta": "Gastos de Mercadeo",
+            "type": "OPEX",
+            "Real": 13.365,
+            "PPTO": 13.139999999999999,
+            "AA": 11.7612,
+            "YoY": 0.13636363636363633,
+            "PPTO_Var": 0.017123287671232987
+          },
+          {
+            "cuenta": "Gastos de Ventas",
+            "type": "OPEX",
+            "Real": 10.395000000000001,
+            "PPTO": 10.22,
+            "AA": 9.1476,
+            "YoY": 0.13636363636363644,
+            "PPTO_Var": 0.017123287671232945
+          },
+          {
+            "cuenta": "Gastos de Logística",
+            "type": "OPEX",
+            "Real": 5.94,
+            "PPTO": 5.84,
+            "AA": 5.227200000000001,
+            "YoY": 0.13636363636363627,
+            "PPTO_Var": 0.01712328767123297
+          },
+          {
+            "cuenta": "EBITDA",
+            "type": "EBITDA",
+            "Real": 44.54999999999999,
+            "PPTO": 43.8,
+            "AA": 39.204,
+            "YoY": 0.1363636363636361,
+            "PPTO_Var": 0.017123287671232716
+          },
+          {
+            "cuenta": "Depreciación y Amortización",
+            "type": "D&A",
+            "Real": 5.197500000000001,
+            "PPTO": 5.11,
+            "AA": 4.5738,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Intereses Netos",
+            "type": "Financiero",
+            "Real": -2.97,
+            "PPTO": -2.92,
+            "AA": -2.6136000000000004,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Utilidad Neta",
+            "type": "Utilidad",
+            "Real": 26.559224999999994,
+            "PPTO": 18.98,
+            "AA": 16.988400000000002,
+            "YoY": 0.5633741258741254,
+            "PPTO_Var": 0.39932692307692275
+          }
+        ]
+      },
+      "deudaMetrics": {
+        "tasaDop": 0.135,
+        "tasaUsd": 0.075,
+        "tasaCambio": 58.5,
+        "deudaNetaUsd": 4.77915170940171,
+        "deudaNetaBancUSD": 7.3504273504273465,
+        "covenantLean": 0.5229711466517024,
+        "apalancamiento": 0.8043396932285822,
+        "capacidadPago": 1.2432558139534882,
+        "razonCorriente": 6.294037598204262,
+        "cajaEfectivo": 150.41962499999994,
+        "deudaTotal": 430,
+        "debtDetail": {
+          "bancaTotal": 429.9999999999998,
+          "relacionadaTotal": 0,
+          "deudaTotal": 430,
+          "efectivo": 150.41962499999994,
+          "deudaNeta": 279.58037500000006,
+          "deudaNetaUSD": 4.77915170940171,
+          "tasaDOP": 0.135,
+          "bancos": {
+            "Banco Popular": 179.16666666666657,
+            "Banco Santa Cruz": 125.4166666666666,
+            "Scotiabank": 89.58333333333329,
+            "Loganville": 35.83333333333336
+          },
+          "tasasPorBanco": {
+            "Banco Popular": 0.145,
+            "Banco Santa Cruz": 0.13,
+            "Scotiabank": 0.115,
+            "Loganville": 0.1
+          }
+        }
+      },
+      "integrity": {
+        "gap": 0,
+        "isBalanced": true
+      }
+    },
+    {
+      "date": "Nov 2026",
+      "Periodo": "11-2026",
+      "sortDate": "2026-11-01T00:00:00.000Z",
+      "_isMock": true,
+      "kpis": {
+        "ingresos": 155,
+        "ebitda": 46.5,
+        "cashflow": 12.271749999999999,
+        "utilidadNeta": 27.72175,
+        "margenBruto": 0.6,
+        "realIngresos": 155,
+        "pptoIngresos": 152,
+        "varIngresos": 0.019736842105263157,
+        "ebitdaRate": 0.3,
+        "realEbitda": 46.5,
+        "pptoEbitda": 45.59999999999999
+      },
+      "trend": {
+        "ingresos": 155,
+        "ebitda": 46.5,
+        "cashflow": 12.271749999999999,
+        "utilidadNeta": 27.72175
+      },
+      "balance": {
+        "deudaTotal": 425,
+        "ebitdaLTM": 558,
+        "efectivo": 162.69137499999994,
+        "roa": 0.04273488297882796,
+        "roe": 0.043042703445256195,
+        "ccc": 12,
+        "fullRows": [
+          {
+            "cuenta": "Efectivo y Equivalentes",
+            "group": "Activo Corriente",
+            "Real": 162.69137499999994,
+            "PPTO": 170.82594374999994
+          },
+          {
+            "cuenta": "Cuentas por Cobrar",
+            "group": "Activo Corriente",
+            "Real": 18.599999999999998,
+            "PPTO": 18.24
+          },
+          {
+            "cuenta": "Inventarios",
+            "group": "Activo Corriente",
+            "Real": 12.4,
+            "PPTO": 12.160000000000002
+          },
+          {
+            "cuenta": "Otros Activos Corrientes",
+            "group": "Activo Corriente",
+            "Real": 4.6499999999999995,
+            "PPTO": 4.56
+          },
+          {
+            "cuenta": "Activos Fijos Netos",
+            "group": "Activo No Corriente",
+            "Real": 440,
+            "PPTO": 442
+          },
+          {
+            "cuenta": "Otros Activos No Corrientes",
+            "group": "Activo No Corriente",
+            "Real": 35,
+            "PPTO": 35
+          },
+          {
+            "cuenta": "Cuentas por Pagar",
+            "group": "Pasivo Corriente",
+            "Real": 9.299999999999999,
+            "PPTO": 9.120000000000001
+          },
+          {
+            "cuenta": "Deuda CP",
+            "group": "Pasivo Corriente",
+            "Real": 60,
+            "PPTO": 60
+          },
+          {
+            "cuenta": "Otros Pasivos Corrientes",
+            "group": "Pasivo Corriente",
+            "Real": 6.2,
+            "PPTO": 6.08
+          },
+          {
+            "cuenta": "Deuda LP",
+            "group": "Pasivo No Corriente",
+            "Real": 365,
+            "PPTO": 365
+          },
+          {
+            "cuenta": "Otros Pasivos LP",
+            "group": "Pasivo No Corriente",
+            "Real": 25,
+            "PPTO": 25
+          },
+          {
+            "cuenta": "Capital Social",
+            "group": "Patrimonio",
+            "Real": 300,
+            "PPTO": 300
+          },
+          {
+            "cuenta": "Utilidades Acumuladas",
+            "group": "Patrimonio",
+            "Real": 344.05224999999996,
+            "PPTO": 286.79999999999995
+          }
+        ]
+      },
+      "cashflowDetail": {
+        "beginning": 150.41962499999994,
+        "cxc": -4.6499999999999995,
+        "inv": -2.3249999999999997,
+        "cxp": 3.1,
+        "wc": -3.8749999999999996,
+        "taxes": -10.253250000000001,
+        "extraordinary": 0,
+        "operating": 32.37175,
+        "capex": -12,
+        "netDebt": -5,
+        "interest": -3.1,
+        "dividends": 0,
+        "financing": -8.1,
+        "change": 12.271749999999999,
+        "ending": 162.69137499999994,
+        "dso": 28,
+        "dio": 26,
+        "dpo": 42,
+        "ccc": 12
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 155,
+          "Costo de Ventas": 62,
+          "Margen Bruto": 93,
+          "OPEX": 46.5,
+          "EBITDA": 46.5,
+          "Depreciación": 5.425000000000001,
+          "EBIT": 41.075,
+          "Impuestos": 10.253250000000001,
+          "Utilidad Neta": 27.72175
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 15.5,
+          "Gastos de Mercadeo": 13.95,
+          "Gastos de Ventas": 10.850000000000001,
+          "Gastos de Logística": 6.2
+        },
+        "segments": {
+          "Agua 500ml": 54.25,
+          "Agua 1L": 38.75,
+          "Agua 5G": 31,
+          "Agua 20L": 18.599999999999998,
+          "Bebida Energética": 12.4
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 155,
+            "PPTO": 152,
+            "AA": 136.4,
+            "YoY": 0.13636363636363633,
+            "PPTO_Var": 0.019736842105263157
+          },
+          {
+            "cuenta": "Costo de Ventas",
+            "type": "Costo de Ventas",
+            "Real": 62,
+            "PPTO": 60.800000000000004,
+            "AA": 54.56,
+            "YoY": 0.13636363636363633,
+            "PPTO_Var": 0.019736842105263087
+          },
+          {
+            "cuenta": "Margen Bruto",
+            "type": "Margen Bruto",
+            "Real": 93,
+            "PPTO": 91.19999999999999,
+            "AA": 81.84,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Gastos Administrativos",
+            "type": "OPEX",
+            "Real": 15.5,
+            "PPTO": 15.200000000000001,
+            "AA": 13.64,
+            "YoY": 0.13636363636363633,
+            "PPTO_Var": 0.019736842105263087
+          },
+          {
+            "cuenta": "Gastos de Mercadeo",
+            "type": "OPEX",
+            "Real": 13.95,
+            "PPTO": 13.68,
+            "AA": 12.276,
+            "YoY": 0.13636363636363633,
+            "PPTO_Var": 0.019736842105263126
+          },
+          {
+            "cuenta": "Gastos de Ventas",
+            "type": "OPEX",
+            "Real": 10.850000000000001,
+            "PPTO": 10.64,
+            "AA": 9.548000000000002,
+            "YoY": 0.1363636363636363,
+            "PPTO_Var": 0.019736842105263237
+          },
+          {
+            "cuenta": "Gastos de Logística",
+            "type": "OPEX",
+            "Real": 6.2,
+            "PPTO": 6.08,
+            "AA": 5.456,
+            "YoY": 0.1363636363636363,
+            "PPTO_Var": 0.019736842105263174
+          },
+          {
+            "cuenta": "EBITDA",
+            "type": "EBITDA",
+            "Real": 46.5,
+            "PPTO": 45.59999999999999,
+            "AA": 40.92,
+            "YoY": 0.13636363636363633,
+            "PPTO_Var": 0.019736842105263445
+          },
+          {
+            "cuenta": "Depreciación y Amortización",
+            "type": "D&A",
+            "Real": 5.425000000000001,
+            "PPTO": 5.32,
+            "AA": 4.774000000000001,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Intereses Netos",
+            "type": "Financiero",
+            "Real": -3.1,
+            "PPTO": -3.04,
+            "AA": -2.728,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Utilidad Neta",
+            "type": "Utilidad",
+            "Real": 27.72175,
+            "PPTO": 19.76,
+            "AA": 17.732000000000003,
+            "YoY": 0.5633741258741256,
+            "PPTO_Var": 0.40292257085020233
+          }
+        ]
+      },
+      "deudaMetrics": {
+        "tasaDop": 0.135,
+        "tasaUsd": 0.075,
+        "tasaCambio": 58.5,
+        "deudaNetaUsd": 4.48390811965812,
+        "deudaNetaBancUSD": 7.264957264957262,
+        "covenantLean": 0.47008714157706105,
+        "apalancamiento": 0.7616487455197133,
+        "capacidadPago": 1.3129411764705883,
+        "razonCorriente": 6.497898745519711,
+        "cajaEfectivo": 162.69137499999994,
+        "deudaTotal": 425,
+        "debtDetail": {
+          "bancaTotal": 424.99999999999983,
+          "relacionadaTotal": 0,
+          "deudaTotal": 425,
+          "efectivo": 162.69137499999994,
+          "deudaNeta": 262.30862500000006,
+          "deudaNetaUSD": 4.48390811965812,
+          "tasaDOP": 0.135,
+          "bancos": {
+            "Banco Popular": 177.08333333333323,
+            "Banco Santa Cruz": 123.95833333333327,
+            "Scotiabank": 88.54166666666661,
+            "Loganville": 35.41666666666669
+          },
+          "tasasPorBanco": {
+            "Banco Popular": 0.145,
+            "Banco Santa Cruz": 0.13,
+            "Scotiabank": 0.115,
+            "Loganville": 0.1
+          }
+        }
+      },
+      "integrity": {
+        "gap": 0,
+        "isBalanced": true
+      }
+    },
+    {
+      "date": "Dic 2026",
+      "Periodo": "12-2026",
+      "sortDate": "2026-12-01T00:00:00.000Z",
+      "_isMock": true,
+      "kpis": {
+        "ingresos": 165,
+        "ebitda": 49.49999999999999,
+        "cashflow": 14.160249999999994,
+        "utilidadNeta": 29.51025,
+        "margenBruto": 0.6,
+        "realIngresos": 165,
+        "pptoIngresos": 160,
+        "varIngresos": 0.03125,
+        "ebitdaRate": 0.29999999999999993,
+        "realEbitda": 49.49999999999999,
+        "pptoEbitda": 48
+      },
+      "trend": {
+        "ingresos": 165,
+        "ebitda": 49.49999999999999,
+        "cashflow": 14.160249999999994,
+        "utilidadNeta": 29.51025
+      },
+      "balance": {
+        "deudaTotal": 420,
+        "ebitdaLTM": 593.9999999999999,
+        "efectivo": 176.85162499999993,
+        "roa": 0.04438621925606334,
+        "roe": 0.04357499939920611,
+        "ccc": 13,
+        "fullRows": [
+          {
+            "cuenta": "Efectivo y Equivalentes",
+            "group": "Activo Corriente",
+            "Real": 176.85162499999993,
+            "PPTO": 185.69420624999992
+          },
+          {
+            "cuenta": "Cuentas por Cobrar",
+            "group": "Activo Corriente",
+            "Real": 19.8,
+            "PPTO": 19.2
+          },
+          {
+            "cuenta": "Inventarios",
+            "group": "Activo Corriente",
+            "Real": 13.200000000000001,
+            "PPTO": 12.8
+          },
+          {
+            "cuenta": "Otros Activos Corrientes",
+            "group": "Activo Corriente",
+            "Real": 4.95,
+            "PPTO": 4.8
+          },
+          {
+            "cuenta": "Activos Fijos Netos",
+            "group": "Activo No Corriente",
+            "Real": 442,
+            "PPTO": 444
+          },
+          {
+            "cuenta": "Otros Activos No Corrientes",
+            "group": "Activo No Corriente",
+            "Real": 35,
+            "PPTO": 35
+          },
+          {
+            "cuenta": "Cuentas por Pagar",
+            "group": "Pasivo Corriente",
+            "Real": 9.9,
+            "PPTO": 9.6
+          },
+          {
+            "cuenta": "Deuda CP",
+            "group": "Pasivo Corriente",
+            "Real": 60,
+            "PPTO": 60
+          },
+          {
+            "cuenta": "Otros Pasivos Corrientes",
+            "group": "Pasivo Corriente",
+            "Real": 6.6000000000000005,
+            "PPTO": 6.4
+          },
+          {
+            "cuenta": "Deuda LP",
+            "group": "Pasivo No Corriente",
+            "Real": 360,
+            "PPTO": 360
+          },
+          {
+            "cuenta": "Otros Pasivos LP",
+            "group": "Pasivo No Corriente",
+            "Real": 25,
+            "PPTO": 25
+          },
+          {
+            "cuenta": "Capital Social",
+            "group": "Patrimonio",
+            "Real": 300,
+            "PPTO": 300
+          },
+          {
+            "cuenta": "Utilidades Acumuladas",
+            "group": "Patrimonio",
+            "Real": 377.228925,
+            "PPTO": 308.4
+          }
+        ]
+      },
+      "cashflowDetail": {
+        "beginning": 162.69137499999994,
+        "cxc": -4.95,
+        "inv": -2.475,
+        "cxp": 3.3000000000000003,
+        "wc": -4.125,
+        "taxes": -10.91475,
+        "extraordinary": 0,
+        "operating": 34.460249999999995,
+        "capex": -12,
+        "netDebt": -5,
+        "interest": -3.3000000000000003,
+        "dividends": 0,
+        "financing": -8.3,
+        "change": 14.160249999999994,
+        "ending": 176.85162499999993,
+        "dso": 29,
+        "dio": 27,
+        "dpo": 43,
+        "ccc": 13
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 165,
+          "Costo de Ventas": 66,
+          "Margen Bruto": 99,
+          "OPEX": 49.50000000000001,
+          "EBITDA": 49.49999999999999,
+          "Depreciación": 5.775,
+          "EBIT": 43.724999999999994,
+          "Impuestos": 10.91475,
+          "Utilidad Neta": 29.51025
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 16.5,
+          "Gastos de Mercadeo": 14.85,
+          "Gastos de Ventas": 11.55,
+          "Gastos de Logística": 6.6000000000000005
+        },
+        "segments": {
+          "Agua 500ml": 57.74999999999999,
+          "Agua 1L": 41.25,
+          "Agua 5G": 33,
+          "Agua 20L": 19.8,
+          "Bebida Energética": 13.200000000000001
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 165,
+            "PPTO": 160,
+            "AA": 145.2,
+            "YoY": 0.13636363636363646,
+            "PPTO_Var": 0.03125
+          },
+          {
+            "cuenta": "Costo de Ventas",
+            "type": "Costo de Ventas",
+            "Real": 66,
+            "PPTO": 64,
+            "AA": 58.08,
+            "YoY": 0.1363636363636364,
+            "PPTO_Var": 0.03125
+          },
+          {
+            "cuenta": "Margen Bruto",
+            "type": "Margen Bruto",
+            "Real": 99,
+            "PPTO": 96,
+            "AA": 87.11999999999999,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Gastos Administrativos",
+            "type": "OPEX",
+            "Real": 16.5,
+            "PPTO": 16,
+            "AA": 14.52,
+            "YoY": 0.1363636363636364,
+            "PPTO_Var": 0.03125
+          },
+          {
+            "cuenta": "Gastos de Mercadeo",
+            "type": "OPEX",
+            "Real": 14.85,
+            "PPTO": 14.399999999999999,
+            "AA": 13.067999999999998,
+            "YoY": 0.13636363636363652,
+            "PPTO_Var": 0.031250000000000076
+          },
+          {
+            "cuenta": "Gastos de Ventas",
+            "type": "OPEX",
+            "Real": 11.55,
+            "PPTO": 11.200000000000001,
+            "AA": 10.164,
+            "YoY": 0.13636363636363646,
+            "PPTO_Var": 0.031249999999999965
+          },
+          {
+            "cuenta": "Gastos de Logística",
+            "type": "OPEX",
+            "Real": 6.6000000000000005,
+            "PPTO": 6.4,
+            "AA": 5.808,
+            "YoY": 0.1363636363636365,
+            "PPTO_Var": 0.03125000000000003
+          },
+          {
+            "cuenta": "EBITDA",
+            "type": "EBITDA",
+            "Real": 49.49999999999999,
+            "PPTO": 48,
+            "AA": 43.559999999999995,
+            "YoY": 0.13636363636363633,
+            "PPTO_Var": 0.03124999999999985
+          },
+          {
+            "cuenta": "Depreciación y Amortización",
+            "type": "D&A",
+            "Real": 5.775,
+            "PPTO": 5.6000000000000005,
+            "AA": 5.082,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Intereses Netos",
+            "type": "Financiero",
+            "Real": -3.3000000000000003,
+            "PPTO": -3.2,
+            "AA": -2.904,
+            "YoY": 0,
+            "PPTO_Var": 0
+          },
+          {
+            "cuenta": "Utilidad Neta",
+            "type": "Utilidad",
+            "Real": 29.51025,
+            "PPTO": 20.8,
+            "AA": 18.875999999999998,
+            "YoY": 0.563374125874126,
+            "PPTO_Var": 0.41876201923076917
+          }
+        ]
+      },
+      "deudaMetrics": {
+        "tasaDop": 0.135,
+        "tasaUsd": 0.075,
+        "tasaCambio": 58.5,
+        "deudaNetaUsd": 4.15638247863248,
+        "deudaNetaBancUSD": 7.179487179487175,
+        "covenantLean": 0.40934069865319883,
+        "apalancamiento": 0.7070707070707072,
+        "capacidadPago": 1.414285714285714,
+        "razonCorriente": 6.621266835016832,
+        "cajaEfectivo": 176.85162499999993,
+        "deudaTotal": 420,
+        "debtDetail": {
+          "bancaTotal": 419.9999999999998,
+          "relacionadaTotal": 0,
+          "deudaTotal": 420,
+          "efectivo": 176.85162499999993,
+          "deudaNeta": 243.14837500000007,
+          "deudaNetaUSD": 4.15638247863248,
+          "tasaDOP": 0.135,
+          "bancos": {
+            "Banco Popular": 174.9999999999999,
+            "Banco Santa Cruz": 122.49999999999994,
+            "Scotiabank": 87.49999999999994,
+            "Loganville": 35.00000000000003
+          },
+          "tasasPorBanco": {
+            "Banco Popular": 0.145,
+            "Banco Santa Cruz": 0.13,
+            "Scotiabank": 0.115,
+            "Loganville": 0.1
+          }
+        }
+      },
+      "integrity": {
+        "gap": 0,
+        "isBalanced": true
+      }
+    }
+  ],
+  "ceoData": [
+    {
+      "Producto": "Total Portafolio",
+      "Tipo": "Volumen",
+      "id": "Total_Portafolio",
+      "parentId": null,
+      "hasChildren": true,
+      "values": {
+        "2026-01": 2037.3,
+        "2026-02": 1948.6,
+        "2026-03": 2148.1,
+        "2026-04": 2103.8,
+        "2026-05": 2214.4,
+        "2026-06": 2325.3,
+        "2026-07": 2280.8,
+        "2026-08": 2391.6,
+        "2026-09": 2325.3,
+        "2026-10": 2435.9,
+        "2026-11": 2546.6,
+        "2026-12": 2701.7
+      },
+      "pptoValues": {
+        "2026-01": 2214.4,
+        "2026-02": 2214.4,
+        "2026-03": 2214.4,
+        "2026-04": 2214.4,
+        "2026-05": 2214.4,
+        "2026-06": 2214.4,
+        "2026-07": 2214.4,
+        "2026-08": 2214.4,
+        "2026-09": 2214.4,
+        "2026-10": 2214.4,
+        "2026-11": 2214.4,
+        "2026-12": 2214.4
+      },
+      "FY2024": 22194,
+      "PO26": 26573
+    },
+    {
+      "Producto": "Total Portafolio",
+      "Tipo": "Monto",
+      "id": "Total_Portafolio",
+      "parentId": null,
+      "hasChildren": true,
+      "values": {
+        "2026-01": 42.58,
+        "2026-02": 40.73,
+        "2026-03": 44.89,
+        "2026-04": 43.97,
+        "2026-05": 46.28,
+        "2026-06": 48.6,
+        "2026-07": 47.66,
+        "2026-08": 49.98,
+        "2026-09": 48.6,
+        "2026-10": 50.91,
+        "2026-11": 53.22,
+        "2026-12": 56.46
+      },
+      "pptoValues": {
+        "2026-01": 46.28,
+        "2026-02": 46.28,
+        "2026-03": 46.28,
+        "2026-04": 46.28,
+        "2026-05": 46.28,
+        "2026-06": 46.28,
+        "2026-07": 46.28,
+        "2026-08": 46.28,
+        "2026-09": 46.28,
+        "2026-10": 46.28,
+        "2026-11": 46.28,
+        "2026-12": 46.28
+      },
+      "FY2024": 462,
+      "PO26": 555
+    },
+    {
+      "Producto": "Agua 500ml",
+      "Tipo": "Volumen",
+      "id": "Agua_500ml",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 844.6,
+        "2026-02": 807.8,
+        "2026-03": 890.5,
+        "2026-04": 872.1,
+        "2026-05": 918,
+        "2026-06": 963.9,
+        "2026-07": 945.5,
+        "2026-08": 991.4,
+        "2026-09": 963.9,
+        "2026-10": 1009.8,
+        "2026-11": 1055.7,
+        "2026-12": 1120
+      },
+      "pptoValues": {
+        "2026-01": 918,
+        "2026-02": 918,
+        "2026-03": 918,
+        "2026-04": 918,
+        "2026-05": 918,
+        "2026-06": 918,
+        "2026-07": 918,
+        "2026-08": 918,
+        "2026-09": 918,
+        "2026-10": 918,
+        "2026-11": 918,
+        "2026-12": 918
+      },
+      "FY2024": 9180,
+      "PO26": 11016
+    },
+    {
+      "Producto": "Agua 500ml",
+      "Tipo": "Monto",
+      "id": "Agua_500ml",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 12.67,
+        "2026-02": 12.12,
+        "2026-03": 13.36,
+        "2026-04": 13.08,
+        "2026-05": 13.77,
+        "2026-06": 14.46,
+        "2026-07": 14.18,
+        "2026-08": 14.87,
+        "2026-09": 14.46,
+        "2026-10": 15.15,
+        "2026-11": 15.84,
+        "2026-12": 16.8
+      },
+      "pptoValues": {
+        "2026-01": 13.77,
+        "2026-02": 13.77,
+        "2026-03": 13.77,
+        "2026-04": 13.77,
+        "2026-05": 13.77,
+        "2026-06": 13.77,
+        "2026-07": 13.77,
+        "2026-08": 13.77,
+        "2026-09": 13.77,
+        "2026-10": 13.77,
+        "2026-11": 13.77,
+        "2026-12": 13.77
+      },
+      "FY2024": 138,
+      "PO26": 165
+    },
+    {
+      "Producto": "Agua 1L",
+      "Tipo": "Volumen",
+      "id": "Agua_1L",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 604.6,
+        "2026-02": 578.3,
+        "2026-03": 637.5,
+        "2026-04": 624.3,
+        "2026-05": 657.2,
+        "2026-06": 690.1,
+        "2026-07": 676.9,
+        "2026-08": 709.8,
+        "2026-09": 690.1,
+        "2026-10": 722.9,
+        "2026-11": 755.8,
+        "2026-12": 801.8
+      },
+      "pptoValues": {
+        "2026-01": 657.2,
+        "2026-02": 657.2,
+        "2026-03": 657.2,
+        "2026-04": 657.2,
+        "2026-05": 657.2,
+        "2026-06": 657.2,
+        "2026-07": 657.2,
+        "2026-08": 657.2,
+        "2026-09": 657.2,
+        "2026-10": 657.2,
+        "2026-11": 657.2,
+        "2026-12": 657.2
+      },
+      "FY2024": 6696,
+      "PO26": 7886
+    },
+    {
+      "Producto": "Agua 1L",
+      "Tipo": "Monto",
+      "id": "Agua_1L",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 10.88,
+        "2026-02": 10.41,
+        "2026-03": 11.47,
+        "2026-04": 11.24,
+        "2026-05": 11.83,
+        "2026-06": 12.42,
+        "2026-07": 12.18,
+        "2026-08": 12.78,
+        "2026-09": 12.42,
+        "2026-10": 13.01,
+        "2026-11": 13.6,
+        "2026-12": 14.43
+      },
+      "pptoValues": {
+        "2026-01": 11.83,
+        "2026-02": 11.83,
+        "2026-03": 11.83,
+        "2026-04": 11.83,
+        "2026-05": 11.83,
+        "2026-06": 11.83,
+        "2026-07": 11.83,
+        "2026-08": 11.83,
+        "2026-09": 11.83,
+        "2026-10": 11.83,
+        "2026-11": 11.83,
+        "2026-12": 11.83
+      },
+      "FY2024": 121,
+      "PO26": 142
+    },
+    {
+      "Producto": "Agua 5G",
+      "Tipo": "Volumen",
+      "id": "Agua_5G",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 313.7,
+        "2026-02": 300.1,
+        "2026-03": 330.8,
+        "2026-04": 324,
+        "2026-05": 341,
+        "2026-06": 358.1,
+        "2026-07": 351.2,
+        "2026-08": 368.3,
+        "2026-09": 358.1,
+        "2026-10": 375.1,
+        "2026-11": 392.2,
+        "2026-12": 416
+      },
+      "pptoValues": {
+        "2026-01": 341,
+        "2026-02": 341,
+        "2026-03": 341,
+        "2026-04": 341,
+        "2026-05": 341,
+        "2026-06": 341,
+        "2026-07": 341,
+        "2026-08": 341,
+        "2026-09": 341,
+        "2026-10": 341,
+        "2026-11": 341,
+        "2026-12": 341
+      },
+      "FY2024": 3348,
+      "PO26": 4092
+    },
+    {
+      "Producto": "Agua 5G",
+      "Tipo": "Monto",
+      "id": "Agua_5G",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 8.78,
+        "2026-02": 8.4,
+        "2026-03": 9.26,
+        "2026-04": 9.07,
+        "2026-05": 9.55,
+        "2026-06": 10.03,
+        "2026-07": 9.83,
+        "2026-08": 10.31,
+        "2026-09": 10.03,
+        "2026-10": 10.5,
+        "2026-11": 10.98,
+        "2026-12": 11.65
+      },
+      "pptoValues": {
+        "2026-01": 9.55,
+        "2026-02": 9.55,
+        "2026-03": 9.55,
+        "2026-04": 9.55,
+        "2026-05": 9.55,
+        "2026-06": 9.55,
+        "2026-07": 9.55,
+        "2026-08": 9.55,
+        "2026-09": 9.55,
+        "2026-10": 9.55,
+        "2026-11": 9.55,
+        "2026-12": 9.55
+      },
+      "FY2024": 94,
+      "PO26": 115
+    },
+    {
+      "Producto": "Agua 20L",
+      "Tipo": "Volumen",
+      "id": "Agua_20L",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 173.9,
+        "2026-02": 166.3,
+        "2026-03": 183.3,
+        "2026-04": 179.6,
+        "2026-05": 189,
+        "2026-06": 198.5,
+        "2026-07": 194.7,
+        "2026-08": 204.1,
+        "2026-09": 198.5,
+        "2026-10": 207.9,
+        "2026-11": 217.3,
+        "2026-12": 230.6
+      },
+      "pptoValues": {
+        "2026-01": 189,
+        "2026-02": 189,
+        "2026-03": 189,
+        "2026-04": 189,
+        "2026-05": 189,
+        "2026-06": 189,
+        "2026-07": 189,
+        "2026-08": 189,
+        "2026-09": 189,
+        "2026-10": 189,
+        "2026-11": 189,
+        "2026-12": 189
+      },
+      "FY2024": 1944,
+      "PO26": 2268
+    },
+    {
+      "Producto": "Agua 20L",
+      "Tipo": "Monto",
+      "id": "Agua_20L",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 5.22,
+        "2026-02": 4.99,
+        "2026-03": 5.5,
+        "2026-04": 5.39,
+        "2026-05": 5.67,
+        "2026-06": 5.95,
+        "2026-07": 5.84,
+        "2026-08": 6.12,
+        "2026-09": 5.95,
+        "2026-10": 6.24,
+        "2026-11": 6.52,
+        "2026-12": 6.92
+      },
+      "pptoValues": {
+        "2026-01": 5.67,
+        "2026-02": 5.67,
+        "2026-03": 5.67,
+        "2026-04": 5.67,
+        "2026-05": 5.67,
+        "2026-06": 5.67,
+        "2026-07": 5.67,
+        "2026-08": 5.67,
+        "2026-09": 5.67,
+        "2026-10": 5.67,
+        "2026-11": 5.67,
+        "2026-12": 5.67
+      },
+      "FY2024": 58,
+      "PO26": 68
+    },
+    {
+      "Producto": "Bebida Energética",
+      "Tipo": "Volumen",
+      "id": "Bebida_Energética",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 100.5,
+        "2026-02": 96.1,
+        "2026-03": 106,
+        "2026-04": 103.8,
+        "2026-05": 109.2,
+        "2026-06": 114.7,
+        "2026-07": 112.5,
+        "2026-08": 118,
+        "2026-09": 114.7,
+        "2026-10": 120.2,
+        "2026-11": 125.6,
+        "2026-12": 133.3
+      },
+      "pptoValues": {
+        "2026-01": 109.2,
+        "2026-02": 109.2,
+        "2026-03": 109.2,
+        "2026-04": 109.2,
+        "2026-05": 109.2,
+        "2026-06": 109.2,
+        "2026-07": 109.2,
+        "2026-08": 109.2,
+        "2026-09": 109.2,
+        "2026-10": 109.2,
+        "2026-11": 109.2,
+        "2026-12": 109.2
+      },
+      "FY2024": 1026,
+      "PO26": 1311
+    },
+    {
+      "Producto": "Bebida Energética",
+      "Tipo": "Monto",
+      "id": "Bebida_Energética",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 5.03,
+        "2026-02": 4.81,
+        "2026-03": 5.3,
+        "2026-04": 5.19,
+        "2026-05": 5.46,
+        "2026-06": 5.74,
+        "2026-07": 5.63,
+        "2026-08": 5.9,
+        "2026-09": 5.74,
+        "2026-10": 6.01,
+        "2026-11": 6.28,
+        "2026-12": 6.66
+      },
+      "pptoValues": {
+        "2026-01": 5.46,
+        "2026-02": 5.46,
+        "2026-03": 5.46,
+        "2026-04": 5.46,
+        "2026-05": 5.46,
+        "2026-06": 5.46,
+        "2026-07": 5.46,
+        "2026-08": 5.46,
+        "2026-09": 5.46,
+        "2026-10": 5.46,
+        "2026-11": 5.46,
+        "2026-12": 5.46
+      },
+      "FY2024": 51,
+      "PO26": 66
+    }
+  ],
+  "comercialData": {
+    "columns": [
+      "Mes",
+      "Year",
+      "Canal",
+      "Categoria",
+      "Volumen",
+      "Ingresos",
+      "Contribucion"
+    ],
+    "rows": [
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 500ml",
+        "Volumen": 103.5,
+        "Ingresos": 1.55,
+        "Contribucion": 0.59
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 1L",
+        "Volumen": 52.9,
+        "Ingresos": 0.95,
+        "Contribucion": 0.36
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 5G",
+        "Volumen": 22,
+        "Ingresos": 0.61,
+        "Contribucion": 0.23
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 20L",
+        "Volumen": 7.3,
+        "Ingresos": 0.22,
+        "Contribucion": 0.08
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Bebida Energética",
+        "Volumen": 2.8,
+        "Ingresos": 0.14,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 500ml",
+        "Volumen": 88.7,
+        "Ingresos": 1.33,
+        "Contribucion": 0.51
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 1L",
+        "Volumen": 45.3,
+        "Ingresos": 0.82,
+        "Contribucion": 0.31
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 5G",
+        "Volumen": 18.8,
+        "Ingresos": 0.53,
+        "Contribucion": 0.2
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 20L",
+        "Volumen": 6.3,
+        "Ingresos": 0.19,
+        "Contribucion": 0.07
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Bebida Energética",
+        "Volumen": 2.4,
+        "Ingresos": 0.12,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 500ml",
+        "Volumen": 59.1,
+        "Ingresos": 0.89,
+        "Contribucion": 0.34
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 1L",
+        "Volumen": 30.2,
+        "Ingresos": 0.54,
+        "Contribucion": 0.21
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 5G",
+        "Volumen": 12.5,
+        "Ingresos": 0.35,
+        "Contribucion": 0.13
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 20L",
+        "Volumen": 4.2,
+        "Ingresos": 0.13,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.6,
+        "Ingresos": 0.08,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 500ml",
+        "Volumen": 35.5,
+        "Ingresos": 0.53,
+        "Contribucion": 0.2
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 1L",
+        "Volumen": 18.1,
+        "Ingresos": 0.33,
+        "Contribucion": 0.13
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 5G",
+        "Volumen": 7.5,
+        "Ingresos": 0.21,
+        "Contribucion": 0.08
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 20L",
+        "Volumen": 2.5,
+        "Ingresos": 0.08,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1,
+        "Ingresos": 0.05,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 500ml",
+        "Volumen": 8.9,
+        "Ingresos": 0.13,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 1L",
+        "Volumen": 4.5,
+        "Ingresos": 0.08,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 5G",
+        "Volumen": 1.9,
+        "Ingresos": 0.05,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 20L",
+        "Volumen": 0.6,
+        "Ingresos": 0.02,
+        "Contribucion": 0.01
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Bebida Energética",
+        "Volumen": 0.2,
+        "Ingresos": 0.01,
+        "Contribucion": 0
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 500ml",
+        "Volumen": 99,
+        "Ingresos": 1.48,
+        "Contribucion": 0.56
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 1L",
+        "Volumen": 50.6,
+        "Ingresos": 0.91,
+        "Contribucion": 0.35
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 5G",
+        "Volumen": 21,
+        "Ingresos": 0.59,
+        "Contribucion": 0.22
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 20L",
+        "Volumen": 7,
+        "Ingresos": 0.21,
+        "Contribucion": 0.08
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Bebida Energética",
+        "Volumen": 2.7,
+        "Ingresos": 0.13,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 500ml",
+        "Volumen": 84.8,
+        "Ingresos": 1.27,
+        "Contribucion": 0.48
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 1L",
+        "Volumen": 43.4,
+        "Ingresos": 0.78,
+        "Contribucion": 0.3
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 5G",
+        "Volumen": 18,
+        "Ingresos": 0.5,
+        "Contribucion": 0.19
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 20L",
+        "Volumen": 6,
+        "Ingresos": 0.18,
+        "Contribucion": 0.07
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Bebida Energética",
+        "Volumen": 2.3,
+        "Ingresos": 0.12,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 500ml",
+        "Volumen": 56.5,
+        "Ingresos": 0.85,
+        "Contribucion": 0.32
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 1L",
+        "Volumen": 28.9,
+        "Ingresos": 0.52,
+        "Contribucion": 0.2
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 5G",
+        "Volumen": 12,
+        "Ingresos": 0.34,
+        "Contribucion": 0.13
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 20L",
+        "Volumen": 4,
+        "Ingresos": 0.12,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.5,
+        "Ingresos": 0.08,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 500ml",
+        "Volumen": 33.9,
+        "Ingresos": 0.51,
+        "Contribucion": 0.19
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 1L",
+        "Volumen": 17.4,
+        "Ingresos": 0.31,
+        "Contribucion": 0.12
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 5G",
+        "Volumen": 7.2,
+        "Ingresos": 0.2,
+        "Contribucion": 0.08
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 20L",
+        "Volumen": 2.4,
+        "Ingresos": 0.07,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Bebida Energética",
+        "Volumen": 0.9,
+        "Ingresos": 0.05,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 500ml",
+        "Volumen": 8.5,
+        "Ingresos": 0.13,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 1L",
+        "Volumen": 4.3,
+        "Ingresos": 0.08,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 5G",
+        "Volumen": 1.8,
+        "Ingresos": 0.05,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 20L",
+        "Volumen": 0.6,
+        "Ingresos": 0.02,
+        "Contribucion": 0.01
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Bebida Energética",
+        "Volumen": 0.2,
+        "Ingresos": 0.01,
+        "Contribucion": 0
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 500ml",
+        "Volumen": 109.1,
+        "Ingresos": 1.64,
+        "Contribucion": 0.62
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 1L",
+        "Volumen": 55.8,
+        "Ingresos": 1,
+        "Contribucion": 0.38
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 5G",
+        "Volumen": 23.2,
+        "Ingresos": 0.65,
+        "Contribucion": 0.25
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 20L",
+        "Volumen": 7.7,
+        "Ingresos": 0.23,
+        "Contribucion": 0.09
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Bebida Energética",
+        "Volumen": 3,
+        "Ingresos": 0.15,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 500ml",
+        "Volumen": 93.5,
+        "Ingresos": 1.4,
+        "Contribucion": 0.53
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 1L",
+        "Volumen": 47.8,
+        "Ingresos": 0.86,
+        "Contribucion": 0.33
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 5G",
+        "Volumen": 19.8,
+        "Ingresos": 0.56,
+        "Contribucion": 0.21
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 20L",
+        "Volumen": 6.6,
+        "Ingresos": 0.2,
+        "Contribucion": 0.08
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Bebida Energética",
+        "Volumen": 2.5,
+        "Ingresos": 0.13,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 500ml",
+        "Volumen": 62.3,
+        "Ingresos": 0.93,
+        "Contribucion": 0.35
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 1L",
+        "Volumen": 31.9,
+        "Ingresos": 0.57,
+        "Contribucion": 0.22
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 5G",
+        "Volumen": 13.2,
+        "Ingresos": 0.37,
+        "Contribucion": 0.14
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 20L",
+        "Volumen": 4.4,
+        "Ingresos": 0.13,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.7,
+        "Ingresos": 0.08,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 500ml",
+        "Volumen": 37.4,
+        "Ingresos": 0.56,
+        "Contribucion": 0.21
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 1L",
+        "Volumen": 19.1,
+        "Ingresos": 0.34,
+        "Contribucion": 0.13
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 5G",
+        "Volumen": 7.9,
+        "Ingresos": 0.22,
+        "Contribucion": 0.08
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 20L",
+        "Volumen": 2.6,
+        "Ingresos": 0.08,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1,
+        "Ingresos": 0.05,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 500ml",
+        "Volumen": 9.3,
+        "Ingresos": 0.14,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 1L",
+        "Volumen": 4.8,
+        "Ingresos": 0.09,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 5G",
+        "Volumen": 2,
+        "Ingresos": 0.06,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 20L",
+        "Volumen": 0.7,
+        "Ingresos": 0.02,
+        "Contribucion": 0.01
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Bebida Energética",
+        "Volumen": 0.3,
+        "Ingresos": 0.01,
+        "Contribucion": 0
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 500ml",
+        "Volumen": 106.8,
+        "Ingresos": 1.6,
+        "Contribucion": 0.61
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 1L",
+        "Volumen": 54.6,
+        "Ingresos": 0.98,
+        "Contribucion": 0.37
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 5G",
+        "Volumen": 22.7,
+        "Ingresos": 0.63,
+        "Contribucion": 0.24
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 20L",
+        "Volumen": 7.5,
+        "Ingresos": 0.23,
+        "Contribucion": 0.09
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Bebida Energética",
+        "Volumen": 2.9,
+        "Ingresos": 0.15,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 500ml",
+        "Volumen": 91.6,
+        "Ingresos": 1.37,
+        "Contribucion": 0.52
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 1L",
+        "Volumen": 46.8,
+        "Ingresos": 0.84,
+        "Contribucion": 0.32
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 5G",
+        "Volumen": 19.4,
+        "Ingresos": 0.54,
+        "Contribucion": 0.21
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 20L",
+        "Volumen": 6.5,
+        "Ingresos": 0.19,
+        "Contribucion": 0.07
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Bebida Energética",
+        "Volumen": 2.5,
+        "Ingresos": 0.12,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 500ml",
+        "Volumen": 61,
+        "Ingresos": 0.92,
+        "Contribucion": 0.35
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 1L",
+        "Volumen": 31.2,
+        "Ingresos": 0.56,
+        "Contribucion": 0.21
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 5G",
+        "Volumen": 13,
+        "Ingresos": 0.36,
+        "Contribucion": 0.14
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 20L",
+        "Volumen": 4.3,
+        "Ingresos": 0.13,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.7,
+        "Ingresos": 0.08,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 500ml",
+        "Volumen": 36.6,
+        "Ingresos": 0.55,
+        "Contribucion": 0.21
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 1L",
+        "Volumen": 18.7,
+        "Ingresos": 0.34,
+        "Contribucion": 0.13
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 5G",
+        "Volumen": 7.8,
+        "Ingresos": 0.22,
+        "Contribucion": 0.08
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 20L",
+        "Volumen": 2.6,
+        "Ingresos": 0.08,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1,
+        "Ingresos": 0.05,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 500ml",
+        "Volumen": 9.2,
+        "Ingresos": 0.14,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 1L",
+        "Volumen": 4.7,
+        "Ingresos": 0.08,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 5G",
+        "Volumen": 1.9,
+        "Ingresos": 0.05,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 20L",
+        "Volumen": 0.6,
+        "Ingresos": 0.02,
+        "Contribucion": 0.01
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Bebida Energética",
+        "Volumen": 0.2,
+        "Ingresos": 0.01,
+        "Contribucion": 0
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 500ml",
+        "Volumen": 112.5,
+        "Ingresos": 1.69,
+        "Contribucion": 0.64
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 1L",
+        "Volumen": 57.5,
+        "Ingresos": 1.04,
+        "Contribucion": 0.4
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 5G",
+        "Volumen": 23.9,
+        "Ingresos": 0.67,
+        "Contribucion": 0.25
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 20L",
+        "Volumen": 7.9,
+        "Ingresos": 0.24,
+        "Contribucion": 0.09
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Bebida Energética",
+        "Volumen": 3.1,
+        "Ingresos": 0.15,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 500ml",
+        "Volumen": 96.4,
+        "Ingresos": 1.45,
+        "Contribucion": 0.55
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 1L",
+        "Volumen": 49.3,
+        "Ingresos": 0.89,
+        "Contribucion": 0.34
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 5G",
+        "Volumen": 20.5,
+        "Ingresos": 0.57,
+        "Contribucion": 0.22
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 20L",
+        "Volumen": 6.8,
+        "Ingresos": 0.2,
+        "Contribucion": 0.08
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Bebida Energética",
+        "Volumen": 2.6,
+        "Ingresos": 0.13,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 500ml",
+        "Volumen": 64.3,
+        "Ingresos": 0.96,
+        "Contribucion": 0.36
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 1L",
+        "Volumen": 32.9,
+        "Ingresos": 0.59,
+        "Contribucion": 0.22
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 5G",
+        "Volumen": 13.6,
+        "Ingresos": 0.38,
+        "Contribucion": 0.14
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 20L",
+        "Volumen": 4.5,
+        "Ingresos": 0.14,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.7,
+        "Ingresos": 0.09,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 500ml",
+        "Volumen": 38.6,
+        "Ingresos": 0.58,
+        "Contribucion": 0.22
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 1L",
+        "Volumen": 19.7,
+        "Ingresos": 0.35,
+        "Contribucion": 0.13
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 5G",
+        "Volumen": 8.2,
+        "Ingresos": 0.23,
+        "Contribucion": 0.09
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 20L",
+        "Volumen": 2.7,
+        "Ingresos": 0.08,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1,
+        "Ingresos": 0.05,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 500ml",
+        "Volumen": 9.6,
+        "Ingresos": 0.14,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 1L",
+        "Volumen": 4.9,
+        "Ingresos": 0.09,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 5G",
+        "Volumen": 2,
+        "Ingresos": 0.06,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 20L",
+        "Volumen": 0.7,
+        "Ingresos": 0.02,
+        "Contribucion": 0.01
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Bebida Energética",
+        "Volumen": 0.3,
+        "Ingresos": 0.01,
+        "Contribucion": 0
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 500ml",
+        "Volumen": 118.1,
+        "Ingresos": 1.77,
+        "Contribucion": 0.67
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 1L",
+        "Volumen": 60.4,
+        "Ingresos": 1.09,
+        "Contribucion": 0.41
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 5G",
+        "Volumen": 25.1,
+        "Ingresos": 0.7,
+        "Contribucion": 0.27
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 20L",
+        "Volumen": 8.3,
+        "Ingresos": 0.25,
+        "Contribucion": 0.1
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Bebida Energética",
+        "Volumen": 3.2,
+        "Ingresos": 0.16,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 500ml",
+        "Volumen": 101.2,
+        "Ingresos": 1.52,
+        "Contribucion": 0.58
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 1L",
+        "Volumen": 51.8,
+        "Ingresos": 0.93,
+        "Contribucion": 0.35
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 5G",
+        "Volumen": 21.5,
+        "Ingresos": 0.6,
+        "Contribucion": 0.23
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 20L",
+        "Volumen": 7.1,
+        "Ingresos": 0.21,
+        "Contribucion": 0.08
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Bebida Energética",
+        "Volumen": 2.8,
+        "Ingresos": 0.14,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 500ml",
+        "Volumen": 67.5,
+        "Ingresos": 1.01,
+        "Contribucion": 0.38
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 1L",
+        "Volumen": 34.5,
+        "Ingresos": 0.62,
+        "Contribucion": 0.24
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 5G",
+        "Volumen": 14.3,
+        "Ingresos": 0.4,
+        "Contribucion": 0.15
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 20L",
+        "Volumen": 4.8,
+        "Ingresos": 0.14,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.8,
+        "Ingresos": 0.09,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 500ml",
+        "Volumen": 40.5,
+        "Ingresos": 0.61,
+        "Contribucion": 0.23
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 1L",
+        "Volumen": 20.7,
+        "Ingresos": 0.37,
+        "Contribucion": 0.14
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 5G",
+        "Volumen": 8.6,
+        "Ingresos": 0.24,
+        "Contribucion": 0.09
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 20L",
+        "Volumen": 2.9,
+        "Ingresos": 0.09,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.1,
+        "Ingresos": 0.06,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 500ml",
+        "Volumen": 10.1,
+        "Ingresos": 0.15,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 1L",
+        "Volumen": 5.2,
+        "Ingresos": 0.09,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 5G",
+        "Volumen": 2.1,
+        "Ingresos": 0.06,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 20L",
+        "Volumen": 0.7,
+        "Ingresos": 0.02,
+        "Contribucion": 0.01
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Bebida Energética",
+        "Volumen": 0.3,
+        "Ingresos": 0.01,
+        "Contribucion": 0
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 500ml",
+        "Volumen": 115.8,
+        "Ingresos": 1.74,
+        "Contribucion": 0.66
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 1L",
+        "Volumen": 59.2,
+        "Ingresos": 1.07,
+        "Contribucion": 0.41
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 5G",
+        "Volumen": 24.6,
+        "Ingresos": 0.69,
+        "Contribucion": 0.26
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 20L",
+        "Volumen": 8.2,
+        "Ingresos": 0.25,
+        "Contribucion": 0.1
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Bebida Energética",
+        "Volumen": 3.2,
+        "Ingresos": 0.16,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 500ml",
+        "Volumen": 99.3,
+        "Ingresos": 1.49,
+        "Contribucion": 0.57
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 1L",
+        "Volumen": 50.8,
+        "Ingresos": 0.91,
+        "Contribucion": 0.35
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 5G",
+        "Volumen": 21.1,
+        "Ingresos": 0.59,
+        "Contribucion": 0.22
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 20L",
+        "Volumen": 7,
+        "Ingresos": 0.21,
+        "Contribucion": 0.08
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Bebida Energética",
+        "Volumen": 2.7,
+        "Ingresos": 0.14,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 500ml",
+        "Volumen": 66.2,
+        "Ingresos": 0.99,
+        "Contribucion": 0.38
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 1L",
+        "Volumen": 33.8,
+        "Ingresos": 0.61,
+        "Contribucion": 0.23
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 5G",
+        "Volumen": 14,
+        "Ingresos": 0.39,
+        "Contribucion": 0.15
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 20L",
+        "Volumen": 4.7,
+        "Ingresos": 0.14,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.8,
+        "Ingresos": 0.09,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 500ml",
+        "Volumen": 39.7,
+        "Ingresos": 0.6,
+        "Contribucion": 0.23
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 1L",
+        "Volumen": 20.3,
+        "Ingresos": 0.37,
+        "Contribucion": 0.14
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 5G",
+        "Volumen": 8.4,
+        "Ingresos": 0.24,
+        "Contribucion": 0.09
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 20L",
+        "Volumen": 2.8,
+        "Ingresos": 0.08,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.1,
+        "Ingresos": 0.05,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 500ml",
+        "Volumen": 9.9,
+        "Ingresos": 0.15,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 1L",
+        "Volumen": 5.1,
+        "Ingresos": 0.09,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 5G",
+        "Volumen": 2.1,
+        "Ingresos": 0.06,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 20L",
+        "Volumen": 0.7,
+        "Ingresos": 0.02,
+        "Contribucion": 0.01
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Bebida Energética",
+        "Volumen": 0.3,
+        "Ingresos": 0.01,
+        "Contribucion": 0
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 500ml",
+        "Volumen": 121.5,
+        "Ingresos": 1.82,
+        "Contribucion": 0.69
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 1L",
+        "Volumen": 62.1,
+        "Ingresos": 1.12,
+        "Contribucion": 0.43
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 5G",
+        "Volumen": 25.8,
+        "Ingresos": 0.72,
+        "Contribucion": 0.27
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 20L",
+        "Volumen": 8.6,
+        "Ingresos": 0.26,
+        "Contribucion": 0.1
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Bebida Energética",
+        "Volumen": 3.3,
+        "Ingresos": 0.17,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 500ml",
+        "Volumen": 104.1,
+        "Ingresos": 1.56,
+        "Contribucion": 0.59
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 1L",
+        "Volumen": 53.2,
+        "Ingresos": 0.96,
+        "Contribucion": 0.36
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 5G",
+        "Volumen": 22.1,
+        "Ingresos": 0.62,
+        "Contribucion": 0.24
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 20L",
+        "Volumen": 7.3,
+        "Ingresos": 0.22,
+        "Contribucion": 0.08
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Bebida Energética",
+        "Volumen": 2.8,
+        "Ingresos": 0.14,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 500ml",
+        "Volumen": 69.4,
+        "Ingresos": 1.04,
+        "Contribucion": 0.4
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 1L",
+        "Volumen": 35.5,
+        "Ingresos": 0.64,
+        "Contribucion": 0.24
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 5G",
+        "Volumen": 14.7,
+        "Ingresos": 0.41,
+        "Contribucion": 0.16
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 20L",
+        "Volumen": 4.9,
+        "Ingresos": 0.15,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.9,
+        "Ingresos": 0.09,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 500ml",
+        "Volumen": 41.6,
+        "Ingresos": 0.62,
+        "Contribucion": 0.24
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 1L",
+        "Volumen": 21.3,
+        "Ingresos": 0.38,
+        "Contribucion": 0.14
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 5G",
+        "Volumen": 8.8,
+        "Ingresos": 0.25,
+        "Contribucion": 0.1
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 20L",
+        "Volumen": 2.9,
+        "Ingresos": 0.09,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.1,
+        "Ingresos": 0.06,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 500ml",
+        "Volumen": 10.4,
+        "Ingresos": 0.16,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 1L",
+        "Volumen": 5.3,
+        "Ingresos": 0.1,
+        "Contribucion": 0.04
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 5G",
+        "Volumen": 2.2,
+        "Ingresos": 0.06,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 20L",
+        "Volumen": 0.7,
+        "Ingresos": 0.02,
+        "Contribucion": 0.01
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Bebida Energética",
+        "Volumen": 0.3,
+        "Ingresos": 0.01,
+        "Contribucion": 0
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 500ml",
+        "Volumen": 118.1,
+        "Ingresos": 1.77,
+        "Contribucion": 0.67
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 1L",
+        "Volumen": 60.4,
+        "Ingresos": 1.09,
+        "Contribucion": 0.41
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 5G",
+        "Volumen": 25.1,
+        "Ingresos": 0.7,
+        "Contribucion": 0.27
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 20L",
+        "Volumen": 8.3,
+        "Ingresos": 0.25,
+        "Contribucion": 0.1
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Bebida Energética",
+        "Volumen": 3.2,
+        "Ingresos": 0.16,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 500ml",
+        "Volumen": 101.2,
+        "Ingresos": 1.52,
+        "Contribucion": 0.58
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 1L",
+        "Volumen": 51.8,
+        "Ingresos": 0.93,
+        "Contribucion": 0.35
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 5G",
+        "Volumen": 21.5,
+        "Ingresos": 0.6,
+        "Contribucion": 0.23
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 20L",
+        "Volumen": 7.1,
+        "Ingresos": 0.21,
+        "Contribucion": 0.08
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Bebida Energética",
+        "Volumen": 2.8,
+        "Ingresos": 0.14,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 500ml",
+        "Volumen": 67.5,
+        "Ingresos": 1.01,
+        "Contribucion": 0.38
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 1L",
+        "Volumen": 34.5,
+        "Ingresos": 0.62,
+        "Contribucion": 0.24
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 5G",
+        "Volumen": 14.3,
+        "Ingresos": 0.4,
+        "Contribucion": 0.15
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 20L",
+        "Volumen": 4.8,
+        "Ingresos": 0.14,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.8,
+        "Ingresos": 0.09,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 500ml",
+        "Volumen": 40.5,
+        "Ingresos": 0.61,
+        "Contribucion": 0.23
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 1L",
+        "Volumen": 20.7,
+        "Ingresos": 0.37,
+        "Contribucion": 0.14
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 5G",
+        "Volumen": 8.6,
+        "Ingresos": 0.24,
+        "Contribucion": 0.09
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 20L",
+        "Volumen": 2.9,
+        "Ingresos": 0.09,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.1,
+        "Ingresos": 0.06,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 500ml",
+        "Volumen": 10.1,
+        "Ingresos": 0.15,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 1L",
+        "Volumen": 5.2,
+        "Ingresos": 0.09,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 5G",
+        "Volumen": 2.1,
+        "Ingresos": 0.06,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 20L",
+        "Volumen": 0.7,
+        "Ingresos": 0.02,
+        "Contribucion": 0.01
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Bebida Energética",
+        "Volumen": 0.3,
+        "Ingresos": 0.01,
+        "Contribucion": 0
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 500ml",
+        "Volumen": 123.7,
+        "Ingresos": 1.86,
+        "Contribucion": 0.71
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 1L",
+        "Volumen": 63.3,
+        "Ingresos": 1.14,
+        "Contribucion": 0.43
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 5G",
+        "Volumen": 26.3,
+        "Ingresos": 0.74,
+        "Contribucion": 0.28
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 20L",
+        "Volumen": 8.7,
+        "Ingresos": 0.26,
+        "Contribucion": 0.1
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Bebida Energética",
+        "Volumen": 3.4,
+        "Ingresos": 0.17,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 500ml",
+        "Volumen": 106,
+        "Ingresos": 1.59,
+        "Contribucion": 0.6
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 1L",
+        "Volumen": 54.2,
+        "Ingresos": 0.98,
+        "Contribucion": 0.37
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 5G",
+        "Volumen": 22.5,
+        "Ingresos": 0.63,
+        "Contribucion": 0.24
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 20L",
+        "Volumen": 7.5,
+        "Ingresos": 0.22,
+        "Contribucion": 0.08
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Bebida Energética",
+        "Volumen": 2.9,
+        "Ingresos": 0.14,
+        "Contribucion": 0.05
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 500ml",
+        "Volumen": 70.7,
+        "Ingresos": 1.06,
+        "Contribucion": 0.4
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 1L",
+        "Volumen": 36.1,
+        "Ingresos": 0.65,
+        "Contribucion": 0.25
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 5G",
+        "Volumen": 15,
+        "Ingresos": 0.42,
+        "Contribucion": 0.16
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 20L",
+        "Volumen": 5,
+        "Ingresos": 0.15,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.9,
+        "Ingresos": 0.1,
+        "Contribucion": 0.04
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 500ml",
+        "Volumen": 42.4,
+        "Ingresos": 0.64,
+        "Contribucion": 0.24
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 1L",
+        "Volumen": 21.7,
+        "Ingresos": 0.39,
+        "Contribucion": 0.15
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 5G",
+        "Volumen": 9,
+        "Ingresos": 0.25,
+        "Contribucion": 0.1
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 20L",
+        "Volumen": 3,
+        "Ingresos": 0.09,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.2,
+        "Ingresos": 0.06,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 500ml",
+        "Volumen": 10.6,
+        "Ingresos": 0.16,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 1L",
+        "Volumen": 5.4,
+        "Ingresos": 0.1,
+        "Contribucion": 0.04
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 5G",
+        "Volumen": 2.3,
+        "Ingresos": 0.06,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 20L",
+        "Volumen": 0.7,
+        "Ingresos": 0.02,
+        "Contribucion": 0.01
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Bebida Energética",
+        "Volumen": 0.3,
+        "Ingresos": 0.01,
+        "Contribucion": 0
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 500ml",
+        "Volumen": 129.3,
+        "Ingresos": 1.94,
+        "Contribucion": 0.74
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 1L",
+        "Volumen": 66.1,
+        "Ingresos": 1.19,
+        "Contribucion": 0.45
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 5G",
+        "Volumen": 27.5,
+        "Ingresos": 0.77,
+        "Contribucion": 0.29
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 20L",
+        "Volumen": 9.1,
+        "Ingresos": 0.27,
+        "Contribucion": 0.1
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Bebida Energética",
+        "Volumen": 3.5,
+        "Ingresos": 0.18,
+        "Contribucion": 0.07
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 500ml",
+        "Volumen": 110.8,
+        "Ingresos": 1.66,
+        "Contribucion": 0.63
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 1L",
+        "Volumen": 56.7,
+        "Ingresos": 1.02,
+        "Contribucion": 0.39
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 5G",
+        "Volumen": 23.5,
+        "Ingresos": 0.66,
+        "Contribucion": 0.25
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 20L",
+        "Volumen": 7.8,
+        "Ingresos": 0.23,
+        "Contribucion": 0.09
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Bebida Energética",
+        "Volumen": 3,
+        "Ingresos": 0.15,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 500ml",
+        "Volumen": 73.9,
+        "Ingresos": 1.11,
+        "Contribucion": 0.42
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 1L",
+        "Volumen": 37.8,
+        "Ingresos": 0.68,
+        "Contribucion": 0.26
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 5G",
+        "Volumen": 15.7,
+        "Ingresos": 0.44,
+        "Contribucion": 0.17
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 20L",
+        "Volumen": 5.2,
+        "Ingresos": 0.16,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Bebida Energética",
+        "Volumen": 2,
+        "Ingresos": 0.1,
+        "Contribucion": 0.04
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 500ml",
+        "Volumen": 44.3,
+        "Ingresos": 0.67,
+        "Contribucion": 0.25
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 1L",
+        "Volumen": 22.7,
+        "Ingresos": 0.41,
+        "Contribucion": 0.16
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 5G",
+        "Volumen": 9.4,
+        "Ingresos": 0.26,
+        "Contribucion": 0.1
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 20L",
+        "Volumen": 3.1,
+        "Ingresos": 0.09,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.2,
+        "Ingresos": 0.06,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 500ml",
+        "Volumen": 11.1,
+        "Ingresos": 0.17,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 1L",
+        "Volumen": 5.7,
+        "Ingresos": 0.1,
+        "Contribucion": 0.04
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 5G",
+        "Volumen": 2.4,
+        "Ingresos": 0.07,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 20L",
+        "Volumen": 0.8,
+        "Ingresos": 0.02,
+        "Contribucion": 0.01
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Bebida Energética",
+        "Volumen": 0.3,
+        "Ingresos": 0.02,
+        "Contribucion": 0.01
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 500ml",
+        "Volumen": 137.2,
+        "Ingresos": 2.06,
+        "Contribucion": 0.78
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 1L",
+        "Volumen": 70.2,
+        "Ingresos": 1.26,
+        "Contribucion": 0.48
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 5G",
+        "Volumen": 29.1,
+        "Ingresos": 0.82,
+        "Contribucion": 0.31
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Agua 20L",
+        "Volumen": 9.7,
+        "Ingresos": 0.29,
+        "Contribucion": 0.11
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Bebida Energética",
+        "Volumen": 3.7,
+        "Ingresos": 0.19,
+        "Contribucion": 0.07
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 500ml",
+        "Volumen": 117.6,
+        "Ingresos": 1.76,
+        "Contribucion": 0.67
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 1L",
+        "Volumen": 60.1,
+        "Ingresos": 1.08,
+        "Contribucion": 0.41
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 5G",
+        "Volumen": 25,
+        "Ingresos": 0.7,
+        "Contribucion": 0.27
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Agua 20L",
+        "Volumen": 8.3,
+        "Ingresos": 0.25,
+        "Contribucion": 0.1
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Bebida Energética",
+        "Volumen": 3.2,
+        "Ingresos": 0.16,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 500ml",
+        "Volumen": 78.4,
+        "Ingresos": 1.18,
+        "Contribucion": 0.45
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 1L",
+        "Volumen": 40.1,
+        "Ingresos": 0.72,
+        "Contribucion": 0.27
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 5G",
+        "Volumen": 16.6,
+        "Ingresos": 0.47,
+        "Contribucion": 0.18
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Agua 20L",
+        "Volumen": 5.5,
+        "Ingresos": 0.17,
+        "Contribucion": 0.06
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Canal Directo",
+        "Categoria": "Bebida Energética",
+        "Volumen": 2.1,
+        "Ingresos": 0.11,
+        "Contribucion": 0.04
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 500ml",
+        "Volumen": 47,
+        "Ingresos": 0.71,
+        "Contribucion": 0.27
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 1L",
+        "Volumen": 24.1,
+        "Ingresos": 0.43,
+        "Contribucion": 0.16
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 5G",
+        "Volumen": 10,
+        "Ingresos": 0.28,
+        "Contribucion": 0.11
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Agua 20L",
+        "Volumen": 3.3,
+        "Ingresos": 0.1,
+        "Contribucion": 0.04
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Institucional",
+        "Categoria": "Bebida Energética",
+        "Volumen": 1.3,
+        "Ingresos": 0.06,
+        "Contribucion": 0.02
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 500ml",
+        "Volumen": 11.8,
+        "Ingresos": 0.18,
+        "Contribucion": 0.07
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 1L",
+        "Volumen": 6,
+        "Ingresos": 0.11,
+        "Contribucion": 0.04
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 5G",
+        "Volumen": 2.5,
+        "Ingresos": 0.07,
+        "Contribucion": 0.03
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Agua 20L",
+        "Volumen": 0.8,
+        "Ingresos": 0.02,
+        "Contribucion": 0.01
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "E-Commerce",
+        "Categoria": "Bebida Energética",
+        "Volumen": 0.3,
+        "Ingresos": 0.02,
+        "Contribucion": 0.01
+      }
+    ]
+  }
+}

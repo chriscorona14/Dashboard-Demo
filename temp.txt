@@ -1,0 +1,595 @@
+13:      if ("serviceWorker" in navigator) {
+14:        window.addEventListener("load", () => {
+16:            .register("/sw.js")
+17:            .then((registration) => {
+18:              console.log(
+23:            .catch((error) => {
+24:              console.log("Fallo en el registro del Service Worker:", error);
+53:        --shadow: 0 8px 24px rgba(15, 76, 129, 0.08);
+73:        background: var(--bg);
+74:        color: var(--text-primary);
+81:      /* Hamburger Menu Navbar (Mobile ONLY) */
+84:        background: var(--sidebar);
+90:        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+119:        background: linear-gradient(
+121:          var(--sidebar) 0%,
+122:          var(--sidebar-dark) 100%
+130:        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+164:        background: rgba(255, 255, 255, 0.2);
+176:        color: rgba(255, 255, 255, 0.7);
+186:        background: rgba(255, 255, 255, 0.1);
+188:        transform: translateX(4px);
+192:        background: rgba(255, 255, 255, 0.08);
+195:        border: 1px dashed rgba(255, 255, 255, 0.2);
+201:        background: var(--sidebar-accent);
+214:        filter: brightness(1.1);
+215:        transform: translateY(-1px);
+229:          transform: rotate(0deg);
+232:          transform: rotate(360deg);
+283:        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+286:        background-color: var(--sidebar-accent);
+289:        transform: translateX(20px);
+310:        background-color: var(--primary);
+333:        color: var(--text-secondary);
+344:        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+351:        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+358:        border: 1px solid var(--border);
+368:        color: var(--text-secondary);
+386:        color: var(--text);
+399:        border: 1px solid var(--border);
+400:        box-shadow: var(--shadow);
+405:        transform: translateY(-4px);
+412:        color: var(--text-secondary);
+420:        color: var(--sidebar);
+449:        border: 1px solid var(--border);
+450:        box-shadow: var(--shadow);
+460:        color: var(--sidebar);
+465:        color: var(--text-secondary);
+470:        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+475:      @media screen and (min-width: 768px) {
+513:        border: 1px solid var(--border);
+515:        color: var(--text-secondary);
+533:        color: var(--sidebar-accent);
+541:      @media screen and (max-width: 1024px) {
+557:          transform: translateX(-100%);
+559:          height: calc(100vh - 60px);
+562:          transform: translateX(0);
+566:          height: calc(100vh - 60px);
+642:      @media screen and (max-width: 768px) {
+667:        border: 1px solid var(--border);
+679:        color: var(--sidebar);
+692:        border: 1px solid var(--border);
+699:        color: var(--text-primary);
+702:        border-bottom: 1px solid var(--line);
+720:        background: var(--primary);
+724:        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+731:      @media screen and (max-width: 768px) {
+750:          box-shadow: inset -4px 0 6px -4px rgba(0, 0, 0, 0.15) !important;
+758:          color: var(--primary);
+765:            transform: translateX(0);
+769:            transform: translateX(4px);
+773:            transform: translateX(0);
+799:          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+828:          content: attr(data-label);
+830:          color: var(--text-secondary);
+835:        .card-view-tbl td:has(> *:empty:only-child) {
+854:        background: rgba(15, 23, 42, 0.95);
+855:        backdrop-filter: blur(4px);
+866:          0 10px 15px -3px rgba(0, 0, 0, 0.3),
+867:          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+869:        border: 1px solid rgba(255, 255, 255, 0.1);
+876:        color: var(--primary-light, #60a5fa);
+883:          transform: translateY(10px);
+887:          transform: translateY(0);
+895:        box-shadow: var(--shadow);
+898:        max-height: calc(100vh - 200px);
+899:        border: 1px solid var(--border);
+970:        border-right: 2px solid var(--border);
+971:        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.04);
+980:        color: var(--text-secondary);
+985:        border-bottom: 2px solid var(--border);
+1028:      #resumen-comercial-thead tr:nth-child(2) th {
+1034:      #resumen-comercial-thead tr:nth-child(2) th:first-child {
+1043:        border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+1048:        border-top: 1px solid var(--border);
+1049:        border-bottom: 2px solid var(--border);
+1054:        color: var(--sidebar) !important;
+1063:        color: var(--sidebar);
+1070:        background-color: rgba(0, 150, 199, 0.04) !important;
+1075:        color: var(--primary) !important;
+1085:        color: var(--text-secondary);
+1099:        color: var(--sidebar);
+1104:        color: var(--text-secondary);
+1112:        grid-template-columns: repeat(3, 1fr);
+1118:        background: var(--card);
+1121:        box-shadow: var(--shadow);
+1122:        border: 1px solid var(--border);
+1127:        transform: translateY(-4px);
+1131:        color: var(--text-secondary);
+1142:        color: var(--sidebar);
+1179:        background: var(--card);
+1181:        box-shadow: var(--shadow);
+1182:        border: 1px solid var(--border);
+1201:        transform: translateZ(0);
+1208:        border-bottom: 1px solid var(--border);
+1217:        color: var(--sidebar);
+1230:        border-bottom: 1px solid var(--border);
+1242:        border-right: 1px solid var(--border);
+1250:      .section-table th:nth-child(1),
+1251:      .section-table td:nth-child(1) {
+1254:      .section-table th:nth-child(2),
+1255:      .section-table td:nth-child(2) {
+1258:      .section-table th:nth-child(3),
+1259:      .section-table td:nth-child(3) {
+1262:      .section-table th:nth-child(4),
+1263:      .section-table td:nth-child(4) {
+1266:      .section-table th:nth-child(5),
+1267:      .section-table td:nth-child(5) {
+1276:        color: var(--text-secondary);
+1292:        background: rgba(255, 255, 255, 0.95);
+1299:        color: var(--primary);
+1306:        border-top: 5px solid var(--primary);
+1314:          transform: rotate(0deg);
+1317:          transform: rotate(360deg);
+1327:        border: 1px solid var(--border);
+1328:        color: var(--text-secondary);
+1330:        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+1334:        color: var(--sidebar);
+1367:        .view-container:not(#view-config) {
+1435:      @media (max-width: 768px) {
+1454:          border: 1px solid var(--border);
+1457:          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+1462:          color: var(--text);
+1480:          color: var(--text-secondary);
+1486:          color: var(--text);
+1521:          background-color: rgba(42, 157, 143, 0.12) !important;
+1522:          box-shadow: inset 0 0 4px rgba(42, 157, 143, 0.15);
+1525:          background-color: rgba(42, 157, 143, 0.32) !important;
+1526:          box-shadow: inset 0 0 8px rgba(42, 157, 143, 0.35);
+1529:          background-color: rgba(42, 157, 143, 0.12) !important;
+1530:          box-shadow: inset 0 0 4px rgba(42, 157, 143, 0.15);
+1535:          background-color: rgba(231, 111, 81, 0.12) !important;
+1536:          box-shadow: inset 0 0 4px rgba(231, 111, 81, 0.15);
+1539:          background-color: rgba(231, 111, 81, 0.32) !important;
+1540:          box-shadow: inset 0 0 8px rgba(231, 111, 81, 0.35);
+1543:          background-color: rgba(231, 111, 81, 0.12) !important;
+1544:          box-shadow: inset 0 0 4px rgba(231, 111, 81, 0.15);
+1639:                  transform: rotate(360deg);
+1701:            onclick="toggleMenuGroup('grupo-seguimiento', 'icon-seguimiento')"
+1710:              color: rgba(255, 255, 255, 0.85);
+1794:            onclick="toggleMenuGroup('grupo-ventas', 'icon-ventas')"
+1803:              color: rgba(255, 255, 255, 0.85);
+1843:            onclick="toggleMenuGroup('grupo-costos', 'icon-costos')"
+1852:              color: rgba(255, 255, 255, 0.85);
+1883:              border-top: 1px solid rgba(255, 255, 255, 0.1);
+1897:                width: calc(100% - 8px);
+1902:                transform: translateY(-2px) !important;
+1903:                background: rgba(56, 189, 248, 0.15) !important;
+1904:                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+1913:                border: 1px dashed rgba(56, 189, 248, 0.4);
+1914:                background: rgba(56, 189, 248, 0.05);
+1932:          function toggleMenuGroup(groupId, iconId) {
+1933:            const group = document.getElementById(groupId);
+1934:            const icon = document.getElementById(iconId);
+1935:            if (!group || !icon) return;
+1937:            if (group.style.maxHeight !== "0px") {
+1939:              icon.style.transform = "rotate(180deg)";
+1943:              icon.style.transform = "rotate(0deg)";
+1956:            background: rgba(255, 255, 255, 0.1);
+1957:            border: 1px solid rgba(255, 255, 255, 0.2);
+1979:            color: rgba(255, 255, 255, 0.7);
+1987:              background-color: var(--warning);
+1998:            color: rgba(255, 255, 255, 0.5);
+2017:            box-shadow: -4px 0 24px rgba(0, 0, 0, 0.1);
+2022:            border-left: 1px solid var(--border);
+2029:            background: var(--sidebar);
+2065:            border: 1px solid var(--border);
+2067:            color: var(--text-primary);
+2070:            background: var(--sidebar-accent);
+2077:            border-top: 1px solid var(--border);
+2085:            border: 1px solid var(--border);
+2091:            background: var(--sidebar-accent);
+2112:            background: var(--sidebar-accent);
+2118:            box-shadow: 0 4px 12px rgba(0, 150, 199, 0.4);
+2125:            transform: scale(1.05);
+2139:            border: 1px solid var(--border);
+2140:            box-shadow: var(--shadow);
+2150:            color: var(--text-primary);
+2155:            accent-color: var(--sidebar-accent);
+2164:            border-left: 4px solid var(--sidebar-accent);
+2178:            background: var(--bg);
+2182:            border-bottom: 1px solid var(--border);
+2184:          @media screen and (max-width: 1024px) {
+2191:          @media screen and (max-width: 768px) {
+2198:          <h2 id="titleLabel">Dashboard de Gestión Corporativa (RD$)</h2>
+2216:              border: 1px solid var(--border);
+2221:              color: var(--sidebar);
+2236:                color: var(--text-primary);
+2249:                color: var(--text-secondary);
+2273:                color: var(--text-secondary);
+2283:                border: 1px solid var(--border);
+2287:                color: var(--text-primary);
+2311:          background: var(--primary);
+2341:          <h3 style="margin-bottom: 20px; font-weight: 500; color: var(--text)">
+2441:                Caja (Saldo Final)
+2444:                  data-tooltip="<strong>Salud de Caja</strong><br/>Representa la liquidez inmediata disponible (Saldo Final de Efectivo)."
+2488:              color: var(--text);
+2491:            Variación Interanual (YoY)
+2531:              color: var(--text);
+2534:            Ratios de Rentabilidad y Solvencia (vs M-1)
+2542:                  data-tooltip="<strong>Margen Bruto</strong><br/>(Ingresos - Costo de Ventas) / Ingresos."
+2565:                ROA (Rentabilidad Activos)
+2568:                  data-tooltip="<strong>ROA (Return on Assets)</strong><br/>Utilidad Neta Anualizada / Activos Totales. Mide la eficiencia en el uso de los activos de la empresa."
+2584:                ROE (Rentabilidad Capital)
+2587:                  data-tooltip="<strong>ROE (Return on Equity)</strong><br/>Utilidad Neta Anualizada / Patrimonio."
+2603:                Apalancamiento (Deuda/EBITDA)
+2606:                  data-tooltip="<strong>Solvencia (Ratio)</strong><br/>Ratio Deuda Total / EBITDA LTM (Anualizado). Mide cuántos años de EBITDA anual se necesitan para pagar la deuda total."
+2622:                Ciclo Conversión Efectivo (CCC)
+2625:                  data-tooltip="<strong>Ciclo de Conversión de Efectivo</strong><br/>Días promedio que tarda la empresa en convertir sus inventarios y otros recursos en flujos de efectivo. (DSO + DIO - DPO)."
+2693:        <!-- 1. Operative Indicators Table (Moved to top) -->
+2702:                color: var(--text-secondary);
+2725:                    color: var(--text-secondary);
+2750:                color: var(--text-secondary);
+2771:        <!-- 3. Cost Segment Breakdown Table (New) -->
+2783:                color: var(--text-secondary);
+2816:                color: var(--text-secondary);
+2840:            <h3>Análisis de Gastos Operativos (OPEX)</h3>
+2845:                color: var(--text-secondary);
+2877:              border-bottom: 1px solid var(--border);
+2885:                style="color: var(--primary); width: 20px; height: 20px"
+2902:              color: var(--text-secondary);
+2935:                    background: var(--sidebar);
+2944:                    background: var(--sidebar);
+2947:                    border-right: 1px solid rgba(255, 255, 255, 0.2);
+2956:                    background: var(--sidebar);
+2968:                    background: var(--sidebar);
+2980:                    background: var(--sidebar-accent);
+2981:                    color: var(--sidebar);
+2984:                    border-left: 1px solid rgba(0, 0, 0, 0.1);
+2993:                    background: var(--sidebar-accent);
+2994:                    color: var(--sidebar);
+3005:                    background: var(--sidebar);
+3009:                    border-left: 1px solid rgba(255, 255, 255, 0.2);
+3018:                    background: var(--sidebar);
+3038:          <h3>Estado de Resultados Detallado (P&L)</h3>
+3044:              color: var(--text-secondary);
+3058:                    color: var(--text-secondary);
+3080:              color: var(--text-secondary);
+3098:            style="font-size: 0.85rem; font-weight: 600; color: var(--sidebar)"
+3117:                color: var(--primary);
+3123:                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+3136:                color: var(--text-secondary);
+3161:                      color: var(--text-secondary);
+3178:                background: var(--sidebar);
+3182:                border: 1px solid var(--sidebar);
+3216:        <!-- Vista Resumen (Oculta por defecto) -->
+3225:                border: 1px solid var(--border);
+3236:                      color: var(--text-secondary);
+3252:          <h2>Zoom in Deuda (Millones DOP)</h2>
+3259:              color: var(--text-secondary);
+3281:              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+3301:              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+3346:              color: var(--text-secondary);
+3359:                  style="text-align: center; color: var(--text-secondary)"
+3373:          <h3>Detalle de Cuentas por Pagar (DOP)</h3>
+3379:              color: var(--text-secondary);
+3403:                color: var(--sidebar);
+3423:                  color: var(--primary);
+3429:                  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+3442:                  color: var(--text-secondary);
+3466:                    style="text-align: center; color: var(--text-secondary)"
+3482:              grid-template-columns: minmax(320px, 1fr) minmax(400px, 1.5fr);
+3488:              box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+3489:              border: 1px solid var(--border);
+3537:                          color: var(--text-secondary);
+3578:              color: var(--text-secondary);
+3596:            style="font-size: 0.85rem; font-weight: 600; color: var(--sidebar)"
+3615:                color: var(--primary);
+3621:                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+3634:                color: var(--text-secondary);
+3659:                      color: var(--text-secondary);
+3677:                background: var(--info);
+3681:                border: 1px solid var(--info);
+3694:                Métricas de Eficiencia Operativa (Ciclo de Caja)
+3715:        <!-- Vista Resumen (Oculta por defecto) -->
+3724:                border: 1px solid var(--border);
+3735:                      color: var(--text-secondary);
+3757:          <p style="font-size: 0.85rem; color: var(--text-secondary)">
+3770:            border: 1px solid var(--border);
+3784:                  color: var(--sidebar);
+3795:                    color: var(--sidebar-accent);
+3803:                  color: var(--text-secondary);
+3807:                Control maestro para habilitar Resumen Ejecutivo, Chat (CFO
+3825:            border: 2px dashed rgba(0, 150, 199, 0.4);
+3838:                color: var(--sidebar);
+3854:                color: var(--text-secondary);
+3858:              Arrastre y suelte su archivo Excel (.xlsx, .csv) o conéctese a
+3899:                    background: var(--primary);
+4022:                        >1. Archivo Financiero Principal (Sharing URL):</label
+4048:                        >2. Archivo Ventas CEO (Sharing URL):</label
+4074:                        >3. Archivo Resumen Comercial (Sharing URL):</label
+4100:                        >4. Archivo P&G Horizontal (Sharing URL):</label
+4126:                        >5. Archivo Detalle CxP (Sharing URL):</label
+4152:                        >6. Archivo Costo Unitario (Sharing URL):</label
+4215:                  color: var(--text-secondary);
+4259:                    style="font-size: 0.75rem; color: var(--text-secondary)"
+4281:                      color: var(--primary);
+4282:                      border: 1px solid var(--border);
+4296:                    style="font-size: 0.75rem; color: var(--text-secondary)"
+4318:                      color: var(--primary);
+4319:                      border: 1px solid var(--border);
+4333:                    style="font-size: 0.75rem; color: var(--text-secondary)"
+4355:                      color: var(--primary);
+4356:                      border: 1px solid var(--border);
+4370:                    style="font-size: 0.75rem; color: var(--text-secondary)"
+4392:                      color: var(--primary);
+4393:                      border: 1px solid var(--border);
+4407:                    style="font-size: 0.75rem; color: var(--text-secondary)"
+4429:                      color: var(--primary);
+4430:                      border: 1px solid var(--border);
+4444:                    style="font-size: 0.75rem; color: var(--text-secondary)"
+4454:                  background: var(--primary);
+4486:                color: var(--primary);
+4494:                color: var(--text-primary);
+4515:                  background: var(--primary);
+4522:              style="font-size: 0.85rem; color: var(--text-secondary)"
+4532:                background: var(--text-secondary);
+4547:            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+4554:              color: var(--sidebar);
+4569:              color: var(--text-secondary);
+4579:              style="width: auto; margin-top: 0; background: var(--success)"
+4596:              style="width: auto; margin-top: 0; background: var(--danger)"
+4618:              color: var(--sidebar);
+4626:              color: var(--text-secondary);
+4644:              color: var(--sidebar);
+4652:              color: var(--text-secondary);
+4658:              <b>Motor:</b> Financiero (Reglas)
+4661:              <b>Formato Soportado:</b> Reporte PA (Estructurado/Ancho)
+4664:              <b>Lógica de Variación:</b> Actual - Previo (Positivo = Verde)
+4674:            <p style="font-size: 0.85rem; color: var(--text-secondary)">
+4700:            border: 1px solid var(--border);
+4703:            box-shadow: var(--shadow);
+4710:            background: linear-gradient(to right, #f8fafc, #ffffff);
+4711:            color: var(--sidebar);
+4730:            color: var(--primary);
+4733:            transform: rotate(180deg);
+4736:            border-bottom: 1px solid var(--border);
+4750:            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+4757:            border-top: 4px solid var(--sidebar);
+4760:            transform: translateY(-4px);
+4761:            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+4766:            color: var(--sidebar);
+4775:            color: var(--primary);
+4780:            border-left: 3px solid var(--primary);
+4785:            color: var(--text-secondary);
+4790:            color: var(--primary);
+4793:          @media screen and (max-width: 767px) {
+4798:          @media screen and (min-width: 768px) {
+4800:              grid-template-columns: repeat(2, 1fr);
+4803:          @media screen and (min-width: 1200px) {
+4805:              grid-template-columns: repeat(3, 1fr);
+4820:            background-color: var(--bg);
+4823:            border-bottom: 2px solid var(--border);
+4831:                color: var(--text-secondary);
+4857:                  principal (Core Business), ignorando políticas fiscales o
+4867:                <div class="glosario-card-title">Margen EBITDA (%)</div>
+4875:                  <i data-lucide="percent" width="16" height="16"></i> (EBITDA /
+4880:                <div class="glosario-card-title">Utilidad Neta (Beneficio)</div>
+4882:                  El renglón final del P&L ("The Bottom Line"). Es la ganancia o
+4893:                <div class="glosario-card-title">Margen Neto (%)</div>
+4901:                  <i data-lucide="percent" width="16" height="16"></i> (Utilidad
+4906:                <div class="glosario-card-title">Margen Bruto (%)</div>
+4914:                  <i data-lucide="percent" width="16" height="16"></i> (Utilidad
+4919:                <div class="glosario-card-title">ROA (Return on Assets)</div>
+4928:                  (Utilidad Neta LTM / Activos Totales) * 100
+4932:                <div class="glosario-card-title">ROE (Return on Equity)</div>
+4940:                  (Utilidad Neta LTM / Patrimonio) * 100
+4970:                  Apalancamiento (Deuda / EBITDA)
+4973:                  El ratio de riesgo bancario definitivo (Covenant). Mueve la
+4975:                  (EBITDA) se requieren para liquidar la deuda. Un número
+4980:                  Total (o Neta) / LTM EBITDA
+4985:                  Apalancamiento (Estructura de Capital)
+4993:                  Pasivos totales (menos deuda subordinada) / patrimonio total
+4994:                  (más deuda subordinada)
+5011:                <div class="glosario-card-title">Prueba Ácida (Acid-Test)</div>
+5019:                  (Activos Corrientes - Inventarios) / Pasivos Corrientes
+5062:                  LTM EBITDA (Last 12 Months)
+5072:                  (Mes actual a Mes - 11)
+5079:                  devengan intereses (facilidades de crédito, bonos,
+5097:                  - Saldo de Tesorería (Efectivo/Bancos)
+5118:                  El endeudamiento puro con terceros (bancos). Al excluir la
+5119:                  deuda de los propios socios (subordinada), esta métrica
+5137:                  EBITDA / (Gastos financieros + porción corriente préstamos a
+5156:                  Ciclo de Conversión de Efectivo (CCC)
+5171:                  DSO (Días Cuentas por Cobrar)
+5180:                  <i data-lucide="calendar" width="16" height="16"></i> (Cuentas
+5186:                  DIO (Días Rotación Inventario)
+5196:                  (Inventarios / Costo de Ventas LTM) * 365
+5201:                  DPO (Días Cuentas por Pagar)
+5206:                  engorda el efectivo interinamente (crédito natural) pero
+5210:                  <i data-lucide="calendar" width="16" height="16"></i> (Cuentas
+5215:                <div class="glosario-card-title">Costo de Ventas (COGS)</div>
+5228:                <div class="glosario-card-title">Gastos Operativos (OPEX)</div>
+5243:          <!-- Categoría 4: Análisis Complementario (Cash Flow, CAPEX, P&L) -->
+5255:                  Flujo de Caja Neto (Variación)
+5259:                  diferencia del Beneficio Neto (que incluye provisiones e
+5283:                  Efectivo Final (Salud de Caja)
+5298:                  CAPEX (Inversiones de Capital)
+5315:                  deuda histórica amortizada (repago capital); indica
+5340:                  Partidas de costo no recurrentes bajo ningún motivo (litigios
+5352:                  Variación YoY (Year-over-Year)
+5357:                  temporadas altas (ej. diciembre vs diciembre) y revelar un
+5361:                  <i data-lucide="calculator" width="16" height="16"></i> (Valor
+5367:                  Integridad del P&L (Gap de Cuadre)
+5385:                  centralizado en moneda local (RD$ a USD o viceversa); se
+5407:                <div class="glosario-card-title">Volumen (Unidades)</div>
+5410:                  facturados (cajas, botellones, fundas). Constituye el
+5429:                  Netas Totales / Volumen (Unidades)
+5442:                  de Ventas Total / Volumen (Unidades)
+5446:                <div class="glosario-card-title">Ventas Netas (mDOP)</div>
+5460:                  Margen Bruto Unitario (MB x Und)
+5474:                <div class="glosario-card-title">Mix de Ventas (%)</div>
+5482:                  <i data-lucide="pie-chart" width="16" height="16"></i> (Ventas
+5495:                  <i data-lucide="trending-up" width="16" height="16"></i> (Real
+5501:                  Variación MoM (Unitario / Precios)
+5510:                  <i data-lucide="calculator" width="16" height="16"></i> (Valor
+5516:                  Perspectiva YTD (Year-to-Date)
+5520:                  (volumen, facturación, márgenes) transcurridos desde el 1 de
+5526:                  Resultados Acumulados (Ene - Mes Actual)
+5544:                  Rentabilidad por Segmento (Canal / Marca)
+5548:                  específicamente a una porción del negocio (ej. un canal de
+5560:                  Análisis Year-over-Year (YoY)
+5570:                  (Métrica Actual / Métrica Mismo Período Año Anterior) - 1
+5575:                  Análisis de Sensibilidad (What-If)
+5586:                  = f(∆ Precio, ∆ Volumen, ∆ Costos, ∆ Gastos)
+5591:                  Presupuesto (PPTO / Budget)
+5611:                  representan un quiebre en tendencias (por ejemplo: la
+5643:                  Medida (Cajas / Fardos)
+5655:                  Medida (Botellones)
+5662:                  Pesos Dominicanos (RD$). <strong>mDOP</strong> se refiere a
+5675:                  Dólares Estadounidenses (USD$). <strong>mUSD</strong> se
+5696:            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+5703:            transform: translateY(-2px);
+5704:            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+5719:            background: var(--sidebar-accent);
+5731:            box-shadow: var(--shadow);
+5742:              border-bottom: 2px solid var(--border);
+5753:                  background: rgba(56, 189, 248, 0.15);
+5761:                  border: 1px solid rgba(56, 189, 248, 0.3);
+5770:                  color: var(--sidebar);
+5782:                    color: var(--sidebar-accent);
+5789:                  color: var(--text-secondary);
+5802:                  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+5813:                  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+5818:                Tour Virtual Interactivo (Simuldor de Video)
+5834:                  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+5859:                border: 1px solid var(--border);
+5870:                  color: var(--text-secondary);
+5881:                  onclick="highlightInstNav(this)"
+5891:                    color: var(--text-primary);
+5900:                  onclick="highlightInstNav(this)"
+5910:                    color: var(--text-secondary);
+5922:                  onclick="highlightInstNav(this)"
+5932:                    color: var(--text-secondary);
+5944:                  onclick="highlightInstNav(this)"
+5954:                    color: var(--text-secondary);
+5966:                  onclick="highlightInstNav(this)"
+5976:                    color: var(--text-secondary);
+5988:                  onclick="highlightInstNav(this)"
+5998:                    color: var(--text-secondary);
+6050:                    color: var(--sidebar);
+6063:                    color: var(--text-primary);
+6070:                  salud transversal (Volumen vs Precio vs OPEX). Las tarjetas de
+6071:                  métricas (KPIs) ofrecen lecturas instantáneas.
+6076:                    border-left: 4px solid var(--sidebar-accent);
+6080:                    color: var(--text-secondary);
+6086:                  neto crece (Color Verde) pero su EBITDA decrece (Color Rojo),
+6096:                    color: var(--text-secondary);
+6101:                  exacta (OPEX, Flete, Marketing) responsable de la erosión del
+6112:                    color: var(--sidebar);
+6120:                  Reconocimiento Temporal: Mensual vs Acumulado (YTD)
+6125:                    color: var(--text-primary);
+6131:                  convencional, ubique el "Interruptor Direccional" (YTD Toggle)
+6154:                        color: var(--sidebar);
+6158:                      Evaluación Mensual (Stand-Alone)
+6164:                        color: var(--text-secondary);
+6184:                        color: var(--sidebar);
+6188:                      Desempeño Acumulado (Year-to-Date)
+6194:                        color: var(--text-secondary);
+6211:                    color: var(--sidebar);
+6224:                    color: var(--text-primary);
+6229:                  Usted notará que los tableros densos (Ej. P&G Horizontal o
+6233:                  comparativas Vs Presupuesto (PPTO), o vistas analíticas
+6234:                  (Variación y Unitarios) sin requerir saltos inter-pantallas ni
+6245:                    color: var(--sidebar);
+6253:                  Identificación de Riesgos Pasivos (CxP Aging)
+6258:                    color: var(--text-primary);
+6264:                  concentrada contra sus proveedores (Vendor Management).
+6287:                        color: var(--sidebar);
+6299:                          color: var(--sidebar-accent);
+6302:                      Proyección de Impacto (Tramos de Mora)
+6308:                        color: var(--text-secondary);
+6328:                    color: var(--sidebar);
+6336:                  Tópico Corporativo: Rentabilidad (EBIT) ≠ Liquidez (Free Cash)
+6341:                    color: var(--text-primary);
+6363:                    color: var(--sidebar);
+6371:                  Motor de Predicción Inmediata (What-If)
+6376:                    color: var(--text-primary);
+6426:                      aprieta la perilla "Días DSO(Cobranza)" buscando expandir
+6439:          <p style="color: var(--text-secondary); font-size: 0.9rem">
+6441:            liquidez (Caja) basados en el mes actual. <br />
+6442:            <span style="font-size: 0.8rem; color: var(--primary)"
+6457:                Crecimiento de Ventas (Volumen)
+6460:                  style="color: var(--sidebar-accent)"
+6480:                  style="color: var(--sidebar-accent)"
+6498:                <span id="label-sim-cogs" style="color: var(--sidebar-accent)"
+6516:                <span id="label-sim-opex" style="color: var(--sidebar-accent)"
+6533:                Días de Cobro (DSO Variación)
+6534:                <span id="label-sim-dso" style="color: var(--sidebar-accent)"
+6556:                  border: 1px solid var(--border);
+6558:                  color: var(--text-primary);
+6580:                  background: var(--sidebar);
+6604:                style="border-left: 4px solid var(--primary)"
+6614:                style="border-left: 4px solid var(--success)"
+6631:                border: 1px solid var(--border);
+6685:                      Impacto ($)
+6696:                        color: var(--text-secondary);
+6746:                  color: var(--sidebar);
+6764:                    color: var(--primary);
+6770:                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+6781:                    color: var(--text-secondary);
+6802:                  background: var(--sidebar);
+7028:                    color: var(--text-secondary);
+7128:                    color: var(--text-secondary);
+7155:                color: var(--sidebar);
+7173:                  color: var(--primary);
+7179:                  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+7183:                Volumen (k)
+7190:                  color: var(--text-secondary);
+7200:                Monto (mDOP)
+7207:                  color: var(--text-secondary);
+7224:                  color: var(--text-secondary);
+7244:                border: 1px solid var(--border);
+7248:                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+7259:                border: 1px solid var(--border);
+7263:                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+7307:              Volumen (k) de Unidades
+7312:            style="width: 100%; height: calc(100% - 60px)"
+7335:                color: var(--sidebar);
+7347:                color: var(--text-secondary);
+7369:                color: var(--sidebar);
+7389:                  color: var(--primary);
+7395:                  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+7408:                  color: var(--text-secondary);
+7427:                  color: var(--text-secondary);
+7446:                background: var(--sidebar);
+7497:                  Volumen (Unidades)<br /><span
+7518:                  Precio (DOP)<br /><span
+7539:                  Ventas Netas (mDOP)<br /><span
+7578:                    border-right: 1px solid rgba(255, 255, 255, 0.1);
+7590:                    border-right: 1px solid rgba(255, 255, 255, 0.1);
+7612:                    border-right: 1px solid rgba(255, 255, 255, 0.1);
+7624:                    border-right: 1px solid rgba(255, 255, 255, 0.1);
+7646:                    border-right: 1px solid rgba(255, 255, 255, 0.1);
+7658:                    border-right: 1px solid rgba(255, 255, 255, 0.1);
+7680:                    border-right: 1px solid rgba(255, 255, 255, 0.1);
+7705:                    color: var(--text-secondary);
+7737:                color: var(--sidebar);
+7763:                color: var(--sidebar);
+7783:                  color: var(--primary);
+7789:                  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+7802:                  color: var(--text-secondary);
+7821:                color: var(--sidebar);
+7836:                onclick="window.setCostoVista('tendencia')"
+7842:                  color: var(--primary);
+7848:                  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+7856:                onclick="window.setCostoVista('resumen')"
+7862:                  color: var(--text-secondary);
+7885:            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+7949:        background: rgba(0, 0, 0, 0.5);
+7962:          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+7968:            color: var(--sidebar);
+7980:            color: var(--text-secondary);
+7985:          avanzadas (CFO Co-Pilot, Resúmenes).
+7994:            border: 1px solid var(--border);
+8021:              background: var(--primary);

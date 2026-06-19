@@ -1,0 +1,296 @@
+      pnl_categorias: curr.pnl?.categorias,
+  if (!url || typeof url !== "string" || (url || '')?.trim().length === 0) return null;
+    let cleanUrl = (url || '')?.trim();
+  let resolved = String(inputUrl)?.trim().replace(/&amp;/g, "&");
+      !!window.runtimeConfig?.VITE_CEO_FILE_URL) ||
+        ?.classList.contains("active");
+        activeView.id?.startsWith("view-") &&
+        if (hasVentas) document.getElementById("menu-ventas-ceo")?.click();
+          document.getElementById("menu-resumen-comercial")?.click();
+        if (hasMaster) document.getElementById("menu-kpi")?.click();
+          document.getElementById("menu-resumen-comercial")?.click();
+        if (hasMaster) document.getElementById("menu-kpi")?.click();
+        else if (hasVentas) document.getElementById("menu-ventas-ceo")?.click();
+      .initialize?.()
+      const masterUrl = document.getElementById("m365UrlMaster")?.value || "";
+      const ventasUrl = document.getElementById("m365UrlVentas")?.value || "";
+        document.getElementById("m365UrlComercial")?.value || "";
+        document.getElementById("m365UrlPgHorizontal")?.value || "";
+      const cxpUrl = document.getElementById("m365UrlCxp")?.value || "";
+        document.getElementById("m365UrlCostoUnitario")?.value || "";
+        document.querySelector(".view-container.active")?.id || "view-config";
+    ?.trim();
+        if (searchInput && (searchInput.value || '')?.trim() !== "") {
+      (n || '')?.trim() === "" ||
+      (norm || '')?.startsWith("activos:") ||
+      (norm || '')?.startsWith("pasivos:") ||
+      (norm || '')?.startsWith("patrimonio:");
+      if ((concept || '')?.trim().length > 10) {
+          (concept || '')?.startsWith("  ") ||
+          (concept || '')?.startsWith("\t") ||
+          ((concept || '')?.trim() === (concept || '')?.trim().toUpperCase() ||
+          (concept || '')?.trim().length > 3;
+            const row = period.balance?.fullRows?.find(
+              if (val === 0 && period.pnl?.netIncome) {
+        ?.trim();
+          searchRow(src.balance?.fullRows) || searchRow(src.pnl?.fullRows);
+        return res || src.pnl?.netIncome || 0;
+          ?.trim();
+      ((capSusItem?.vDic || 0) +
+        (revalItem?.vDic || 0) +
+        (gananciaPerItem?.vDic || 0));
+      ((capSusItem?.vCurr || 0) +
+        (revalItem?.vCurr || 0) +
+        (gananciaPerItem?.vCurr || 0));
+      ((capSusItem?.vPpto || 0) +
+        (revalItem?.vPpto || 0) +
+        (gananciaPerItem?.vPpto || 0));
+        const r = m.wcFullRows?.find((r) => r.concept === conceptName);
+      let val = m.wcDetail?.[c.key];
+        val = m.cashflowDetail?.[c.key];
+              .includes(c?.label?.toLowerCase() || "") ||
+            ?.trim();
+              String(key).toLowerCase()?.trim() ===
+              String(gItem.date).toLowerCase()?.trim()
+              if (Math.abs(Number((r?.values || {})[key])) > 0)
+              if (Math.abs(Number((r?.values || {})[key])) > 0)
+            ?.trim();
+              String(key).toLowerCase()?.trim() ===
+              String(gItem.date).toLowerCase()?.trim()
+              if (Math.abs(Number((r?.values || {})[key])) > 0)
+              if (Math.abs(Number((r?.values || {})[key])) > 0)
+            val = period.kpis?.ebitda || 0;
+            val = period.cashflowDetail?.[spec.key] || 0;
+      m.cashflowDetail?.dso || m.cashflowDetail?.dpo || m.cashflowDetail?.dio,
+              const dso = p.cashflowDetail?.dso || 0;
+              const dio = p.cashflowDetail?.dio || 0;
+              const dpo = p.cashflowDetail?.dpo || 0;
+              val = p.cashflowDetail?.[m.key] || 0;
+          ? item.ppto?.cashflowDetail || {}
+        const kpis = isPpto ? item.ppto?.kpis || {} : item.kpis || {};
+      ? targetItem.ppto?.cashflowDetail || {}
+        ? firstMonth.ppto?.cashflowDetail || {}
+            ? (rows[i].concept || '')?.trim().toLowerCase()
+          (r.concept || '')?.trim().toLowerCase() === kw &&
+      let pnlRows = item.pnl?.fullRows || [];
+      let val = findValueInRows(sourceRows, kw?.trim());
+        val = findValueInRows(item.balance?.fullRows || [], kw?.trim());
+        val = findValueInRows(item.wcFullRows || [], kw?.trim());
+      let pnlRows = item.pnl?.fullRows || [];
+      let val = findValueInRows(sourceRows, kw?.trim());
+            targetItem.ppto.pnl.opexDetalle?.["Gastos Administrativos"] || 0;
+          ppto = targetItem.ppto.pnl.opexDetalle?.["Gastos de Mercadeo"] || 0;
+            targetItem.ppto.pnl.opexDetalle?.["Gastos de Ventas (Comercial)"] ||
+          ppto = targetItem.ppto.pnl.opexDetalle?.["Gastos de Logística"] || 0;
+        if (rowLabel?.trim() === "EVP")
+              ? targetItem.ppto.pnl.segments["EVP"]?.costos || 0
+              : targetItem.ppto.pnl.segments["EVP"]?.ventas || 0;
+        if (rowLabel?.trim() === "BT5")
+              ? targetItem.ppto.pnl.segments["BT5"]?.costos || 0
+              : targetItem.ppto.pnl.segments["BT5"]?.ventas || 0;
+        if (rowLabel?.trim() === "BON" || rowLabel?.trim() === "P6")
+              ? targetItem.ppto.pnl.segments["BON"]?.costos ||
+                targetItem.ppto.pnl.segments["P6"]?.costos ||
+              : targetItem.ppto.pnl.segments["BON"]?.ventas ||
+                targetItem.ppto.pnl.segments["P6"]?.ventas ||
+        if (rowLabel?.trim() === "Otros Ingresos")
+            (targetItem.ppto.pnl.segments["Otras Ventas"]?.ventas || 0) +
+            (targetItem.ppto.pnl.segments["Otros Ingresos"]?.ventas || 0);
+        const pptoVentasNetas = targetItem.ppto?.kpis?.ingresos || 0;
+        const actualVentasNetas = targetItem?.kpis?.ingresos || 0;
+        const pptoVentasNetas = targetItem.ppto?.kpis?.ingresos || 0;
+        const actualVentasNetas = targetItem?.kpis?.ingresos || 0;
+        targetItem?.kpis?.ingresos ||
+        const actualVentasNetas = targetItem?.kpis?.ingresos || 0;
+        const pptoVentasNetas = targetItem.ppto?.kpis?.ingresos || 0;
+        targetItem?.kpis?.ingresos ||
+        targetItem?.pnl?.categorias?.["Costo de Ventas"] ||
+      actual = targetItem?.kpis?.ebitda || 0;
+      actual = targetItem?.pnl?.categorias?.["Costo de Ventas"] || 0;
+      actual = targetItem?.kpis?.utilidad || 0;
+          if (localVal === 0 && iterItem.kpis?.ebitda)
+          iterItem.ppto?.tasaCambio ||
+        if (iterItem.ppto?.kpis?.ebitda) {
+        } else if (iterItem.ppto?.pnl?.fullRows) {
+        const labelLower = row?.label?.toLowerCase() || "";
+          periodData.pnl?.fullRows?.filter((r) => r.concept === concept) || [];
+            period.pnl?.fullRows?.filter((r) => r.concept === concept) || [];
+              period.pnl?.fullRows?.filter((r) => {
+                : period.kpis?.ingresos || 0;
+              const numRow = period.pnl?.fullRows?.find(
+                : period.kpis?.ebitda || 0;
+              const numRow = period.pnl?.fullRows?.find(
+                : period.kpis?.margen_bruto * period.kpis?.ingresos || 0;
+              const numRow = period.pnl?.fullRows?.find(
+                : period.kpis?.utilidad || 0;
+              const numRow = period.pnl?.fullRows?.find(
+          let pptoRows = period.ppto?.pnl?.fullRows || [];
+        (concept || '')?.startsWith("  ") ||
+        (concept || '')?.startsWith("\t") ||
+                : item.kpis?.ingresos || 0;
+                  : item.kpis?.ebitda || 0;
+                  : item.kpis?.margen_bruto * item.kpis?.ingresos || 0;
+                  : item.kpis?.utilidad || 0;
+            lastItem.pnl?.fullRows?.filter((r) => r.concept === concept) || [];
+            if (localVal === 0 && item.kpis?.ebitda)
+              ? parseDirtyNumber((currentRateRow?.values || {})[item.date])
+      if (displayConcept?.trim() === "Ventas P6") {
+      sumIngresos += item.kpis?.ingresos || 0;
+      sumUtilidad += item.kpis?.utilidad || 0;
+        (item.kpis?.margen_bruto || 0) * (item.kpis?.ingresos || 0);
+  const dso = curr.cashflowDetail?.dso || 0;
+  const dio = curr.cashflowDetail?.dio || 0;
+  const dpo = curr.cashflowDetail?.dpo || 0;
+  const prevDso = prev.cashflowDetail?.dso || 0;
+  const prevDio = prev.cashflowDetail?.dio || 0;
+  const prevDpo = prev.cashflowDetail?.dpo || 0;
+    curr.ppto?.kpis?.ingresos || 0,
+    curr.ppto?.kpis?.ebitda || 0,
+    curr.ppto?.kpis?.cashflow || 0,
+    curr.ppto?.kpis?.utilidad || 0,
+        ? yoyItem.kpis?.cashEnding || yoyItem.kpis?.cashflow || 0
+          ? yoyItem.kpis?.utilidad || 0
+          : yoyItem.kpis?.[elPrefix] || 0;
+      ?.trim();
+          const vNet = periodData?.kpis?.ingresos || 0;
+          const cVentas = periodData?.pnl?.categorias?.["Costo de Ventas"] || 0;
+          val = periodData?.kpis?.ebitda || 0;
+          val = periodData?.kpis?.utilidad || 0;
+            periodData?.kpis?.ingresos ||
+            periodData?.pnl?.categorias?.["Ingresos"] ||
+          val = periodData?.pnl?.categorias?.["Costo de Ventas"] || 0;
+          const opDet = periodData?.pnl?.opexDetalle || {};
+          if (val === 0 && periodData?.kpis?.ingresos) {
+              (periodData.pnl?.categorias?.["Costo de Ventas"] || 0) -
+      const pCats = periodData.pnl?.categorias || {};
+      const oDet = periodData.pnl?.opexDetalle || {};
+    const pnlCats = curr.pnl?.categorias || {};
+    const opexDet = curr.pnl?.opexDetalle || {};
+    beginning = data[firstIdx]?.cashflowDetail?.beginning || 0;
+    ending = data[index]?.cashflowDetail?.ending || 0;
+      const det = data[k]?.cashflowDetail || {};
+            - Ingresos (Kpis): RD$ ${(curr.kpis?.ingresos || 0).toFixed(2)}M
+            - EBITDA (Kpis): RD$ ${(curr.kpis?.ebitda || 0).toFixed(2)}M
+            - Utilidad Neta (Kpis): RD$ ${(curr.kpis?.utilidad || 0).toFixed(2)}M
+            - Flujo de Caja (Generación): RD$ ${(curr.kpis?.cashflow || 0).toFixed(2)}M
+            - Efectivo Final: RD$ ${(curr.cashflowDetail?.ending || 0).toFixed(2)}M
+            - Margen Bruto: ${((curr.kpis?.margen_bruto || 0) * 100).toFixed(1)}%
+            - Margen Neto: ${((curr.kpis?.margen_neto || 0) * 100).toFixed(1)}%
+            - Deuda Total: RD$ ${(curr.balance?.deudaTotal || 0).toFixed(2)}M
+            - Apalancamiento (Deuda/EBITDA): ${((curr.balance?.deudaTotal || 0) / (curr.balance?.ebitdaLTM || 1)).toFixed(2)}x
+    const question = aiChatInput.value?.trim();
+    const realIngresos = curr.kpis?.ingresos || 0;
+    const realEbitda = curr.kpis?.ebitda || 0;
+    const realCaja = curr.cashflowDetail?.ending || 0;
+    let cogs = curr.pnl?.categorias?.["Costo de Ventas"] || 0;
+    if (curr.pnl?.categorias?.OPEX) {
+    } else if (curr.pnl?.opexDetalle) {
+                  ?.trim();
+                  ?.trim();
+            (workbook?.SheetNames ? workbook.SheetNames[0] : null);
+              sheetNames: workbook?.SheetNames,
+                  d.Producto.toUpperCase()?.trim(),
+              // we don't have ((totRow?.pptoValues || {})[y])
+          (workbook?.SheetNames ? workbook.SheetNames[0] : null);
+        if (selectedSheetName && workbook?.Sheets?.[selectedSheetName]) {
+          sheetNames: workbook?.SheetNames,
+    const catUpper = category.toUpperCase()?.trim();
+        ?.trim();
+        ((catUpper || '')?.startsWith("Variante ") && desc.includes(catUpper)) ||
+          const text = String(cell).toLowerCase()?.trim();
+      const text = String(h).toLowerCase()?.trim();
+        const s = String(cell).toUpperCase()?.trim();
+          const s = String(cell).toUpperCase()?.trim();
+        const headerText = String(h)?.trim();
+          ((headerText || '')?.startsWith("202") && headerText.length >= 7)
+          (c) => c && String(c).toUpperCase()?.trim() === "TOTAL",
+              String(headers[j])?.trim() !== ""
+                ? String(headers[j])?.trim()
+      let prodVal = String(r[prodKey] || "")?.trim();
+        ?.trim();
+        (firstCell || '')?.startsWith("TOTAL SIN BON") ||
+        String(r[tipoKey])?.trim() !== "" &&
+        String(r[tipoKey])?.trim() !== "0"
+          ?.trim()
+          ((k || '')?.startsWith("202") && k.length >= 7)
+            ?.trim();
+                const text = String(cell).toUpperCase()?.trim();
+        const text = String(h).toLowerCase()?.trim();
+            String(cell).toUpperCase()?.trim()?.startsWith("TOTAL"),
+          String(cell).toUpperCase()?.trim()?.startsWith("TOTAL"),
+            ?.trim() === "no"
+              (h) => h && String(h)?.trim() !== "",
+          const s = String(cell).toUpperCase()?.trim();
+            const s = String(cell).toUpperCase()?.trim();
+            String(row[c])?.trim() !== ""
+            let headerStr = String(h)?.trim();
+          ?.trim();
+          String(v).toUpperCase()?.trim(),
+        if (d.Tipo && String(d.Tipo)?.trim() !== "") {
+          currentType = String(d.Tipo)?.trim();
+          ?.trim();
+          (firstCell || '')?.startsWith("TOTAL SIN BON") ||
+            ?.trim()
+            ((k || '')?.startsWith("202") && k.length >= 7)
+            if ((d || '')?.startsWith("2026-") && d > lastNonZeroDate) {
+            HECTOLITER_FACTORS[volRow.Producto.toUpperCase()?.trim()] || 0.1;
+                      ?.trim() === "producto" ||
+                      ?.trim() === "descripción",
+      csvRows = text.split("\n").filter((l) => l?.trim().length > 0);
+      if ((row || '')?.startsWith("---")) {
+        const prod = cols[0].toUpperCase()?.trim();
+        const upProd = cMap.Producto.toUpperCase()?.trim();
+        HECTOLITER_FACTORS[volRow.Producto.toUpperCase()?.trim()] || 0.1;
+            r.Producto.toUpperCase()?.trim(),
+          (totalRow.FY2024 || 0) - (parentBon?.FY2024 || 0);
+        totalSinBonRow.PO26 = (totalRow.PO26 || 0) - (parentBon?.PO26 || 0);
+              (parentBon?.values?.[mStr] || 0);
+            (parentBon?.pptoValues?.[mStr] || 0);
+          if ((d || '')?.startsWith("2026-") && (p.values || {})[d] !== 0) {
+          if ((d || '')?.startsWith("2026-") && d > lastNonZeroDate) {
+      let str = String(v)?.trim();
+      const isNegative = (str || '')?.startsWith("'(") || (str || '')?.startsWith("(");
+      let val = String(histHeaders[i]).toLowerCase()?.trim();
+        let rowStr = String(anaRows[r][0]).toLowerCase()?.trim();
+      ?.addEventListener("click", () => {
+      ?.addEventListener("click", () => {
+      ?.addEventListener("click", () => {
+      ?.addEventListener("click", () => {
+      ?.addEventListener("click", () => {
+      ?.addEventListener("click", () => {
+      ?.addEventListener("click", () => {
+      ?.addEventListener("click", () => {
+      ?.addEventListener("click", () => {
+      ?.addEventListener("click", () => {
+      ?.addEventListener("click", () => {
+          ?.trim();
+          const prodUpper = volRow.Producto.toUpperCase()?.trim();
+                d.Producto.toUpperCase()?.trim(),
+      const p = d.Producto ? d.Producto?.trim().toUpperCase() : "";
+        if ((row?.pptoValues || {})[altKey])
+      const p = d.Producto ? d.Producto?.trim().toUpperCase() : "";
+      const p = d.Producto ? d.Producto?.trim().toUpperCase() : "";
+    ?.addEventListener("click", () => {
+    ?.addEventListener("click", () => {
+          val = parseFloat((row?.values || {})[c]);
+  document.getElementById("btn-ventas-vol")?.addEventListener("click", () => {
+  document.getElementById("btn-ventas-monto")?.addEventListener("click", () => {
+    ?.addEventListener("click", () => {
+    ?.addEventListener("click", () => {
+        document.getElementById("menu-kpi")?.click();
+        document.getElementById("menu-kpi")?.click();
+        document.getElementById("menu-cxp")?.click();
+        document.getElementById("menu-resumen-comercial")?.click();
+          document.getElementById("btn-comercial-resumen")?.click();
+        document.getElementById("menu-resumen-comercial")?.click();
+          document.getElementById("btn-comercial-mom")?.click();
+        document.getElementById("menu-resumen-comercial")?.click();
+          document.getElementById("btn-comercial-variacion")?.click();
+        document.getElementById("menu-pnl")?.click();
+        document.getElementById("menu-simulador")?.click();
+        document.getElementById("menu-config")?.click();
+            ?.scrollIntoView({ behavior: "smooth", block: "center" });
+        document.getElementById("menu-instructivo")?.click();
+    document.getElementById("menu-instructivo")?.click();
+    ?.addEventListener("click", () => {
+    ?.addEventListener("click", () => {

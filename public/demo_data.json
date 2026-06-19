@@ -1,0 +1,3751 @@
+{
+  "globalFinancialData": [
+    {
+      "date": "Ene 2026",
+      "Periodo": "01-2026",
+      "sortDate": "2026-01-01T00:00:00.000Z",
+      "kpis": {
+        "ingresos": 10.191487456126113,
+        "ebitda": 3.5670206096441395,
+        "cashflow": 1.3536164877153118,
+        "utilidadNeta": 2.1402123657864838,
+        "margenBruto": 0.6,
+        "realIngresos": 10.191487456126113,
+        "pptoIngresos": 10.5,
+        "varIngresos": -0.029382147035608264,
+        "ebitdaRate": 0.35,
+        "realEbitda": 3.5670206096441395,
+        "pptoEbitda": 3.3886695791619323
+      },
+      "trend": {
+        "ingresos": 10.191487456126113,
+        "ebitda": 3.5670206096441395,
+        "cashflow": 1.3536164877153118,
+        "utilidadNeta": 2.1402123657864838
+      },
+      "balance": {
+        "deudaTotal": 11.8,
+        "ebitdaLTM": 42.804247315729675,
+        "efectivo": 6.353616487715312,
+        "roa": 0.15,
+        "roe": 0.2,
+        "ccc": 45
+      },
+      "cashflowDetail": {
+        "ending": 6.353616487715312,
+        "ops": 2.853616487715312,
+        "inv": -1,
+        "fin": -0.5,
+        "beg": 5
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 10.191487456126113,
+          "Costo de Ventas": 4.0765949824504455,
+          "Margen Bruto": 6.114892473675668,
+          "OPEX": 2.5478718640315283,
+          "EBITDA": 3.5670206096441395,
+          "Depreciación": 0.356702060964414,
+          "EBIT": 3.2103185486797257,
+          "Impuestos": 0.5350530914466209,
+          "Utilidad Neta": 2.1402123657864838
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 1.0191487456126114,
+          "Gastos de Mercadeo": 1.0191487456126114,
+          "Gastos Generales": 0.5095743728063057
+        },
+        "segments": {
+          "Producto 1": 4.0765949824504455,
+          "Producto 2": 2.0382974912252227,
+          "Producto 3": 2.0382974912252227,
+          "Producto 4": 1.0191487456126114,
+          "Producto 5": 1.0191487456126114
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 10.191487456126113,
+            "PPTO": 10.5,
+            "AA": 9.172338710513502,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Costo Directo",
+            "type": "Costo de Ventas",
+            "Real": 4.0765949824504455,
+            "PPTO": 4.2804247315729675,
+            "AA": 3.668935484205401,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Sueldos y Salarios",
+            "type": "OPEX",
+            "Real": 1.0191487456126114,
+            "PPTO": 1.0191487456126114,
+            "AA": 0.8917551524110349,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          }
+        ]
+      },
+      "_isMock": true
+    },
+    {
+      "date": "Feb 2026",
+      "Periodo": "02-2026",
+      "sortDate": "2026-02-01T00:00:00.000Z",
+      "kpis": {
+        "ingresos": 10.238869475407272,
+        "ebitda": 3.583604316392545,
+        "cashflow": 1.3668834531140361,
+        "utilidadNeta": 2.150162589835527,
+        "margenBruto": 0.6,
+        "realIngresos": 10.238869475407272,
+        "pptoIngresos": 10.5,
+        "varIngresos": -0.024869573770735953,
+        "ebitdaRate": 0.35,
+        "realEbitda": 3.583604316392545,
+        "pptoEbitda": 3.4044241005729172
+      },
+      "trend": {
+        "ingresos": 10.238869475407272,
+        "ebitda": 3.583604316392545,
+        "cashflow": 1.3668834531140361,
+        "utilidadNeta": 2.150162589835527
+      },
+      "balance": {
+        "deudaTotal": 11.600000000000001,
+        "ebitdaLTM": 43.003251796710536,
+        "efectivo": 7.720499940829349,
+        "roa": 0.15,
+        "roe": 0.2,
+        "ccc": 45
+      },
+      "cashflowDetail": {
+        "ending": 7.720499940829349,
+        "ops": 2.866883453114036,
+        "inv": -1,
+        "fin": -0.5,
+        "beg": 6.353616487715312
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 10.238869475407272,
+          "Costo de Ventas": 4.095547790162909,
+          "Margen Bruto": 6.143321685244363,
+          "OPEX": 2.559717368851818,
+          "EBITDA": 3.583604316392545,
+          "Depreciación": 0.3583604316392545,
+          "EBIT": 3.2252438847532905,
+          "Impuestos": 0.5375406474588817,
+          "Utilidad Neta": 2.150162589835527
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 1.0238869475407273,
+          "Gastos de Mercadeo": 1.0238869475407273,
+          "Gastos Generales": 0.5119434737703636
+        },
+        "segments": {
+          "Producto 1": 4.095547790162909,
+          "Producto 2": 2.0477738950814546,
+          "Producto 3": 2.0477738950814546,
+          "Producto 4": 1.0238869475407273,
+          "Producto 5": 1.0238869475407273
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 10.238869475407272,
+            "PPTO": 10.5,
+            "AA": 9.214982527866544,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Costo Directo",
+            "type": "Costo de Ventas",
+            "Real": 4.095547790162909,
+            "PPTO": 4.300325179671055,
+            "AA": 3.685993011146618,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Sueldos y Salarios",
+            "type": "OPEX",
+            "Real": 1.0238869475407273,
+            "PPTO": 1.0238869475407273,
+            "AA": 0.8959010790981362,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          }
+        ]
+      },
+      "_isMock": true
+    },
+    {
+      "date": "Mar 2026",
+      "Periodo": "03-2026",
+      "sortDate": "2026-03-01T00:00:00.000Z",
+      "kpis": {
+        "ingresos": 10.316235823947949,
+        "ebitda": 3.6106825383817815,
+        "cashflow": 1.3885460307054256,
+        "utilidadNeta": 2.1664095230290688,
+        "margenBruto": 0.6,
+        "realIngresos": 10.316235823947949,
+        "pptoIngresos": 10.5,
+        "varIngresos": -0.01750135010019538,
+        "ebitdaRate": 0.3499999999999999,
+        "realEbitda": 3.6106825383817815,
+        "pptoEbitda": 3.4301484114626923
+      },
+      "trend": {
+        "ingresos": 10.316235823947949,
+        "ebitda": 3.6106825383817815,
+        "cashflow": 1.3885460307054256,
+        "utilidadNeta": 2.1664095230290688
+      },
+      "balance": {
+        "deudaTotal": 11.400000000000002,
+        "ebitdaLTM": 43.32819046058138,
+        "efectivo": 9.109045971534774,
+        "roa": 0.15,
+        "roe": 0.2,
+        "ccc": 45
+      },
+      "cashflowDetail": {
+        "ending": 9.109045971534774,
+        "ops": 2.8885460307054256,
+        "inv": -1,
+        "fin": -0.5,
+        "beg": 7.720499940829349
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 10.316235823947949,
+          "Costo de Ventas": 4.12649432957918,
+          "Margen Bruto": 6.189741494368769,
+          "OPEX": 2.579058955986987,
+          "EBITDA": 3.6106825383817815,
+          "Depreciación": 0.3610682538381782,
+          "EBIT": 3.2496142845436036,
+          "Impuestos": 0.5416023807572672,
+          "Utilidad Neta": 2.1664095230290688
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 1.031623582394795,
+          "Gastos de Mercadeo": 1.031623582394795,
+          "Gastos Generales": 0.5158117911973975
+        },
+        "segments": {
+          "Producto 1": 4.12649432957918,
+          "Producto 2": 2.06324716478959,
+          "Producto 3": 2.06324716478959,
+          "Producto 4": 1.031623582394795,
+          "Producto 5": 1.031623582394795
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 10.316235823947949,
+            "PPTO": 10.5,
+            "AA": 9.284612241553154,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Costo Directo",
+            "type": "Costo de Ventas",
+            "Real": 4.12649432957918,
+            "PPTO": 4.332819046058139,
+            "AA": 3.713844896621262,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Sueldos y Salarios",
+            "type": "OPEX",
+            "Real": 1.031623582394795,
+            "PPTO": 1.031623582394795,
+            "AA": 0.9026706345954455,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          }
+        ]
+      },
+      "_isMock": true
+    },
+    {
+      "date": "Abr 2026",
+      "Periodo": "04-2026",
+      "sortDate": "2026-04-01T00:00:00.000Z",
+      "kpis": {
+        "ingresos": 10.951154544332352,
+        "ebitda": 3.832904090516323,
+        "cashflow": 1.5663232724130585,
+        "utilidadNeta": 2.2997424543097935,
+        "margenBruto": 0.6,
+        "realIngresos": 10.951154544332352,
+        "pptoIngresos": 10.5,
+        "varIngresos": 0.042967099460224034,
+        "ebitdaRate": 0.35,
+        "realEbitda": 3.832904090516323,
+        "pptoEbitda": 3.641258885990507
+      },
+      "trend": {
+        "ingresos": 10.951154544332352,
+        "ebitda": 3.832904090516323,
+        "cashflow": 1.5663232724130585,
+        "utilidadNeta": 2.2997424543097935
+      },
+      "balance": {
+        "deudaTotal": 11.200000000000003,
+        "ebitdaLTM": 45.99484908619588,
+        "efectivo": 10.675369243947832,
+        "roa": 0.15,
+        "roe": 0.2,
+        "ccc": 45
+      },
+      "cashflowDetail": {
+        "ending": 10.675369243947832,
+        "ops": 3.0663232724130585,
+        "inv": -1,
+        "fin": -0.5,
+        "beg": 9.109045971534774
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 10.951154544332352,
+          "Costo de Ventas": 4.380461817732941,
+          "Margen Bruto": 6.570692726599411,
+          "OPEX": 2.737788636083088,
+          "EBITDA": 3.832904090516323,
+          "Depreciación": 0.3832904090516323,
+          "EBIT": 3.4496136814646907,
+          "Impuestos": 0.5749356135774484,
+          "Utilidad Neta": 2.2997424543097935
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 1.0951154544332353,
+          "Gastos de Mercadeo": 1.0951154544332353,
+          "Gastos Generales": 0.5475577272166177
+        },
+        "segments": {
+          "Producto 1": 4.380461817732941,
+          "Producto 2": 2.1902309088664706,
+          "Producto 3": 2.1902309088664706,
+          "Producto 4": 1.0951154544332353,
+          "Producto 5": 1.0951154544332353
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 10.951154544332352,
+            "PPTO": 10.5,
+            "AA": 9.856039089899117,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Costo Directo",
+            "type": "Costo de Ventas",
+            "Real": 4.380461817732941,
+            "PPTO": 4.599484908619589,
+            "AA": 3.942415635959647,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Sueldos y Salarios",
+            "type": "OPEX",
+            "Real": 1.0951154544332353,
+            "PPTO": 1.0951154544332353,
+            "AA": 0.9582260226290807,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          }
+        ]
+      },
+      "_isMock": true
+    },
+    {
+      "date": "May 2026",
+      "Periodo": "05-2026",
+      "sortDate": "2026-05-01T00:00:00.000Z",
+      "kpis": {
+        "ingresos": 11.210626791409561,
+        "ebitda": 3.9237193769933465,
+        "cashflow": 1.6389755015946772,
+        "utilidadNeta": 2.354231626196008,
+        "margenBruto": 0.6,
+        "realIngresos": 11.210626791409561,
+        "pptoIngresos": 10.5,
+        "varIngresos": 0.06767874203900592,
+        "ebitdaRate": 0.35,
+        "realEbitda": 3.9237193769933465,
+        "pptoEbitda": 3.727533408143679
+      },
+      "trend": {
+        "ingresos": 11.210626791409561,
+        "ebitda": 3.9237193769933465,
+        "cashflow": 1.6389755015946772,
+        "utilidadNeta": 2.354231626196008
+      },
+      "balance": {
+        "deudaTotal": 11.000000000000004,
+        "ebitdaLTM": 47.084632523920156,
+        "efectivo": 12.31434474554251,
+        "roa": 0.15,
+        "roe": 0.2,
+        "ccc": 45
+      },
+      "cashflowDetail": {
+        "ending": 12.31434474554251,
+        "ops": 3.138975501594677,
+        "inv": -1,
+        "fin": -0.5,
+        "beg": 10.675369243947832
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 11.210626791409561,
+          "Costo de Ventas": 4.484250716563825,
+          "Margen Bruto": 6.726376074845737,
+          "OPEX": 2.8026566978523904,
+          "EBITDA": 3.9237193769933465,
+          "Depreciación": 0.39237193769933465,
+          "EBIT": 3.531347439294012,
+          "Impuestos": 0.588557906549002,
+          "Utilidad Neta": 2.354231626196008
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 1.1210626791409561,
+          "Gastos de Mercadeo": 1.1210626791409561,
+          "Gastos Generales": 0.5605313395704781
+        },
+        "segments": {
+          "Producto 1": 4.484250716563825,
+          "Producto 2": 2.2421253582819123,
+          "Producto 3": 2.2421253582819123,
+          "Producto 4": 1.1210626791409561,
+          "Producto 5": 1.1210626791409561
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 11.210626791409561,
+            "PPTO": 10.5,
+            "AA": 10.089564112268606,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Costo Directo",
+            "type": "Costo de Ventas",
+            "Real": 4.484250716563825,
+            "PPTO": 4.708463252392016,
+            "AA": 4.035825644907442,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Sueldos y Salarios",
+            "type": "OPEX",
+            "Real": 1.1210626791409561,
+            "PPTO": 1.1210626791409561,
+            "AA": 0.9809298442483365,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          }
+        ]
+      },
+      "_isMock": true
+    },
+    {
+      "date": "Jun 2026",
+      "Periodo": "06-2026",
+      "sortDate": "2026-06-01T00:00:00.000Z",
+      "kpis": {
+        "ingresos": 11.792913681088926,
+        "ebitda": 4.127519788381124,
+        "cashflow": 1.8020158307048995,
+        "utilidadNeta": 2.4765118730286746,
+        "margenBruto": 0.6,
+        "realIngresos": 11.792913681088926,
+        "pptoIngresos": 10.5,
+        "varIngresos": 0.12313463629418342,
+        "ebitdaRate": 0.35000000000000003,
+        "realEbitda": 4.127519788381124,
+        "pptoEbitda": 3.921143798962068
+      },
+      "trend": {
+        "ingresos": 11.792913681088926,
+        "ebitda": 4.127519788381124,
+        "cashflow": 1.8020158307048995,
+        "utilidadNeta": 2.4765118730286746
+      },
+      "balance": {
+        "deudaTotal": 10.800000000000004,
+        "ebitdaLTM": 49.53023746057349,
+        "efectivo": 14.11636057624741,
+        "roa": 0.15,
+        "roe": 0.2,
+        "ccc": 45
+      },
+      "cashflowDetail": {
+        "ending": 14.11636057624741,
+        "ops": 3.3020158307048995,
+        "inv": -1,
+        "fin": -0.5,
+        "beg": 12.31434474554251
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 11.792913681088926,
+          "Costo de Ventas": 4.71716547243557,
+          "Margen Bruto": 7.075748208653356,
+          "OPEX": 2.9482284202722315,
+          "EBITDA": 4.127519788381124,
+          "Depreciación": 0.41275197883811243,
+          "EBIT": 3.714767809543012,
+          "Impuestos": 0.6191279682571686,
+          "Utilidad Neta": 2.4765118730286746
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 1.1792913681088926,
+          "Gastos de Mercadeo": 1.1792913681088926,
+          "Gastos Generales": 0.5896456840544463
+        },
+        "segments": {
+          "Producto 1": 4.71716547243557,
+          "Producto 2": 2.358582736217785,
+          "Producto 3": 2.358582736217785,
+          "Producto 4": 1.1792913681088926,
+          "Producto 5": 1.1792913681088926
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 11.792913681088926,
+            "PPTO": 10.5,
+            "AA": 10.613622312980034,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Costo Directo",
+            "type": "Costo de Ventas",
+            "Real": 4.71716547243557,
+            "PPTO": 4.953023746057349,
+            "AA": 4.245448925192013,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Sueldos y Salarios",
+            "type": "OPEX",
+            "Real": 1.1792913681088926,
+            "PPTO": 1.1792913681088926,
+            "AA": 1.031879947095281,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          }
+        ]
+      },
+      "_isMock": true
+    },
+    {
+      "date": "Jul 2026",
+      "Periodo": "07-2026",
+      "sortDate": "2026-07-01T00:00:00.000Z",
+      "kpis": {
+        "ingresos": 10.350845652993922,
+        "ebitda": 3.622795978547872,
+        "cashflow": 1.398236782838298,
+        "utilidadNeta": 2.173677587128723,
+        "margenBruto": 0.6,
+        "realIngresos": 10.350845652993922,
+        "pptoIngresos": 10.5,
+        "varIngresos": -0.014205175905340761,
+        "ebitdaRate": 0.3499999999999999,
+        "realEbitda": 3.622795978547872,
+        "pptoEbitda": 3.441656179620478
+      },
+      "trend": {
+        "ingresos": 10.350845652993922,
+        "ebitda": 3.622795978547872,
+        "cashflow": 1.398236782838298,
+        "utilidadNeta": 2.173677587128723
+      },
+      "balance": {
+        "deudaTotal": 10.600000000000005,
+        "ebitdaLTM": 43.473551742574465,
+        "efectivo": 15.514597359085707,
+        "roa": 0.15,
+        "roe": 0.2,
+        "ccc": 45
+      },
+      "cashflowDetail": {
+        "ending": 15.514597359085707,
+        "ops": 2.898236782838298,
+        "inv": -1,
+        "fin": -0.5,
+        "beg": 14.11636057624741
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 10.350845652993922,
+          "Costo de Ventas": 4.140338261197569,
+          "Margen Bruto": 6.2105073917963525,
+          "OPEX": 2.5877114132484804,
+          "EBITDA": 3.622795978547872,
+          "Depreciación": 0.36227959785478725,
+          "EBIT": 3.260516380693085,
+          "Impuestos": 0.5434193967821808,
+          "Utilidad Neta": 2.173677587128723
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 1.0350845652993923,
+          "Gastos de Mercadeo": 1.0350845652993923,
+          "Gastos Generales": 0.5175422826496962
+        },
+        "segments": {
+          "Producto 1": 4.140338261197569,
+          "Producto 2": 2.0701691305987846,
+          "Producto 3": 2.0701691305987846,
+          "Producto 4": 1.0350845652993923,
+          "Producto 5": 1.0350845652993923
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 10.350845652993922,
+            "PPTO": 10.5,
+            "AA": 9.31576108769453,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Costo Directo",
+            "type": "Costo de Ventas",
+            "Real": 4.140338261197569,
+            "PPTO": 4.347355174257448,
+            "AA": 3.7263044350778123,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Sueldos y Salarios",
+            "type": "OPEX",
+            "Real": 1.0350845652993923,
+            "PPTO": 1.0350845652993923,
+            "AA": 0.9056989946369681,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          }
+        ]
+      },
+      "_isMock": true
+    },
+    {
+      "date": "Ago 2026",
+      "Periodo": "08-2026",
+      "sortDate": "2026-08-01T00:00:00.000Z",
+      "kpis": {
+        "ingresos": 11.33544883455455,
+        "ebitda": 3.9674070920940925,
+        "cashflow": 1.6739256736752743,
+        "utilidadNeta": 2.3804442552564553,
+        "margenBruto": 0.6,
+        "realIngresos": 11.33544883455455,
+        "pptoIngresos": 10.5,
+        "varIngresos": 0.07956655567186188,
+        "ebitdaRate": 0.35000000000000003,
+        "realEbitda": 3.9674070920940925,
+        "pptoEbitda": 3.7690367374893876
+      },
+      "trend": {
+        "ingresos": 11.33544883455455,
+        "ebitda": 3.9674070920940925,
+        "cashflow": 1.6739256736752743,
+        "utilidadNeta": 2.3804442552564553
+      },
+      "balance": {
+        "deudaTotal": 10.400000000000006,
+        "ebitdaLTM": 47.60888510512911,
+        "efectivo": 17.188523032760983,
+        "roa": 0.15,
+        "roe": 0.2,
+        "ccc": 45
+      },
+      "cashflowDetail": {
+        "ending": 17.188523032760983,
+        "ops": 3.1739256736752743,
+        "inv": -1,
+        "fin": -0.5,
+        "beg": 15.514597359085709
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 11.33544883455455,
+          "Costo de Ventas": 4.53417953382182,
+          "Margen Bruto": 6.80126930073273,
+          "OPEX": 2.8338622086386374,
+          "EBITDA": 3.9674070920940925,
+          "Depreciación": 0.3967407092094093,
+          "EBIT": 3.570666382884683,
+          "Impuestos": 0.5951110638141138,
+          "Utilidad Neta": 2.3804442552564553
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 1.133544883455455,
+          "Gastos de Mercadeo": 1.133544883455455,
+          "Gastos Generales": 0.5667724417277274
+        },
+        "segments": {
+          "Producto 1": 4.53417953382182,
+          "Producto 2": 2.26708976691091,
+          "Producto 3": 2.26708976691091,
+          "Producto 4": 1.133544883455455,
+          "Producto 5": 1.133544883455455
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 11.33544883455455,
+            "PPTO": 10.5,
+            "AA": 10.201903951099094,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Costo Directo",
+            "type": "Costo de Ventas",
+            "Real": 4.53417953382182,
+            "PPTO": 4.760888510512911,
+            "AA": 4.0807615804396375,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Sueldos y Salarios",
+            "type": "OPEX",
+            "Real": 1.133544883455455,
+            "PPTO": 1.133544883455455,
+            "AA": 0.991851773023523,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          }
+        ]
+      },
+      "_isMock": true
+    },
+    {
+      "date": "Sep 2026",
+      "Periodo": "09-2026",
+      "sortDate": "2026-09-01T00:00:00.000Z",
+      "kpis": {
+        "ingresos": 11.960423347453283,
+        "ebitda": 4.186148171608648,
+        "cashflow": 1.8489185372869188,
+        "utilidadNeta": 2.5116889029651888,
+        "margenBruto": 0.6,
+        "realIngresos": 11.960423347453283,
+        "pptoIngresos": 10.5,
+        "varIngresos": 0.1390879378526937,
+        "ebitdaRate": 0.35,
+        "realEbitda": 4.186148171608648,
+        "pptoEbitda": 3.976840763028216
+      },
+      "trend": {
+        "ingresos": 11.960423347453283,
+        "ebitda": 4.186148171608648,
+        "cashflow": 1.8489185372869188,
+        "utilidadNeta": 2.5116889029651888
+      },
+      "balance": {
+        "deudaTotal": 10.200000000000006,
+        "ebitdaLTM": 50.23377805930378,
+        "efectivo": 19.037441570047903,
+        "roa": 0.15,
+        "roe": 0.2,
+        "ccc": 45
+      },
+      "cashflowDetail": {
+        "ending": 19.037441570047903,
+        "ops": 3.348918537286919,
+        "inv": -1,
+        "fin": -0.5,
+        "beg": 17.188523032760983
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 11.960423347453283,
+          "Costo de Ventas": 4.784169338981314,
+          "Margen Bruto": 7.176254008471969,
+          "OPEX": 2.9901058368633207,
+          "EBITDA": 4.186148171608648,
+          "Depreciación": 0.41861481716086485,
+          "EBIT": 3.767533354447784,
+          "Impuestos": 0.6279222257412972,
+          "Utilidad Neta": 2.5116889029651888
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 1.1960423347453284,
+          "Gastos de Mercadeo": 1.1960423347453284,
+          "Gastos Generales": 0.5980211673726642
+        },
+        "segments": {
+          "Producto 1": 4.784169338981314,
+          "Producto 2": 2.392084669490657,
+          "Producto 3": 2.392084669490657,
+          "Producto 4": 1.1960423347453284,
+          "Producto 5": 1.1960423347453284
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 11.960423347453283,
+            "PPTO": 10.5,
+            "AA": 10.764381012707954,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Costo Directo",
+            "type": "Costo de Ventas",
+            "Real": 4.784169338981314,
+            "PPTO": 5.023377805930379,
+            "AA": 4.305752405083182,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Sueldos y Salarios",
+            "type": "OPEX",
+            "Real": 1.1960423347453284,
+            "PPTO": 1.1960423347453284,
+            "AA": 1.046537042902162,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          }
+        ]
+      },
+      "_isMock": true
+    },
+    {
+      "date": "Oct 2026",
+      "Periodo": "10-2026",
+      "sortDate": "2026-10-01T00:00:00.000Z",
+      "kpis": {
+        "ingresos": 11.102482524812668,
+        "ebitda": 3.8858688836844335,
+        "cashflow": 1.6086951069475468,
+        "utilidadNeta": 2.33152133021066,
+        "margenBruto": 0.6,
+        "realIngresos": 11.102482524812668,
+        "pptoIngresos": 10.5,
+        "varIngresos": 0.057379288077396895,
+        "ebitdaRate": 0.35,
+        "realEbitda": 3.8858688836844335,
+        "pptoEbitda": 3.6915754395002116
+      },
+      "trend": {
+        "ingresos": 11.102482524812668,
+        "ebitda": 3.8858688836844335,
+        "cashflow": 1.6086951069475468,
+        "utilidadNeta": 2.33152133021066
+      },
+      "balance": {
+        "deudaTotal": 10.000000000000007,
+        "ebitdaLTM": 46.6304266042132,
+        "efectivo": 20.64613667699545,
+        "roa": 0.15,
+        "roe": 0.2,
+        "ccc": 45
+      },
+      "cashflowDetail": {
+        "ending": 20.64613667699545,
+        "ops": 3.108695106947547,
+        "inv": -1,
+        "fin": -0.5,
+        "beg": 19.037441570047903
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 11.102482524812668,
+          "Costo de Ventas": 4.440993009925068,
+          "Margen Bruto": 6.6614895148876005,
+          "OPEX": 2.775620631203167,
+          "EBITDA": 3.8858688836844335,
+          "Depreciación": 0.38858688836844335,
+          "EBIT": 3.49728199531599,
+          "Impuestos": 0.582880332552665,
+          "Utilidad Neta": 2.33152133021066
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 1.110248252481267,
+          "Gastos de Mercadeo": 1.110248252481267,
+          "Gastos Generales": 0.5551241262406335
+        },
+        "segments": {
+          "Producto 1": 4.440993009925068,
+          "Producto 2": 2.220496504962534,
+          "Producto 3": 2.220496504962534,
+          "Producto 4": 1.110248252481267,
+          "Producto 5": 1.110248252481267
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 11.102482524812668,
+            "PPTO": 10.5,
+            "AA": 9.992234272331402,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Costo Directo",
+            "type": "Costo de Ventas",
+            "Real": 4.440993009925068,
+            "PPTO": 4.663042660421321,
+            "AA": 3.996893708932561,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Sueldos y Salarios",
+            "type": "OPEX",
+            "Real": 1.110248252481267,
+            "PPTO": 1.110248252481267,
+            "AA": 0.9714672209211084,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          }
+        ]
+      },
+      "_isMock": true
+    },
+    {
+      "date": "Nov 2026",
+      "Periodo": "11-2026",
+      "sortDate": "2026-11-01T00:00:00.000Z",
+      "kpis": {
+        "ingresos": 10.773806353089395,
+        "ebitda": 3.770832223581288,
+        "cashflow": 1.5166657788650308,
+        "utilidadNeta": 2.2624993341487727,
+        "margenBruto": 0.6,
+        "realIngresos": 10.773806353089395,
+        "pptoIngresos": 10.5,
+        "varIngresos": 0.026076795532323338,
+        "ebitdaRate": 0.35,
+        "realEbitda": 3.770832223581288,
+        "pptoEbitda": 3.5822906124022236
+      },
+      "trend": {
+        "ingresos": 10.773806353089395,
+        "ebitda": 3.770832223581288,
+        "cashflow": 1.5166657788650308,
+        "utilidadNeta": 2.2624993341487727
+      },
+      "balance": {
+        "deudaTotal": 9.800000000000008,
+        "ebitdaLTM": 45.24998668297546,
+        "efectivo": 22.16280245586048,
+        "roa": 0.15,
+        "roe": 0.2,
+        "ccc": 45
+      },
+      "cashflowDetail": {
+        "ending": 22.16280245586048,
+        "ops": 3.016665778865031,
+        "inv": -1,
+        "fin": -0.5,
+        "beg": 20.646136676995447
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 10.773806353089395,
+          "Costo de Ventas": 4.309522541235758,
+          "Margen Bruto": 6.464283811853637,
+          "OPEX": 2.6934515882723487,
+          "EBITDA": 3.770832223581288,
+          "Depreciación": 0.37708322235812886,
+          "EBIT": 3.3937490012231595,
+          "Impuestos": 0.5656248335371932,
+          "Utilidad Neta": 2.2624993341487727
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 1.0773806353089395,
+          "Gastos de Mercadeo": 1.0773806353089395,
+          "Gastos Generales": 0.5386903176544697
+        },
+        "segments": {
+          "Producto 1": 4.309522541235758,
+          "Producto 2": 2.154761270617879,
+          "Producto 3": 2.154761270617879,
+          "Producto 4": 1.0773806353089395,
+          "Producto 5": 1.0773806353089395
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 10.773806353089395,
+            "PPTO": 10.5,
+            "AA": 9.696425717780455,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Costo Directo",
+            "type": "Costo de Ventas",
+            "Real": 4.309522541235758,
+            "PPTO": 4.524998668297546,
+            "AA": 3.8785702871121823,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Sueldos y Salarios",
+            "type": "OPEX",
+            "Real": 1.0773806353089395,
+            "PPTO": 1.0773806353089395,
+            "AA": 0.9427080558953219,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          }
+        ]
+      },
+      "_isMock": true
+    },
+    {
+      "date": "Dic 2026",
+      "Periodo": "12-2026",
+      "sortDate": "2026-12-01T00:00:00.000Z",
+      "kpis": {
+        "ingresos": 10.095729800241703,
+        "ebitda": 3.5335054300845954,
+        "cashflow": 1.3268043440676767,
+        "utilidadNeta": 2.120103258050757,
+        "margenBruto": 0.6,
+        "realIngresos": 10.095729800241703,
+        "pptoIngresos": 10.5,
+        "varIngresos": -0.03850192378650452,
+        "ebitdaRate": 0.3499999999999999,
+        "realEbitda": 3.5335054300845954,
+        "pptoEbitda": 3.3568301585803653
+      },
+      "trend": {
+        "ingresos": 10.095729800241703,
+        "ebitda": 3.5335054300845954,
+        "cashflow": 1.3268043440676767,
+        "utilidadNeta": 2.120103258050757
+      },
+      "balance": {
+        "deudaTotal": 9.600000000000009,
+        "ebitdaLTM": 42.402065161015145,
+        "efectivo": 23.489606799928154,
+        "roa": 0.15,
+        "roe": 0.2,
+        "ccc": 45
+      },
+      "cashflowDetail": {
+        "ending": 23.489606799928154,
+        "ops": 2.8268043440676767,
+        "inv": -1,
+        "fin": -0.5,
+        "beg": 22.16280245586048
+      },
+      "pnl": {
+        "categorias": {
+          "Ingresos": 10.095729800241703,
+          "Costo de Ventas": 4.038291920096682,
+          "Margen Bruto": 6.057437880145021,
+          "OPEX": 2.5239324500604257,
+          "EBITDA": 3.5335054300845954,
+          "Depreciación": 0.3533505430084596,
+          "EBIT": 3.180154887076136,
+          "Impuestos": 0.5300258145126893,
+          "Utilidad Neta": 2.120103258050757
+        },
+        "opexDetalle": {
+          "Gastos Administrativos": 1.0095729800241704,
+          "Gastos de Mercadeo": 1.0095729800241704,
+          "Gastos Generales": 0.5047864900120852
+        },
+        "segments": {
+          "Producto 1": 4.038291920096682,
+          "Producto 2": 2.019145960048341,
+          "Producto 3": 2.019145960048341,
+          "Producto 4": 1.0095729800241704,
+          "Producto 5": 1.0095729800241704
+        },
+        "fullRows": [
+          {
+            "cuenta": "Ingresos Operativos",
+            "type": "Ingresos",
+            "Real": 10.095729800241703,
+            "PPTO": 10.5,
+            "AA": 9.086156820217532,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Costo Directo",
+            "type": "Costo de Ventas",
+            "Real": 4.038291920096682,
+            "PPTO": 4.240206516101516,
+            "AA": 3.6344627280870134,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          },
+          {
+            "cuenta": "Sueldos y Salarios",
+            "type": "OPEX",
+            "Real": 1.0095729800241704,
+            "PPTO": 1.0095729800241704,
+            "AA": 0.883376357521149,
+            "YoY": 0.1,
+            "PPTO_Var": 0.05
+          }
+        ]
+      },
+      "_isMock": true
+    }
+  ],
+  "ceoData": [
+    {
+      "Producto": "Total Portafolio",
+      "Tipo": "Volumen",
+      "id": "Total_Portafolio",
+      "parentId": null,
+      "hasChildren": true,
+      "values": {
+        "2026-01": 7.614782836702608,
+        "2026-02": 8.387917834699568,
+        "2026-03": 7.825196130462223,
+        "2026-04": 8.15730745596812,
+        "2026-05": 8.357686490564255,
+        "2026-06": 8.166041168477388,
+        "2026-07": 7.926440546139083,
+        "2026-08": 8.120363053853067,
+        "2026-09": 7.637313807181852,
+        "2026-10": 8.266332893916061,
+        "2026-11": 7.730189231004344,
+        "2026-12": 7.801623089348958
+      },
+      "pptoValues": {
+        "2026-01": 7.940000000000001,
+        "2026-02": 7.940000000000001,
+        "2026-03": 7.940000000000001,
+        "2026-04": 7.940000000000001,
+        "2026-05": 7.940000000000001,
+        "2026-06": 7.940000000000001,
+        "2026-07": 7.940000000000001,
+        "2026-08": 7.940000000000001,
+        "2026-09": 7.940000000000001,
+        "2026-10": 7.940000000000001,
+        "2026-11": 7.940000000000001,
+        "2026-12": 7.940000000000001
+      },
+      "FY2024": 0,
+      "PO26": 0
+    },
+    {
+      "Producto": "Total Portafolio",
+      "Tipo": "Monto",
+      "id": "Total_Portafolio",
+      "parentId": null,
+      "hasChildren": true,
+      "values": {
+        "2026-01": 76.27054692066856,
+        "2026-02": 79.34925173758575,
+        "2026-03": 78.45924303610964,
+        "2026-04": 81.49024738453163,
+        "2026-05": 77.97258577875131,
+        "2026-06": 79.78680221498533,
+        "2026-07": 83.98388644534388,
+        "2026-08": 79.48840178516717,
+        "2026-09": 80.372010094592,
+        "2026-10": 80.98627235273439,
+        "2026-11": 82.63354682840743,
+        "2026-12": 78.78575737671005
+      },
+      "pptoValues": {
+        "2026-01": 79.39999999999999,
+        "2026-02": 79.39999999999999,
+        "2026-03": 79.39999999999999,
+        "2026-04": 79.39999999999999,
+        "2026-05": 79.39999999999999,
+        "2026-06": 79.39999999999999,
+        "2026-07": 79.39999999999999,
+        "2026-08": 79.39999999999999,
+        "2026-09": 79.39999999999999,
+        "2026-10": 79.39999999999999,
+        "2026-11": 79.39999999999999,
+        "2026-12": 79.39999999999999
+      },
+      "FY2024": 0,
+      "PO26": 0
+    },
+    {
+      "Producto": "Producto 1",
+      "Tipo": "Volumen",
+      "id": "Producto_1",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 3.1751061307208888,
+        "2026-02": 3.4554452394902357,
+        "2026-03": 3.333639885398602,
+        "2026-04": 3.2720978890194172,
+        "2026-05": 3.5525524089224287,
+        "2026-06": 3.3773906355830277,
+        "2026-07": 3.011374946443546,
+        "2026-08": 3.505903227103833,
+        "2026-09": 3.069390865525113,
+        "2026-10": 3.3975547586685693,
+        "2026-11": 3.0135564354141207,
+        "2026-12": 3.217456225451163
+      },
+      "pptoValues": {
+        "2026-01": 3.3000000000000003,
+        "2026-02": 3.3000000000000003,
+        "2026-03": 3.3000000000000003,
+        "2026-04": 3.3000000000000003,
+        "2026-05": 3.3000000000000003,
+        "2026-06": 3.3000000000000003,
+        "2026-07": 3.3000000000000003,
+        "2026-08": 3.3000000000000003,
+        "2026-09": 3.3000000000000003,
+        "2026-10": 3.3000000000000003,
+        "2026-11": 3.3000000000000003,
+        "2026-12": 3.3000000000000003
+      },
+      "FY2024": 32,
+      "PO26": 40
+    },
+    {
+      "Producto": "Producto 1",
+      "Tipo": "Monto",
+      "id": "Producto_1",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 32.43588933655161,
+        "2026-02": 32.22064990829031,
+        "2026-03": 31.905065877128354,
+        "2026-04": 35.04574943433001,
+        "2026-05": 30.651036137147322,
+        "2026-06": 34.463697484942195,
+        "2026-07": 35.037203422187666,
+        "2026-08": 32.33089592552301,
+        "2026-09": 30.226510305831564,
+        "2026-10": 30.563397262446845,
+        "2026-11": 33.57991511015775,
+        "2026-12": 31.76218029014055
+      },
+      "pptoValues": {
+        "2026-01": 33,
+        "2026-02": 33,
+        "2026-03": 33,
+        "2026-04": 33,
+        "2026-05": 33,
+        "2026-06": 33,
+        "2026-07": 33,
+        "2026-08": 33,
+        "2026-09": 33,
+        "2026-10": 33,
+        "2026-11": 33,
+        "2026-12": 33
+      },
+      "FY2024": 324,
+      "PO26": 396
+    },
+    {
+      "Producto": "Producto 2",
+      "Tipo": "Volumen",
+      "id": "Producto_2",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 2.564229610778542,
+        "2026-02": 2.881134174714937,
+        "2026-03": 2.537563252300213,
+        "2026-04": 2.8819052206455043,
+        "2026-05": 2.8249621592471548,
+        "2026-06": 2.764585511213166,
+        "2026-07": 2.9776121468096273,
+        "2026-08": 2.6394582958444603,
+        "2026-09": 2.647295795231106,
+        "2026-10": 2.9575187181270772,
+        "2026-11": 2.784867408842657,
+        "2026-12": 2.515102151865684
+      },
+      "pptoValues": {
+        "2026-01": 2.625,
+        "2026-02": 2.625,
+        "2026-03": 2.625,
+        "2026-04": 2.625,
+        "2026-05": 2.625,
+        "2026-06": 2.625,
+        "2026-07": 2.625,
+        "2026-08": 2.625,
+        "2026-09": 2.625,
+        "2026-10": 2.625,
+        "2026-11": 2.625,
+        "2026-12": 2.625
+      },
+      "FY2024": 27,
+      "PO26": 32
+    },
+    {
+      "Producto": "Producto 2",
+      "Tipo": "Monto",
+      "id": "Producto_2",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 25.24707871411455,
+        "2026-02": 26.648156517126967,
+        "2026-03": 27.5484220684447,
+        "2026-04": 25.779992461171478,
+        "2026-05": 27.601331008100118,
+        "2026-06": 25.716322698200756,
+        "2026-07": 28.297407950030827,
+        "2026-08": 27.180994925421516,
+        "2026-09": 29.90230424387022,
+        "2026-10": 29.54384094703845,
+        "2026-11": 29.224567900313083,
+        "2026-12": 27.795752742536834
+      },
+      "pptoValues": {
+        "2026-01": 26.25,
+        "2026-02": 26.25,
+        "2026-03": 26.25,
+        "2026-04": 26.25,
+        "2026-05": 26.25,
+        "2026-06": 26.25,
+        "2026-07": 26.25,
+        "2026-08": 26.25,
+        "2026-09": 26.25,
+        "2026-10": 26.25,
+        "2026-11": 26.25,
+        "2026-12": 26.25
+      },
+      "FY2024": 270,
+      "PO26": 315
+    },
+    {
+      "Producto": "Producto 3",
+      "Tipo": "Volumen",
+      "id": "Producto_3",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 1.0025373264664479,
+        "2026-02": 1.1150626663123213,
+        "2026-03": 1.0442103305683528,
+        "2026-04": 1.1274671859393721,
+        "2026-05": 1.0880451518940077,
+        "2026-06": 1.1753361526604917,
+        "2026-07": 1.0721873998860891,
+        "2026-08": 1.0988976082166113,
+        "2026-09": 1.0648738595295597,
+        "2026-10": 1.0651887493134855,
+        "2026-11": 1.068012741077171,
+        "2026-12": 1.1427800236609666
+      },
+      "pptoValues": {
+        "2026-01": 1.08,
+        "2026-02": 1.08,
+        "2026-03": 1.08,
+        "2026-04": 1.08,
+        "2026-05": 1.08,
+        "2026-06": 1.08,
+        "2026-07": 1.08,
+        "2026-08": 1.08,
+        "2026-09": 1.08,
+        "2026-10": 1.08,
+        "2026-11": 1.08,
+        "2026-12": 1.08
+      },
+      "FY2024": 11,
+      "PO26": 13
+    },
+    {
+      "Producto": "Producto 3",
+      "Tipo": "Monto",
+      "id": "Producto_3",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 10.018606675761008,
+        "2026-02": 11.207161752162143,
+        "2026-03": 10.44274318430656,
+        "2026-04": 11.929338799975628,
+        "2026-05": 10.456665709581891,
+        "2026-06": 10.745586540251136,
+        "2026-07": 11.889644627845161,
+        "2026-08": 11.208720814011679,
+        "2026-09": 10.960194069023856,
+        "2026-10": 11.577746736030399,
+        "2026-11": 10.925692790418763,
+        "2026-12": 10.407508147703812
+      },
+      "pptoValues": {
+        "2026-01": 10.8,
+        "2026-02": 10.8,
+        "2026-03": 10.8,
+        "2026-04": 10.8,
+        "2026-05": 10.8,
+        "2026-06": 10.8,
+        "2026-07": 10.8,
+        "2026-08": 10.8,
+        "2026-09": 10.8,
+        "2026-10": 10.8,
+        "2026-11": 10.8,
+        "2026-12": 10.8
+      },
+      "FY2024": 108,
+      "PO26": 130
+    },
+    {
+      "Producto": "Producto 4",
+      "Tipo": "Volumen",
+      "id": "Producto_4",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 0.5614197207794617,
+        "2026-02": 0.5850814916217131,
+        "2026-03": 0.5566792913312948,
+        "2026-04": 0.5161373196437198,
+        "2026-05": 0.5706268905677544,
+        "2026-06": 0.5328082075801319,
+        "2026-07": 0.5606839086336823,
+        "2026-08": 0.5291670880533466,
+        "2026-09": 0.5522358497763235,
+        "2026-10": 0.5324158165834636,
+        "2026-11": 0.5213344823537506,
+        "2026-12": 0.5809515611754801
+      },
+      "pptoValues": {
+        "2026-01": 0.575,
+        "2026-02": 0.575,
+        "2026-03": 0.575,
+        "2026-04": 0.575,
+        "2026-05": 0.575,
+        "2026-06": 0.575,
+        "2026-07": 0.575,
+        "2026-08": 0.575,
+        "2026-09": 0.575,
+        "2026-10": 0.575,
+        "2026-11": 0.575,
+        "2026-12": 0.575
+      },
+      "FY2024": 5,
+      "PO26": 7
+    },
+    {
+      "Producto": "Producto 4",
+      "Tipo": "Monto",
+      "id": "Producto_4",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 5.559426553742757,
+        "2026-02": 5.6837648061342865,
+        "2026-03": 5.187236252409063,
+        "2026-04": 5.402814593467886,
+        "2026-05": 5.980624372926243,
+        "2026-06": 5.861014344251366,
+        "2026-07": 5.74290142425311,
+        "2026-08": 5.598147903216136,
+        "2026-09": 5.816197536734358,
+        "2026-10": 5.973731444351231,
+        "2026-11": 5.577331522092223,
+        "2026-12": 5.5022923400739
+      },
+      "pptoValues": {
+        "2026-01": 5.75,
+        "2026-02": 5.75,
+        "2026-03": 5.75,
+        "2026-04": 5.75,
+        "2026-05": 5.75,
+        "2026-06": 5.75,
+        "2026-07": 5.75,
+        "2026-08": 5.75,
+        "2026-09": 5.75,
+        "2026-10": 5.75,
+        "2026-11": 5.75,
+        "2026-12": 5.75
+      },
+      "FY2024": 54,
+      "PO26": 69
+    },
+    {
+      "Producto": "Producto 5",
+      "Tipo": "Volumen",
+      "id": "Producto_5",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 0.31149004795726704,
+        "2026-02": 0.3511942625603597,
+        "2026-03": 0.35310337086375987,
+        "2026-04": 0.3596998407201064,
+        "2026-05": 0.3214998799329107,
+        "2026-06": 0.3159206614405713,
+        "2026-07": 0.3045821443661378,
+        "2026-08": 0.3469368346348162,
+        "2026-09": 0.3035174371197492,
+        "2026-10": 0.31365485122346576,
+        "2026-11": 0.34241816331664515,
+        "2026-12": 0.34533312719566356
+      },
+      "pptoValues": {
+        "2026-01": 0.36,
+        "2026-02": 0.36,
+        "2026-03": 0.36,
+        "2026-04": 0.36,
+        "2026-05": 0.36,
+        "2026-06": 0.36,
+        "2026-07": 0.36,
+        "2026-08": 0.36,
+        "2026-09": 0.36,
+        "2026-10": 0.36,
+        "2026-11": 0.36,
+        "2026-12": 0.36
+      },
+      "FY2024": 3,
+      "PO26": 4
+    },
+    {
+      "Producto": "Producto 5",
+      "Tipo": "Monto",
+      "id": "Producto_5",
+      "parentId": "Total_Portafolio",
+      "hasChildren": false,
+      "values": {
+        "2026-01": 3.009545640498638,
+        "2026-02": 3.589518753872027,
+        "2026-03": 3.3757756538209547,
+        "2026-04": 3.332352095586632,
+        "2026-05": 3.2829285509957313,
+        "2026-06": 3.0001811473398794,
+        "2026-07": 3.0167290210271274,
+        "2026-08": 3.169642216994831,
+        "2026-09": 3.4668039391319856,
+        "2026-10": 3.327555962867463,
+        "2026-11": 3.3260395054256184,
+        "2026-12": 3.3180238562549618
+      },
+      "pptoValues": {
+        "2026-01": 3.5999999999999996,
+        "2026-02": 3.5999999999999996,
+        "2026-03": 3.5999999999999996,
+        "2026-04": 3.5999999999999996,
+        "2026-05": 3.5999999999999996,
+        "2026-06": 3.5999999999999996,
+        "2026-07": 3.5999999999999996,
+        "2026-08": 3.5999999999999996,
+        "2026-09": 3.5999999999999996,
+        "2026-10": 3.5999999999999996,
+        "2026-11": 3.5999999999999996,
+        "2026-12": 3.5999999999999996
+      },
+      "FY2024": 32,
+      "PO26": 43
+    }
+  ],
+  "comercialData": {
+    "columns": [
+      "Mes",
+      "Year",
+      "Canal",
+      "Categoria",
+      "Volumen",
+      "Ingresos",
+      "Contribucion"
+    ],
+    "rows": [
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 1",
+        "Volumen": 6.027403061607861,
+        "Ingresos": 1.1277152461286473,
+        "Contribucion": 0.28953862375828704
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 2",
+        "Volumen": 5.417894260165467,
+        "Ingresos": 1.077692149093013,
+        "Contribucion": 0.2455804276318896
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 3",
+        "Volumen": 6.574655915518402,
+        "Ingresos": 1.12453064389763,
+        "Contribucion": 0.2000317926679649
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 4",
+        "Volumen": 6.87943430177979,
+        "Ingresos": 1.2630572594158056,
+        "Contribucion": 0.293181748348719
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 5",
+        "Volumen": 6.3845250244369005,
+        "Ingresos": 1.2419253672542299,
+        "Contribucion": 0.2652076890712794
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 1",
+        "Volumen": 5.515787034492051,
+        "Ingresos": 1.0511698720159206,
+        "Contribucion": 0.26650115186525714
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 2",
+        "Volumen": 6.463695536683732,
+        "Ingresos": 1.4435736505477497,
+        "Contribucion": 0.25653807860700406
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 3",
+        "Volumen": 5.689483683446835,
+        "Ingresos": 1.0385289702751312,
+        "Contribucion": 0.2738203640564947
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 4",
+        "Volumen": 6.638744948907673,
+        "Ingresos": 1.4775204419322154,
+        "Contribucion": 0.2234386217662668
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 5",
+        "Volumen": 5.651076938182683,
+        "Ingresos": 1.1205976202400554,
+        "Contribucion": 0.2540316807445387
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 1",
+        "Volumen": 5.5563726284150246,
+        "Ingresos": 1.3700886033703994,
+        "Contribucion": 0.2012287494461475
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 2",
+        "Volumen": 6.799951635524998,
+        "Ingresos": 1.3783230271532487,
+        "Contribucion": 0.25887655845983365
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 3",
+        "Volumen": 6.8788463244745195,
+        "Ingresos": 1.4897408849721936,
+        "Contribucion": 0.22868458347800788
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 4",
+        "Volumen": 5.863294569141971,
+        "Ingresos": 1.3659612305214206,
+        "Contribucion": 0.29768394454393254
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 5",
+        "Volumen": 6.960628207513288,
+        "Ingresos": 1.3015432717548745,
+        "Contribucion": 0.2954330394439147
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 1",
+        "Volumen": 5.590242659324694,
+        "Ingresos": 1.4217967037603154,
+        "Contribucion": 0.28239063390417846
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 2",
+        "Volumen": 6.852634169383764,
+        "Ingresos": 1.2298412496213729,
+        "Contribucion": 0.23629350384724046
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 3",
+        "Volumen": 5.775612184791857,
+        "Ingresos": 1.3923647979482725,
+        "Contribucion": 0.23636662916872342
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 4",
+        "Volumen": 5.449382227351232,
+        "Ingresos": 1.221042697711542,
+        "Contribucion": 0.2145100644579869
+      },
+      {
+        "Mes": 1,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 5",
+        "Volumen": 5.013086398732985,
+        "Ingresos": 1.2211628159764794,
+        "Contribucion": 0.2702820749714475
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 1",
+        "Volumen": 5.944905351838326,
+        "Ingresos": 1.2906064931907493,
+        "Contribucion": 0.27702862215409935
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 2",
+        "Volumen": 6.554516456095035,
+        "Ingresos": 1.3262227561333115,
+        "Contribucion": 0.22868286560140297
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 3",
+        "Volumen": 5.474545913598115,
+        "Ingresos": 1.2716120478589263,
+        "Contribucion": 0.2912596388812525
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 4",
+        "Volumen": 6.360779237589265,
+        "Ingresos": 1.2626971456211014,
+        "Contribucion": 0.20485478810797428
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 5",
+        "Volumen": 6.087692024028524,
+        "Ingresos": 1.3106797990094063,
+        "Contribucion": 0.24287816853843291
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 1",
+        "Volumen": 6.711533346934429,
+        "Ingresos": 1.0031317303191989,
+        "Contribucion": 0.2870200397586618
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 2",
+        "Volumen": 5.638712062144604,
+        "Ingresos": 1.2084807692386876,
+        "Contribucion": 0.23605993274478418
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 3",
+        "Volumen": 5.3142650414521935,
+        "Ingresos": 1.0646331509326799,
+        "Contribucion": 0.26186332215747055
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 4",
+        "Volumen": 5.06621783151302,
+        "Ingresos": 1.0276686903213785,
+        "Contribucion": 0.27548610900663917
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 5",
+        "Volumen": 6.3726831382390365,
+        "Ingresos": 1.2665451110680475,
+        "Contribucion": 0.2833219641123827
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 1",
+        "Volumen": 6.028514592511943,
+        "Ingresos": 1.3134950377079693,
+        "Contribucion": 0.29889626344820525
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 2",
+        "Volumen": 5.484478566495547,
+        "Ingresos": 1.268748777619132,
+        "Contribucion": 0.27909027924230634
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 3",
+        "Volumen": 5.438780423050948,
+        "Ingresos": 1.2426531646452694,
+        "Contribucion": 0.2349443449351382
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 4",
+        "Volumen": 6.240786965565816,
+        "Ingresos": 1.2540067000467807,
+        "Contribucion": 0.24168837621834552
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 5",
+        "Volumen": 6.9845664712628945,
+        "Ingresos": 1.0779547512859429,
+        "Contribucion": 0.2679613525085439
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 1",
+        "Volumen": 5.844754195023304,
+        "Ingresos": 1.0478420764314946,
+        "Contribucion": 0.2011819537424392
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 2",
+        "Volumen": 6.090335265647095,
+        "Ingresos": 1.268004537008102,
+        "Contribucion": 0.22409779127179105
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 3",
+        "Volumen": 6.997527430918106,
+        "Ingresos": 1.4112792649658132,
+        "Contribucion": 0.2057751791531788
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 4",
+        "Volumen": 5.230235279668133,
+        "Ingresos": 1.0479532506413634,
+        "Contribucion": 0.20030440116287407
+      },
+      {
+        "Mes": 2,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 5",
+        "Volumen": 5.912891489058991,
+        "Ingresos": 1.4853579729371655,
+        "Contribucion": 0.28632418292770256
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 1",
+        "Volumen": 5.381012697444612,
+        "Ingresos": 1.3585505102928015,
+        "Contribucion": 0.21613472318725135
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 2",
+        "Volumen": 6.542766179558161,
+        "Ingresos": 1.155777230732351,
+        "Contribucion": 0.2082664449602352
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 3",
+        "Volumen": 6.965360076616678,
+        "Ingresos": 1.154769339020327,
+        "Contribucion": 0.22758722241029805
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 4",
+        "Volumen": 6.902094359355794,
+        "Ingresos": 1.432410622143756,
+        "Contribucion": 0.24253185107127465
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 5",
+        "Volumen": 6.7317086273604945,
+        "Ingresos": 1.2215695232670045,
+        "Contribucion": 0.232988559858149
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 1",
+        "Volumen": 5.340619339242366,
+        "Ingresos": 1.353333103239633,
+        "Contribucion": 0.27729608242260945
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 2",
+        "Volumen": 6.524949001357284,
+        "Ingresos": 1.1235298649244534,
+        "Contribucion": 0.24673156196645896
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 3",
+        "Volumen": 6.247708282587874,
+        "Ingresos": 1.0526137321478595,
+        "Contribucion": 0.20810511791993336
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 4",
+        "Volumen": 5.844860168565178,
+        "Ingresos": 1.451154566928503,
+        "Contribucion": 0.20791195177456784
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 5",
+        "Volumen": 5.638765010516666,
+        "Ingresos": 1.4204948290217612,
+        "Contribucion": 0.20181966433899423
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 1",
+        "Volumen": 5.5425216169774245,
+        "Ingresos": 1.1641335538157627,
+        "Contribucion": 0.22087669540374144
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 2",
+        "Volumen": 6.679925611706235,
+        "Ingresos": 1.154400925497496,
+        "Contribucion": 0.27577197970600664
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 3",
+        "Volumen": 6.0689253864348505,
+        "Ingresos": 1.2899941721273993,
+        "Contribucion": 0.236662200160651
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 4",
+        "Volumen": 6.338481756814293,
+        "Ingresos": 1.2930568681352734,
+        "Contribucion": 0.249379447251269
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 5",
+        "Volumen": 5.127063505472359,
+        "Ingresos": 1.3171384810602973,
+        "Contribucion": 0.24824547514401363
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 1",
+        "Volumen": 5.388567187245416,
+        "Ingresos": 1.0612291296492913,
+        "Contribucion": 0.24321227373919962
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 2",
+        "Volumen": 5.914086107885096,
+        "Ingresos": 1.2787238706766517,
+        "Contribucion": 0.28525433698452407
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 3",
+        "Volumen": 6.217770531000053,
+        "Ingresos": 1.0677016012398608,
+        "Contribucion": 0.20666708538322265
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 4",
+        "Volumen": 5.137294324268993,
+        "Ingresos": 1.03891164516944,
+        "Contribucion": 0.25721262172014187
+      },
+      {
+        "Mes": 3,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 5",
+        "Volumen": 6.5256972935191495,
+        "Ingresos": 1.482089379781038,
+        "Contribucion": 0.2583359197148599
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 1",
+        "Volumen": 6.3362178285986275,
+        "Ingresos": 1.2645582987844102,
+        "Contribucion": 0.2288402962341594
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 2",
+        "Volumen": 6.883411466795884,
+        "Ingresos": 1.4663089118031971,
+        "Contribucion": 0.24574162265246274
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 3",
+        "Volumen": 5.43327609885061,
+        "Ingresos": 1.008748249636633,
+        "Contribucion": 0.24033872923065885
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 4",
+        "Volumen": 5.993878531382363,
+        "Ingresos": 1.211690572106541,
+        "Contribucion": 0.22562300352394588
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 5",
+        "Volumen": 6.044331230537153,
+        "Ingresos": 1.000539586983181,
+        "Contribucion": 0.24938085058245596
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 1",
+        "Volumen": 5.875807536965274,
+        "Ingresos": 1.362982554281713,
+        "Contribucion": 0.2382357079595614
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 2",
+        "Volumen": 5.642453083773789,
+        "Ingresos": 1.4874063605280203,
+        "Contribucion": 0.2079935878399369
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 3",
+        "Volumen": 5.661319666882596,
+        "Ingresos": 1.1114375278982767,
+        "Contribucion": 0.21920767261245822
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 4",
+        "Volumen": 5.228538771528754,
+        "Ingresos": 1.347631312346151,
+        "Contribucion": 0.21758098014360058
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 5",
+        "Volumen": 5.057149555234098,
+        "Ingresos": 1.1610718649257232,
+        "Contribucion": 0.24083932925222146
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 1",
+        "Volumen": 6.262528802671609,
+        "Ingresos": 1.3326140277449494,
+        "Contribucion": 0.29538606404800716
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 2",
+        "Volumen": 5.301134460576275,
+        "Ingresos": 1.0596969603023743,
+        "Contribucion": 0.2899473293846248
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 3",
+        "Volumen": 6.573051975613454,
+        "Ingresos": 1.0631781852015028,
+        "Contribucion": 0.2262537201031532
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 4",
+        "Volumen": 5.724391043032235,
+        "Ingresos": 1.106886158046779,
+        "Contribucion": 0.2488392244570399
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 5",
+        "Volumen": 6.32978674912318,
+        "Ingresos": 1.3040636956278702,
+        "Contribucion": 0.23795284408562414
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 1",
+        "Volumen": 6.25149401529944,
+        "Ingresos": 1.3526955520617903,
+        "Contribucion": 0.2757473448898477
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 2",
+        "Volumen": 6.820232299622616,
+        "Ingresos": 1.144063614503668,
+        "Contribucion": 0.27364144463682816
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 3",
+        "Volumen": 5.644787467837933,
+        "Ingresos": 1.191034290883655,
+        "Contribucion": 0.24301658111364427
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 4",
+        "Volumen": 5.838577364130751,
+        "Ingresos": 1.11088950875214,
+        "Contribucion": 0.2360799677578068
+      },
+      {
+        "Mes": 4,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 5",
+        "Volumen": 6.439732518813933,
+        "Ingresos": 1.2142501793916571,
+        "Contribucion": 0.2807756078986845
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 1",
+        "Volumen": 5.537297941501796,
+        "Ingresos": 1.1814059519513735,
+        "Contribucion": 0.21286769177966397
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 2",
+        "Volumen": 5.327895244501682,
+        "Ingresos": 1.2849557755810017,
+        "Contribucion": 0.2929622213309167
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 3",
+        "Volumen": 6.625380914724771,
+        "Ingresos": 1.1881102541739264,
+        "Contribucion": 0.24810936206107237
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 4",
+        "Volumen": 6.205747724696089,
+        "Ingresos": 1.257013820790358,
+        "Contribucion": 0.29497313401138486
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 5",
+        "Volumen": 5.540617647189002,
+        "Ingresos": 1.490055040825497,
+        "Contribucion": 0.20830384095185475
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 1",
+        "Volumen": 6.709007074513329,
+        "Ingresos": 1.3674230248689345,
+        "Contribucion": 0.29527556398999827
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 2",
+        "Volumen": 5.4602841037108885,
+        "Ingresos": 1.0264207582315406,
+        "Contribucion": 0.2770775192526438
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 3",
+        "Volumen": 6.23202999438872,
+        "Ingresos": 1.3013831234242255,
+        "Contribucion": 0.2722328632646733
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 4",
+        "Volumen": 6.8924610173284595,
+        "Ingresos": 1.425695393964093,
+        "Contribucion": 0.2618795956313834
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 5",
+        "Volumen": 6.560102343721534,
+        "Ingresos": 1.1949051157741364,
+        "Contribucion": 0.2700199734062931
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 1",
+        "Volumen": 6.614337949228116,
+        "Ingresos": 1.348892260168971,
+        "Contribucion": 0.27690039541883993
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 2",
+        "Volumen": 5.971653709306081,
+        "Ingresos": 1.3675108562823979,
+        "Contribucion": 0.2586398045727113
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 3",
+        "Volumen": 6.024790921335818,
+        "Ingresos": 1.483987265033024,
+        "Contribucion": 0.2702565047529812
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 4",
+        "Volumen": 6.581730259933031,
+        "Ingresos": 1.3458722105092273,
+        "Contribucion": 0.21101100925882
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 5",
+        "Volumen": 6.797340939902247,
+        "Ingresos": 1.2856287602362344,
+        "Contribucion": 0.26846713849591863
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 1",
+        "Volumen": 5.241392645630579,
+        "Ingresos": 1.3241410302788488,
+        "Contribucion": 0.28463292586265043
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 2",
+        "Volumen": 5.448197428145917,
+        "Ingresos": 1.2894578254237115,
+        "Contribucion": 0.25483020698603176
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 3",
+        "Volumen": 6.82299588734792,
+        "Ingresos": 1.0919999056648262,
+        "Contribucion": 0.21693290383922736
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 4",
+        "Volumen": 5.610235760336081,
+        "Ingresos": 1.0541563925792197,
+        "Contribucion": 0.28124285463075976
+      },
+      {
+        "Mes": 5,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 5",
+        "Volumen": 5.359120601522365,
+        "Ingresos": 1.0414091328267223,
+        "Contribucion": 0.245485881562768
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 1",
+        "Volumen": 6.121997102045868,
+        "Ingresos": 1.2311215134630356,
+        "Contribucion": 0.22039836412008046
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 2",
+        "Volumen": 6.4692509160286455,
+        "Ingresos": 1.1505155426495712,
+        "Contribucion": 0.20574728249171637
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 3",
+        "Volumen": 6.6379622389150725,
+        "Ingresos": 1.1681907495978991,
+        "Contribucion": 0.2742739704237164
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 4",
+        "Volumen": 6.956218021325291,
+        "Ingresos": 1.2665415881723867,
+        "Contribucion": 0.2369206210876746
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 5",
+        "Volumen": 6.680862428484099,
+        "Ingresos": 1.0757560542369613,
+        "Contribucion": 0.20708572733205158
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 1",
+        "Volumen": 6.339282184400187,
+        "Ingresos": 1.4031069063114934,
+        "Contribucion": 0.249049289908234
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 2",
+        "Volumen": 6.561028827197861,
+        "Ingresos": 1.4699542696496273,
+        "Contribucion": 0.2767480128989704
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 3",
+        "Volumen": 6.1309370139164585,
+        "Ingresos": 1.1378809851916178,
+        "Contribucion": 0.27773984751422665
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 4",
+        "Volumen": 6.004403115293044,
+        "Ingresos": 1.1439985665873131,
+        "Contribucion": 0.2843314781220163
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 5",
+        "Volumen": 5.1216527389307505,
+        "Ingresos": 1.3423478284907508,
+        "Contribucion": 0.25237679662234297
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 1",
+        "Volumen": 5.317599536831269,
+        "Ingresos": 1.4117035559540194,
+        "Contribucion": 0.21268456997738405
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 2",
+        "Volumen": 6.624936637758514,
+        "Ingresos": 1.432586145353072,
+        "Contribucion": 0.22220765549501012
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 3",
+        "Volumen": 6.893804095487933,
+        "Ingresos": 1.3325820791019178,
+        "Contribucion": 0.20485960637760775
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 4",
+        "Volumen": 6.2947747740091335,
+        "Ingresos": 1.3058524255930024,
+        "Contribucion": 0.25262055097098657
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 5",
+        "Volumen": 6.899547078681308,
+        "Ingresos": 1.4390697230962581,
+        "Contribucion": 0.27150830798314196
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 1",
+        "Volumen": 5.052890614632432,
+        "Ingresos": 1.2588743691465232,
+        "Contribucion": 0.23955081585126267
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 2",
+        "Volumen": 6.373214555955737,
+        "Ingresos": 1.3503222153162282,
+        "Contribucion": 0.2612791359555523
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 3",
+        "Volumen": 5.487767951496411,
+        "Ingresos": 1.2308591502985062,
+        "Contribucion": 0.29526697079382475
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 4",
+        "Volumen": 6.703750461126201,
+        "Ingresos": 1.4203146693227815,
+        "Contribucion": 0.29366085393750163
+      },
+      {
+        "Mes": 6,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 5",
+        "Volumen": 5.600645173424774,
+        "Ingresos": 1.1136680601835054,
+        "Contribucion": 0.2226833617668917
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 1",
+        "Volumen": 6.719791378831019,
+        "Ingresos": 1.4480818517852896,
+        "Contribucion": 0.20976231255138728
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 2",
+        "Volumen": 5.504553017215243,
+        "Ingresos": 1.0897208725866034,
+        "Contribucion": 0.23217943008567044
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 3",
+        "Volumen": 6.162587146512586,
+        "Ingresos": 1.2175218262581122,
+        "Contribucion": 0.23213591174358614
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 4",
+        "Volumen": 6.758641924711371,
+        "Ingresos": 1.3890548023462783,
+        "Contribucion": 0.2979162676498915
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 5",
+        "Volumen": 6.640116673396257,
+        "Ingresos": 1.294725581453692,
+        "Contribucion": 0.2731338976038778
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 1",
+        "Volumen": 5.003629965393516,
+        "Ingresos": 1.222962605162648,
+        "Contribucion": 0.2991531319701749
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 2",
+        "Volumen": 5.983697878274379,
+        "Ingresos": 1.4888855503979954,
+        "Contribucion": 0.2840264000067027
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 3",
+        "Volumen": 6.889182060022668,
+        "Ingresos": 1.049162998767124,
+        "Contribucion": 0.29916124442269704
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 4",
+        "Volumen": 5.9500643288864,
+        "Ingresos": 1.4240731814368017,
+        "Contribucion": 0.2580490613416171
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 5",
+        "Volumen": 6.141863077484708,
+        "Ingresos": 1.0138545040139584,
+        "Contribucion": 0.28664869409644617
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 1",
+        "Volumen": 5.448934528697066,
+        "Ingresos": 1.0405504071166507,
+        "Contribucion": 0.24470334499009444
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 2",
+        "Volumen": 6.8931306795053215,
+        "Ingresos": 1.0780005249664446,
+        "Contribucion": 0.27020129440547896
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 3",
+        "Volumen": 6.236412534585718,
+        "Ingresos": 1.0972684091474543,
+        "Contribucion": 0.28426893317187385
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 4",
+        "Volumen": 6.154982676385275,
+        "Ingresos": 1.4581924488193938,
+        "Contribucion": 0.25133659812372916
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 5",
+        "Volumen": 6.462143855942313,
+        "Ingresos": 1.3915269934171368,
+        "Contribucion": 0.2830865222906273
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 1",
+        "Volumen": 6.323575665880747,
+        "Ingresos": 1.0465850480838703,
+        "Contribucion": 0.25671460849756667
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 2",
+        "Volumen": 6.2384624708654695,
+        "Ingresos": 1.111439240800891,
+        "Contribucion": 0.2682597045418543
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 3",
+        "Volumen": 5.220429073580599,
+        "Ingresos": 1.3073305598987734,
+        "Contribucion": 0.28913534159120724
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 4",
+        "Volumen": 6.75001039491953,
+        "Ingresos": 1.2274587415982452,
+        "Contribucion": 0.23406581595777032
+      },
+      {
+        "Mes": 7,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 5",
+        "Volumen": 5.848495796190779,
+        "Ingresos": 1.3931678503027285,
+        "Contribucion": 0.20999053401283083
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 1",
+        "Volumen": 6.074817979060359,
+        "Ingresos": 1.015498017877536,
+        "Contribucion": 0.2442685007669662
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 2",
+        "Volumen": 6.72946445261088,
+        "Ingresos": 1.1411934430416768,
+        "Contribucion": 0.27133709357779473
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 3",
+        "Volumen": 6.320936523152204,
+        "Ingresos": 1.1546790787771202,
+        "Contribucion": 0.28036680424614346
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 4",
+        "Volumen": 5.834872462155322,
+        "Ingresos": 1.0202964351084967,
+        "Contribucion": 0.2739519103387447
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 5",
+        "Volumen": 5.841841426636092,
+        "Ingresos": 1.4944952828213793,
+        "Contribucion": 0.2227850159970572
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 1",
+        "Volumen": 5.784065636945343,
+        "Ingresos": 1.3366592494627088,
+        "Contribucion": 0.2537592322385706
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 2",
+        "Volumen": 5.539535374199934,
+        "Ingresos": 1.4641751128300569,
+        "Contribucion": 0.28751062492983726
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 3",
+        "Volumen": 6.812458018132757,
+        "Ingresos": 1.23202260984158,
+        "Contribucion": 0.21085485867164
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 4",
+        "Volumen": 5.022624611128673,
+        "Ingresos": 1.3567707598232392,
+        "Contribucion": 0.22737362321281376
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 5",
+        "Volumen": 5.851601985952707,
+        "Ingresos": 1.1302281268286252,
+        "Contribucion": 0.23711735534764444
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 1",
+        "Volumen": 5.695755784075807,
+        "Ingresos": 1.4855491515648769,
+        "Contribucion": 0.2482136113093405
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 2",
+        "Volumen": 6.692842330186737,
+        "Ingresos": 1.112059331176901,
+        "Contribucion": 0.28917987373356874
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 3",
+        "Volumen": 5.580593488425487,
+        "Ingresos": 1.14046269142171,
+        "Contribucion": 0.21052751649568513
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 4",
+        "Volumen": 6.958652175660436,
+        "Ingresos": 1.0433318592637681,
+        "Contribucion": 0.28610728015004877
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 5",
+        "Volumen": 6.026700326395655,
+        "Ingresos": 1.0841478379597254,
+        "Contribucion": 0.24478548592184096
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 1",
+        "Volumen": 5.919457715015934,
+        "Ingresos": 1.49246442206106,
+        "Contribucion": 0.28628207843086667
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 2",
+        "Volumen": 6.239897905330287,
+        "Ingresos": 1.0588456607547925,
+        "Contribucion": 0.218393333978745
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 3",
+        "Volumen": 5.416663412362702,
+        "Ingresos": 1.1064211233166437,
+        "Contribucion": 0.22115136631985993
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 4",
+        "Volumen": 6.028637532099126,
+        "Ingresos": 1.0751690016945212,
+        "Contribucion": 0.25713897010139325
+      },
+      {
+        "Mes": 8,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 5",
+        "Volumen": 6.281748071466116,
+        "Ingresos": 1.4680573851691427,
+        "Contribucion": 0.2505062197798011
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 1",
+        "Volumen": 5.803032167397808,
+        "Ingresos": 1.023451740740418,
+        "Contribucion": 0.260042333020372
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 2",
+        "Volumen": 5.667878330487969,
+        "Ingresos": 1.31227805166674,
+        "Contribucion": 0.24008648004393585
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 3",
+        "Volumen": 6.169684034560127,
+        "Ingresos": 1.0152793500946582,
+        "Contribucion": 0.22490543935724316
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 4",
+        "Volumen": 6.90898556661354,
+        "Ingresos": 1.1019438504392651,
+        "Contribucion": 0.2479597297815155
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 5",
+        "Volumen": 6.196959696487372,
+        "Ingresos": 1.4572088741443958,
+        "Contribucion": 0.26386567132386296
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 1",
+        "Volumen": 5.804730935404243,
+        "Ingresos": 1.427849657703589,
+        "Contribucion": 0.23790480927698776
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 2",
+        "Volumen": 6.4833509995095335,
+        "Ingresos": 1.2894151380691574,
+        "Contribucion": 0.20851115268769735
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 3",
+        "Volumen": 5.251181276286209,
+        "Ingresos": 1.3596326442918385,
+        "Contribucion": 0.2515216721167251
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 4",
+        "Volumen": 5.464463711452181,
+        "Ingresos": 1.2340825682761287,
+        "Contribucion": 0.24962529184421078
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 5",
+        "Volumen": 6.93908761526024,
+        "Ingresos": 1.1234390141462938,
+        "Contribucion": 0.214224921819264
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 1",
+        "Volumen": 6.195622565527451,
+        "Ingresos": 1.4993576562954187,
+        "Contribucion": 0.2891138852807628
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 2",
+        "Volumen": 6.880194406142829,
+        "Ingresos": 1.2033795408595378,
+        "Contribucion": 0.2008518648634679
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 3",
+        "Volumen": 5.185256121423069,
+        "Ingresos": 1.4277043229414894,
+        "Contribucion": 0.23544769994715642
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 4",
+        "Volumen": 5.410229374426022,
+        "Ingresos": 1.3542075668009477,
+        "Contribucion": 0.2851467888862947
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 5",
+        "Volumen": 5.213022343723814,
+        "Ingresos": 1.0853821581793313,
+        "Contribucion": 0.27113167675773175
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 1",
+        "Volumen": 6.549411382514287,
+        "Ingresos": 1.3987688264756557,
+        "Contribucion": 0.26195072628915167
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 2",
+        "Volumen": 6.5683871753996375,
+        "Ingresos": 1.4123039555863812,
+        "Contribucion": 0.22006112525744448
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 3",
+        "Volumen": 5.750576615625824,
+        "Ingresos": 1.1128814468412083,
+        "Contribucion": 0.25294942699069806
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 4",
+        "Volumen": 5.64602754727161,
+        "Ingresos": 1.325226095440975,
+        "Contribucion": 0.25671283477461754
+      },
+      {
+        "Mes": 9,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 5",
+        "Volumen": 6.055875942626482,
+        "Ingresos": 1.117858956176558,
+        "Contribucion": 0.23142942092585722
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 1",
+        "Volumen": 5.459934554013715,
+        "Ingresos": 1.2187067878702043,
+        "Contribucion": 0.23895955340009767
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 2",
+        "Volumen": 5.144443063282841,
+        "Ingresos": 1.172908315732332,
+        "Contribucion": 0.21921996454652226
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 3",
+        "Volumen": 5.659132299867565,
+        "Ingresos": 1.1748200796862218,
+        "Contribucion": 0.23219984023345167
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 4",
+        "Volumen": 6.690751749581757,
+        "Ingresos": 1.3131986359068382,
+        "Contribucion": 0.2655150875228774
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 5",
+        "Volumen": 6.8270692659462195,
+        "Ingresos": 1.3906141839871768,
+        "Contribucion": 0.2671423855124053
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 1",
+        "Volumen": 5.576756274152706,
+        "Ingresos": 1.3530306422483949,
+        "Contribucion": 0.21413588342895903
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 2",
+        "Volumen": 5.009906666079335,
+        "Ingresos": 1.2384838088019825,
+        "Contribucion": 0.23052070389897086
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 3",
+        "Volumen": 6.084437548147486,
+        "Ingresos": 1.2446164325400921,
+        "Contribucion": 0.21893639301612808
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 4",
+        "Volumen": 5.812232772540966,
+        "Ingresos": 1.06716105107613,
+        "Contribucion": 0.24796799716309295
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 5",
+        "Volumen": 5.4096396982263,
+        "Ingresos": 1.4678289073383395,
+        "Contribucion": 0.24892944873615555
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 1",
+        "Volumen": 6.625445428115028,
+        "Ingresos": 1.339504301692768,
+        "Contribucion": 0.21449542256870874
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 2",
+        "Volumen": 6.771486375318656,
+        "Ingresos": 1.3737688345185424,
+        "Contribucion": 0.29998886149372594
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 3",
+        "Volumen": 6.324595191670227,
+        "Ingresos": 1.4207891526215253,
+        "Contribucion": 0.2283841277625626
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 4",
+        "Volumen": 5.710421984284652,
+        "Ingresos": 1.418572709904685,
+        "Contribucion": 0.29911581804571946
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 5",
+        "Volumen": 6.3683351323349715,
+        "Ingresos": 1.3361567255392524,
+        "Contribucion": 0.2066761502149187
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 1",
+        "Volumen": 6.00716310542005,
+        "Ingresos": 1.1792770498937382,
+        "Contribucion": 0.29078390837107837
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 2",
+        "Volumen": 5.594155072871386,
+        "Ingresos": 1.4248808915552305,
+        "Contribucion": 0.28886445122675974
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 3",
+        "Volumen": 5.647958613959808,
+        "Ingresos": 1.3386329479830537,
+        "Contribucion": 0.23388540340499614
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 4",
+        "Volumen": 6.789211540348115,
+        "Ingresos": 1.381191518288746,
+        "Contribucion": 0.22924474985096532
+      },
+      {
+        "Mes": 10,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 5",
+        "Volumen": 5.055508985114809,
+        "Ingresos": 1.4189744357179637,
+        "Contribucion": 0.2057802661943167
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 1",
+        "Volumen": 6.501252435520891,
+        "Ingresos": 1.2082652236030906,
+        "Contribucion": 0.21975171082169218
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 2",
+        "Volumen": 5.070749358505889,
+        "Ingresos": 1.0330813032180615,
+        "Contribucion": 0.20557643285588237
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 3",
+        "Volumen": 6.176924593818998,
+        "Ingresos": 1.0972516930572178,
+        "Contribucion": 0.2967018999569201
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 4",
+        "Volumen": 5.79663053499794,
+        "Ingresos": 1.1065220620832488,
+        "Contribucion": 0.2812601627540877
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 5",
+        "Volumen": 6.749169403134562,
+        "Ingresos": 1.231250672022818,
+        "Contribucion": 0.24110564890872854
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 1",
+        "Volumen": 6.036976721047437,
+        "Ingresos": 1.1317518760823368,
+        "Contribucion": 0.24293666678236633
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 2",
+        "Volumen": 5.615846485169124,
+        "Ingresos": 1.207471745328215,
+        "Contribucion": 0.2631238522687406
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 3",
+        "Volumen": 6.409000515920079,
+        "Ingresos": 1.2443666702304905,
+        "Contribucion": 0.24102558643815244
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 4",
+        "Volumen": 5.776364914391726,
+        "Ingresos": 1.3006942019983176,
+        "Contribucion": 0.29799920321889084
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 5",
+        "Volumen": 6.763538959144193,
+        "Ingresos": 1.295190784258315,
+        "Contribucion": 0.2705487222415165
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 1",
+        "Volumen": 5.916461071899814,
+        "Ingresos": 1.4539224006554843,
+        "Contribucion": 0.21322573111352708
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 2",
+        "Volumen": 6.711663740354906,
+        "Ingresos": 1.3958084696016768,
+        "Contribucion": 0.29584216945435415
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 3",
+        "Volumen": 5.391557455481001,
+        "Ingresos": 1.087107394972418,
+        "Contribucion": 0.2241035000980774
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 4",
+        "Volumen": 5.440651932070745,
+        "Ingresos": 1.169003684849103,
+        "Contribucion": 0.20415984859117442
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 5",
+        "Volumen": 5.522319345716458,
+        "Ingresos": 1.0137909239736596,
+        "Contribucion": 0.28683235177861055
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 1",
+        "Volumen": 5.940758139998344,
+        "Ingresos": 1.4027248863286261,
+        "Contribucion": 0.2872427035610687
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 2",
+        "Volumen": 5.887460083696485,
+        "Ingresos": 1.3709503456796357,
+        "Contribucion": 0.22281168653003441
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 3",
+        "Volumen": 5.782985422470912,
+        "Ingresos": 1.491331139072764,
+        "Contribucion": 0.27753625334180176
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 4",
+        "Volumen": 6.521184443757601,
+        "Ingresos": 1.2716170884317677,
+        "Contribucion": 0.24885479457262852
+      },
+      {
+        "Mes": 11,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 5",
+        "Volumen": 5.865353249724668,
+        "Ingresos": 1.3893170851570424,
+        "Contribucion": 0.29618289916203144
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 1",
+        "Volumen": 5.61579191660214,
+        "Ingresos": 1.4028461255745013,
+        "Contribucion": 0.28923521511659134
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 2",
+        "Volumen": 5.3703796913338095,
+        "Ingresos": 1.2967397787065593,
+        "Contribucion": 0.24848491868935083
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 3",
+        "Volumen": 5.008207063182638,
+        "Ingresos": 1.1420266157114964,
+        "Contribucion": 0.2429484265059395
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 4",
+        "Volumen": 5.087909502928891,
+        "Ingresos": 1.0981046754248136,
+        "Contribucion": 0.24660470849859795
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Supermercados",
+        "Categoria": "Producto 5",
+        "Volumen": 5.095774957176701,
+        "Ingresos": 1.0363209493408028,
+        "Contribucion": 0.27204639495661126
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 1",
+        "Volumen": 6.782826497084988,
+        "Ingresos": 1.0919607550228503,
+        "Contribucion": 0.23736119961899846
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 2",
+        "Volumen": 6.725161951392932,
+        "Ingresos": 1.2081337519701454,
+        "Contribucion": 0.20703124589003818
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 3",
+        "Volumen": 6.232707476847635,
+        "Ingresos": 1.3273391825349665,
+        "Contribucion": 0.20535809061970905
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 4",
+        "Volumen": 5.073259982566844,
+        "Ingresos": 1.313041010072098,
+        "Contribucion": 0.275559084503094
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Distribuidores",
+        "Categoria": "Producto 5",
+        "Volumen": 5.147047866116877,
+        "Ingresos": 1.0814021811983783,
+        "Contribucion": 0.29978830535158296
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 1",
+        "Volumen": 5.164156142490166,
+        "Ingresos": 1.296757488866887,
+        "Contribucion": 0.2719468978635336
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 2",
+        "Volumen": 5.611153693774575,
+        "Ingresos": 1.3359680385485047,
+        "Contribucion": 0.2492021396660025
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 3",
+        "Volumen": 6.076920114610202,
+        "Ingresos": 1.4275057424819546,
+        "Contribucion": 0.26730375287416647
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 4",
+        "Volumen": 6.2815112645278575,
+        "Ingresos": 1.0771831985612952,
+        "Contribucion": 0.2950555447109894
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "Directo",
+        "Categoria": "Producto 5",
+        "Volumen": 5.108666383878607,
+        "Ingresos": 1.0288003049807166,
+        "Contribucion": 0.24881934522055715
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 1",
+        "Volumen": 6.596412120459112,
+        "Ingresos": 1.0025274571727127,
+        "Contribucion": 0.21597381709007335
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 2",
+        "Volumen": 6.721782436407347,
+        "Ingresos": 1.483503938429217,
+        "Contribucion": 0.24782344482429047
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 3",
+        "Volumen": 6.190773507155489,
+        "Ingresos": 1.3426947177968358,
+        "Contribucion": 0.233259658619498
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 4",
+        "Volumen": 6.018610350966093,
+        "Ingresos": 1.423302236944123,
+        "Contribucion": 0.21428266159685258
+      },
+      {
+        "Mes": 12,
+        "Year": 2026,
+        "Canal": "E-commerce",
+        "Categoria": "Producto 5",
+        "Volumen": 6.05655872364315,
+        "Ingresos": 1.1420273136123034,
+        "Contribucion": 0.25680512631683167
+      }
+    ]
+  }
+}
