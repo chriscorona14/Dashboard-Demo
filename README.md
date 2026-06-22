@@ -1,20 +1,3 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Dashboard Financiero
 
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/4d4866c9-c246-4bfd-8419-34ccd584294f
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Esta aplicación fue construida separando los secretos del entorno. Para correrla localmente con datos reales, crea un archivo .env basado en .env.example. La app también posee un Modo Demo offline que puede ser evaluado sin necesidad de integrar claves reales.

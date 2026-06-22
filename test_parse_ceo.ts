@@ -15,7 +15,7 @@ function resolveSharepointUrl(url: string | undefined, fallback: string): string
 }
 
 async function run() {
-  const fallbackUrl = "https://aguaplanetaazul2-my.sharepoint.com/personal/christopher_corona_planetaazulrd_com/_layouts/15/Doc.aspx?sourcedoc={0dded43b-deb4-4017-b8e7-849aa0ca29ac}&download=1";
+  const fallbackUrl = "";
   const rawUrl = process.env.VITE_CEO_FILE_URL || fallbackUrl;
   const url = resolveSharepointUrl(rawUrl, fallbackUrl);
 
