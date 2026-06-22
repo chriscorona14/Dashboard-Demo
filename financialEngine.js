@@ -70,9 +70,6 @@ export function formatSegmentName(name) {
   if (!name) return name;
   let n = typeof name === "string" ? name : String(name);
   return n
-    .replace(/\bEVP\b/g, "EVP (Botellas)")
-    .replace(/\bBT5\b/g, "BT5 (Botellones)")
-    .replace(/\b(?:BON|P6)\b/g, "BON (Zumos)")
     .replace(/\bfx\b/gi, "Tasa de cierre USD");
 }
 

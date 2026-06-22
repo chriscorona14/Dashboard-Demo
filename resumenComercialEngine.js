@@ -56,15 +56,19 @@ const CATEGORIAS_EXACTAS = {
     "APA SPORT 0.71 LTS (x12)": "APA_SPORT_0_71_LTS_x12",
     "APA TETRA PACK 0.5 LTS (x18)": "APA_TETRA_PACK_0_5_LTS_x18",
 
-    // MAQUILA
+// MAQUILA
     "MAQUILA AGUA 0.5 LTS (x20)": "MAQUILA_AGUA_0_5_LTS_x20",
     "MAQUILA AGUA 1.5 L TS (x12)": "MAQUILA_AGUA_1_5_L_TS_x12",
     "MAQUILA AGUA 1.5 LTS (x12)": "MAQUILA_AGUA_1_5_L_TS_x12",
+    "MAQUILA 100% RPET 0.5LTS (x12)": "MAQUILA_100_RPET_0_5LTS_x12",
+    "MAQUILA BOTELLA 5LTS (x4)": "MAQUILA_BOTELLA_5LTS_x4",
+    "MAQUILA AGUA OTROS": "MAQUILA_AGUA_OTROS",
 
     // HIDRACTIVE + (Consolidación solicitada)
     "PA H+ 0.5 LTS (x12)": "HIDRACTIVE_PLUS",
     "PA H+ 0.71 LTS (x12)": "HIDRACTIVE_PLUS",
     "HIDRACTIVE +": "HIDRACTIVE_PLUS",
+    "HIDRACTIVE PLUS": "HIDRACTIVE_PLUS",
     "SURTIDO HIDRACTIVE 24 OZ": "HIDRACTIVE_PLUS",
     "HIDRACTIVE 24 OZ": "HIDRACTIVE_PLUS",
 
@@ -126,66 +130,66 @@ export function classifyRow(r) {
 const ARBOL_COMERCIAL = [
   { 
     id: 'BT5_Total', 
-    label: 'BOTELLÓN', 
+    label: 'CATEGORÍA 1', 
     type: 'main', 
     matcher: (r) => classifyRow(r) === 'BT5_Total'
   },
   
-  { id: 'BOTELLAS_Total', label: 'BOTELLAS', type: 'main' },
+  { id: 'BOTELLAS_Total', label: 'CATEGORÍA 2', type: 'main' },
     { 
       id: 'APA_BOTELLA_0_5_LTS_x20', 
       parent: 'BOTELLAS_Total', 
-      label: 'APA BOTELLA 0.5 LTS (x20)', 
+      label: 'CATEGORÍA 2.1', 
       type: 'item',
       matcher: (r) => classifyRow(r) === 'APA_BOTELLA_0_5_LTS_x20'
     },
     { 
       id: 'APA_BOTELLA_1_5_LTS_x12', 
       parent: 'BOTELLAS_Total', 
-      label: 'APA BOTELLA 1.5 LTS (x12)', 
+      label: 'CATEGORÍA 2.2', 
       type: 'item',
       matcher: (r) => classifyRow(r) === 'APA_BOTELLA_1_5_LTS_x12'
     },
-    { id: 'APA_OTROS', parent: 'BOTELLAS_Total', label: 'APA OTROS', type: 'sub' },
+    { id: 'APA_OTROS', parent: 'BOTELLAS_Total', label: 'CATEGORÍA 2.3', type: 'sub' },
       { 
         id: 'APA_100_RPET_0_5LTS_x12', 
         parent: 'APA_OTROS', 
-        label: 'APA 100% RPET 0.5LTS (x12)', 
+        label: 'CATEGORÍA 2.3.1', 
         type: 'item',
         matcher: (r) => classifyRow(r) === 'APA_100_RPET_0_5LTS_x12'
       },
       { 
         id: 'APA_BOTELLA_0_5LTS_x12', 
         parent: 'APA_OTROS', 
-        label: 'APA BOTELLA 0.5LTS (x12)', 
+        label: 'CATEGORÍA 2.3.2', 
         type: 'item',
         matcher: (r) => classifyRow(r) === 'APA_BOTELLA_0_5LTS_x12'
       },
       { 
         id: 'APA_BOTELLA_5LTS_x4', 
         parent: 'APA_OTROS', 
-        label: 'APA BOTELLA 5LTS (x4)', 
+        label: 'CATEGORÍA 2.3.3', 
         type: 'item',
         matcher: (r) => classifyRow(r) === 'APA_BOTELLA_5LTS_x4'
       },
       { 
         id: 'APA_BOTELLA_8_VASOS_1_89_LTS_x6', 
         parent: 'APA_OTROS', 
-        label: 'APA BOTELLA 8 VASOS 1.89 LTS (x6)', 
+        label: 'CATEGORÍA 2.3.4', 
         type: 'item',
         matcher: (r) => classifyRow(r) === 'APA_BOTELLA_8_VASOS_1_89_LTS_x6'
       },
       { 
         id: 'APA_SPORT_0_71_LTS_x12', 
         parent: 'APA_OTROS', 
-        label: 'APA SPORT 0.71 LTS (x12)', 
+        label: 'CATEGORÍA 2.3.5', 
         type: 'item',
         matcher: (r) => classifyRow(r) === 'APA_SPORT_0_71_LTS_x12'
       },
       { 
         id: 'APA_TETRA_PACK_0_5_LTS_x18', 
         parent: 'APA_OTROS', 
-        label: 'APA TETRA PACK 0.5 LTS (x18)', 
+        label: 'CATEGORÍA 2.3.6', 
         type: 'item',
         matcher: (r) => classifyRow(r) === 'APA_TETRA_PACK_0_5_LTS_x18'
       },
@@ -193,59 +197,59 @@ const ARBOL_COMERCIAL = [
     { 
       id: 'MAQUILA_AGUA_0_5_LTS_x20', 
       parent: 'BOTELLAS_Total', 
-      label: 'MAQUILA AGUA 0.5 LTS (x20)', 
+      label: 'CATEGORÍA 2.4', 
       type: 'sub',
       matcher: (r) => classifyRow(r) === 'MAQUILA_AGUA_0_5_LTS_x20'
     },
     { 
       id: 'MAQUILA_AGUA_1_5_L_TS_x12', 
       parent: 'BOTELLAS_Total', 
-      label: 'MAQUILA AGUA 1.5 L TS (x12)', 
+      label: 'CATEGORÍA 2.5', 
       type: 'sub',
       matcher: (r) => classifyRow(r) === 'MAQUILA_AGUA_1_5_L_TS_x12'
     },
-    { id: 'MAQUILA_OTROS', parent: 'BOTELLAS_Total', label: 'MAQUILA OTROS', type: 'sub' },
+    { id: 'MAQUILA_OTROS', parent: 'BOTELLAS_Total', label: 'CATEGORÍA 2.6', type: 'sub' },
       { 
         id: 'MAQUILA_100_RPET_0_5LTS_x12', 
         parent: 'MAQUILA_OTROS', 
-        label: '100% RPET 0.5LTS (x12)', 
+        label: 'CATEGORÍA 2.6.1', 
         type: 'item',
         matcher: (r) => classifyRow(r) === 'MAQUILA_100_RPET_0_5LTS_x12'
       },
       { 
         id: 'MAQUILA_BOTELLA_5LTS_x4', 
         parent: 'MAQUILA_OTROS', 
-        label: 'BOTELLA 5LTS (x4)', 
+        label: 'CATEGORÍA 2.6.2', 
         type: 'item',
         matcher: (r) => classifyRow(r) === 'MAQUILA_BOTELLA_5LTS_x4'
       },
       {
         id: 'MAQUILA_AGUA_OTROS',
         parent: 'MAQUILA_OTROS',
-        label: 'MAQUILA AGUA OTROS',
+        label: 'CATEGORÍA 2.6.3',
         type: 'item',
         matcher: (r) => classifyRow(r) === 'MAQUILA_AGUA_OTROS'
       },
       
-  { id: 'BEBIDAS_Total', parent: 'BOTELLAS_Total', label: 'BEBIDAS', type: 'sub' },
+  { id: 'BEBIDAS_Total', parent: 'BOTELLAS_Total', label: 'CATEGORÍA 2.7', type: 'sub' },
     { 
       id: 'PA_SABOR_0_5_LTS_x12', 
       parent: 'BEBIDAS_Total', 
-      label: 'PA SABOR 0.5 LTS (x12)', 
+      label: 'CATEGORÍA 2.7.1', 
       type: 'item',
       matcher: (r) => classifyRow(r) === 'PA_SABOR_0_5_LTS_x12'
     },
     { 
       id: 'HIDRACTIVE_PLUS', 
       parent: 'BEBIDAS_Total', 
-      label: 'HIDRACTIVE +', 
+      label: 'CATEGORÍA 2.7.2', 
       type: 'item',
       matcher: (r) => classifyRow(r) === 'HIDRACTIVE_PLUS'
     },
     
   { 
     id: 'BON_Total', 
-    label: 'BON', 
+    label: 'CATEGORÍA 3', 
     type: 'main',
     matcher: (r) => classifyRow(r) === 'BON_Total'
   }
@@ -303,8 +307,11 @@ function normalizeText(text) {
 }
 
 function excelDateToMonth(val) {
-  if (val instanceof Date) return val.getMonth() + 1;
-  
+  if (val instanceof Date) {
+    // Check if it was parsed as local but shifted back into the previous month in UTC 
+    // or vice versa. Usually, SheetJS outputs UTC.
+    return val.getUTCMonth() + 1;
+  }
   if (val !== undefined && val !== null) {
     const trimmed = String(val)?.trim();
     const numVal = parseInt(trimmed, 10);
@@ -345,7 +352,7 @@ function excelDateToMonth(val) {
 
     // Intentar Parse general de fecha
     const d = new Date(val);
-    if (!isNaN(d.getTime())) return d.getMonth() + 1;
+    if (!isNaN(d.getTime())) return d.getUTCMonth() + 1;
   }
   
   return null;
@@ -964,6 +971,10 @@ window.toggleComercialGroup = function(nodeId) {
 export function renderResumenComercial(mesSeleccionado, isYTD, viewType = 'resumen') {
   if (!comercialRawData) {
     console.warn('[comercialEngine] No hay datos cargados aún.');
+    const tbodyLive = document.getElementById('resumen-comercial-tbody') || (document.getElementById('resumen-comercial-table') ? document.getElementById('resumen-comercial-table').querySelector('tbody') : null);
+    if (tbodyLive) {
+      tbodyLive.innerHTML = `<tr><td colspan="100%" style="text-align:center; padding:45px 24px; color:var(--text-secondary); font-style:italic;">Por favor, cargue el reporte de Resumen Comercial ("Resumen_Comercial.xlsx") en Configuración para activar y visualizar esta sección.</td></tr>`;
+    }
     return;
   }
 
@@ -2043,7 +2054,7 @@ export async function processManualFile(arrayBuffer) {
 // ------------------------------------------------------------------
 function openDB() {
   return new Promise((resolve, reject) => {
-    const req = indexedDB.open('PlanetaAzulDB', 7);
+    const req = indexedDB.open('FinanceDB', 7);
     req.onupgradeneeded = (e) => {
       if (!e.target.result.objectStoreNames.contains('finance_cache')) {
         e.target.result.createObjectStore('finance_cache');
@@ -2079,21 +2090,79 @@ export function resetComercialEngine() {
 export function setDemoComercialData(flatRows) {
   if (!flatRows || !flatRows.length) return;
 
-  // Convertir flat rows => formato dataF
-  const dataF = flatRows.map(r => ({
-    source: '2026',
-    mes: r.Mes,            // 1-12
-    descProd: r.Categoria,
-    agrupacion: r.Canal,
-    familia: r.Categoria,
-    cantidad: r.Volumen || 0,
-    ingreso: r.Ingresos || 0,
-  }));
+  const mapToExact = {
+    "CATEGORÍA 2.1": "APA BOTELLA 0.5 LTS (x20)",
+    "CATEGORÍA 2.2": "APA BOTELLA 1.5 LTS (x12)",
+    "CATEGORÍA 1": "APA BOTELLON 5 Gls.",
+    "CATEGORÍA 2.3.1": "APA 100% RPET 0.5LTS (x12)",
+    "CATEGORÍA 2.3.2": "APA BOTELLA 0.5LTS (x12)",
+    "CATEGORÍA 2.3.3": "APA BOTELLA 5LTS (x4)",
+    "CATEGORÍA 2.3.4": "APA BOTELLA 8 VASOS 1.89 LTS (x6)",
+    "CATEGORÍA 2.3.5": "APA SPORT 0.71 LTS (x12)",
+    "CATEGORÍA 2.3.6": "APA TETRA PACK 0.5 LTS (x18)",
+    "CATEGORÍA 2.4": "MAQUILA AGUA 0.5 LTS (x20)",
+    "CATEGORÍA 2.5": "MAQUILA AGUA 1.5 L TS (x12)",
+    "CATEGORÍA 2.6.1": "MAQUILA 100% RPET 0.5LTS (x12)",
+    "CATEGORÍA 2.6.2": "MAQUILA BOTELLA 5LTS (x4)",
+    "CATEGORÍA 2.6.3": "MAQUILA AGUA OTROS",
+    "CATEGORÍA 2.7.1": "PA SABOR 0.5 LTS (x12)",
+    "CATEGORÍA 2.7.2": "HIDRACTIVE PLUS",
+    "CATEGORÍA 3": "BON"
+  };
+
+  const dataF = flatRows.map(r => {
+    const exactCat = mapToExact[r.Categoria] || r.Categoria;
+    return {
+      source: String(r.Year || '2026'),
+      mes: r.Mes,
+      descProd: exactCat,
+      agrupacion: r.Canal,
+      agrupacionCeo: exactCat,
+      "Agrupacion CEO": exactCat,
+      "AGRUPACION CEO": exactCat,
+      familia: exactCat,
+      cantidad: (r.Volumen || 0) * 1000,
+      ingreso: r.Ingresos || 0,
+    };
+  });
+  
+  const pptoVolMap = {};
+  const pptoVtaMap = {};
+
+  flatRows.filter(r => String(r.Year || '2026') === '2026').forEach(r => {
+    const exactCat = mapToExact[r.Categoria] || r.Categoria;
+    const key = `${exactCat}_${r.Canal}`;
+    if (!pptoVolMap[key]) {
+      pptoVolMap[key] = {
+        descProd: exactCat,
+        agrupacion: r.Canal,
+        agrupacionCeo: exactCat,
+        "Agrupacion CEO": exactCat,
+        "AGRUPACION CEO": exactCat,
+        familia: exactCat,
+        monthValues: Array(12).fill(0)
+      };
+      pptoVtaMap[key] = {
+        descProd: exactCat,
+        agrupacion: r.Canal,
+        agrupacionCeo: exactCat,
+        "Agrupacion CEO": exactCat,
+        "AGRUPACION CEO": exactCat,
+        familia: exactCat,
+        monthValues: Array(12).fill(0)
+      };
+    }
+    const mIdx = Number(r.Mes) - 1;
+    if (mIdx >= 0 && mIdx < 12) {
+      pptoVolMap[key].monthValues[mIdx] += (r.Volumen || 0) * 1000 * 1.05;
+      pptoVtaMap[key].monthValues[mIdx] += (r.Ingresos || 0) * 1.05;
+    }
+  });
 
   comercialRawData = {
-    dataF,
-    data2025: [],
-    ppto: { vol: [], vta: [] },
+    dataF: dataF.filter(r => String(r.source) === '2026'),
+    data2025: dataF.filter(r => String(r.source) === '2025'),
+    ppto: { vol: Object.values(pptoVolMap), vta: Object.values(pptoVtaMap) },
     sixPlusSix: { vol: [], vta: [] },
     pgHorizontal: [],
   };

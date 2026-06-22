@@ -102,11 +102,36 @@ function parseCostoUnitario(sheet) {
 
     function parseBlock(startRow, endRow) {
         let blockRows = [];
+        let numCounter = 1;
+
         for (let r = startRow; r <= endRow; r++) {
             let conceptCell = sheet['C' + r];
             if (!conceptCell || !conceptCell.v) continue;
-            let concept = String(conceptCell.v)?.trim();
-            
+            let conceptRaw = String(conceptCell.v)?.trim();
+            let conceptLower = conceptRaw.toLowerCase();
+
+            // Obfuscate specific names to generic names
+            let concept = conceptRaw;
+            if (
+                !conceptLower.includes('total') &&
+                !conceptLower.includes('cantidad') &&
+                !conceptLower.includes('costo') &&
+                !conceptLower.includes('margen') &&
+                !conceptLower.includes('producción') &&
+                !conceptLower.includes('volumen') &&
+                !conceptLower.includes('depreciación') &&
+                !conceptLower.includes('materia prima') &&
+                !conceptLower.includes('suministro') &&
+                !conceptLower.includes('empaque') &&
+                !conceptLower.includes('etiqueta') &&
+                !conceptLower.includes('%') &&
+                conceptRaw.length >= 4 
+            ) {
+                // If it looks like a specific item, obfuscate it
+                concept = "Insumo / Variante " + numCounter;
+                numCounter++;
+            }
+
             let rowDict = {
                 concept: concept,
                 colA: sheet['A' + r] ? String(sheet['A' + r].v)?.trim() : '',
@@ -116,13 +141,23 @@ function parseCostoUnitario(sheet) {
                 ppto: []
             };
 
+            const scalar = 0.81432;
+            const parseAndObfuscate = (cellVal) => {
+                let v = cellVal && cellVal.t === 'n' ? cellVal.v : (cellVal ? parseFloat(cellVal.v) || 0 : 0);
+                // Scale if it's not a zero and not a small percentage format (e.g. 0.05)
+                if (v !== 0 && Math.abs(v) > 2.0) {
+                    v = v * scalar;
+                }
+                return v;
+            };
+
             for (let i = 0; i < 12; i++) {
                 let cellR25 = sheet[colsReal25[i] + r];
                 let cellR = sheet[colsReal[i] + r];
                 let cellP = sheet[colsPpto[i] + r];
-                rowDict.real25.push(cellR25 && cellR25.t === 'n' ? cellR25.v : (cellR25 ? parseFloat(cellR25.v) || 0 : 0));
-                rowDict.real.push(cellR && cellR.t === 'n' ? cellR.v : (cellR ? parseFloat(cellR.v) || 0 : 0));
-                rowDict.ppto.push(cellP && cellP.t === 'n' ? cellP.v : (cellP ? parseFloat(cellP.v) || 0 : 0));
+                rowDict.real25.push(parseAndObfuscate(cellR25));
+                rowDict.real.push(parseAndObfuscate(cellR));
+                rowDict.ppto.push(parseAndObfuscate(cellP));
             }
             blockRows.push(rowDict);
         }
@@ -154,7 +189,7 @@ export function processManualFile(arrayBuffer) {
 // IndexedDB Helpers
 function openDB() {
   return new Promise((resolve, reject) => {
-    const req = indexedDB.open('PlanetaAzulDB', 7);
+    const req = indexedDB.open('FinanceDB', 7);
     req.onupgradeneeded = (e) => {
       if (!e.target.result.objectStoreNames.contains('finance_cache')) {
         e.target.result.createObjectStore('finance_cache');
@@ -217,7 +252,17 @@ export async function loadCostoUnitarioCache() {
 }
 
 export function renderCostoUnitario(monthIndex, prodType, vista = 'tendencia') {
-    if (!costoUnitarioData) return;
+    if (!costoUnitarioData) {
+        const thead = document.getElementById("costo-unitario-thead");
+        const tbody = document.getElementById("costo-unitario-tbody");
+        if (thead) {
+            thead.innerHTML = '<tr><th style="text-align:left;">Concepto</th><th style="padding:12px 16px; text-align:right;">Estado</th></tr>';
+        }
+        if (tbody) {
+            tbody.innerHTML = '<tr><td colspan="2" style="text-align:center; padding:45px 24px; color:var(--text-secondary); font-style:italic;">Por favor, cargue el reporte de Costo-Volumen de Producción ("Maquila.xlsx") en Configuración para activar y visualizar esta sección.</td></tr>';
+        }
+        return;
+    }
 
     if (vista === 'resumen') {
         renderCostoUnitarioResumen(monthIndex, prodType);
@@ -287,6 +332,36 @@ function renderCostoUnitarioTendencia(monthIndex, prodType) {
     let renderedConcepts = new Set();
     let displayRows = [];
 
+    // Local function to ensure all specific item names get obfuscated
+    let numCounter = 1;
+    function obfuscateConceptName(conceptRaw) {
+        if (!conceptRaw) return "";
+        let conceptLower = conceptRaw.toLowerCase();
+
+        if (
+            !conceptLower.includes('total') &&
+            !conceptLower.includes('cantidad') &&
+            !conceptLower.includes('costo') &&
+            !conceptLower.includes('margen') &&
+            !conceptLower.includes('producción') &&
+            !conceptLower.includes('volumen') &&
+            !conceptLower.includes('depreciación') &&
+            !conceptLower.includes('materia prima') &&
+            !conceptLower.includes('suministro') &&
+            !conceptLower.includes('empaque') &&
+            !conceptLower.includes('etiqueta') &&
+            !conceptLower.includes('%') &&
+            !conceptLower.includes('botellon') &&
+            !conceptLower.includes('botella') &&
+            conceptRaw.length >= 4 
+        ) {
+            let res = "Insumo / Variante " + numCounter;
+            numCounter++;
+            return res;
+        }
+        return conceptRaw;
+    }
+
     for (let i = 0; i < block.length; i++) {
         let r_dop = block[i];
         if (renderedConcepts.has(i)) continue;
@@ -300,9 +375,12 @@ function renderCostoUnitarioTendencia(monthIndex, prodType) {
             continue;
         }
         
-        if (prodType === 'botellon' && concept.toUpperCase().includes('APA BOTELLON 18.9 LTS (X1)')) continue;
-        if (prodType === 'botella' && concept.toUpperCase().includes('AGUA PLANETA AZUL 16.9 OZ CLEAR (20/1)')) continue;
+        if (prodType === 'botellon' && concept.toUpperCase().includes('BOTELLON 18.9 LTS (X1)')) continue;
+        if (prodType === 'botella' && concept.toUpperCase().includes('AGUA 16.9 OZ CLEAR (20/1)')) continue;
         
+        // Apply rendering obfuscation
+        concept = obfuscateConceptName(concept);
+
         let unitariosByMonth = [];
         
         let unitRowIndex = -1;
@@ -464,11 +542,41 @@ function renderCostoUnitarioResumen(monthIndex, prodType) {
     let renderedConcepts = new Set();
     let displayRows = [];
 
+    let numCounter = 1;
+    function obfuscateConceptName(conceptRaw) {
+        if (!conceptRaw) return "";
+        let conceptLower = conceptRaw.toLowerCase();
+        
+        if (
+            !conceptLower.includes('total') &&
+            !conceptLower.includes('cantidad') &&
+            !conceptLower.includes('costo') &&
+            !conceptLower.includes('margen') &&
+            !conceptLower.includes('producción') &&
+            !conceptLower.includes('volumen') &&
+            !conceptLower.includes('depreciación') &&
+            !conceptLower.includes('materia prima') &&
+            !conceptLower.includes('suministro') &&
+            !conceptLower.includes('empaque') &&
+            !conceptLower.includes('etiqueta') &&
+            !conceptLower.includes('%') &&
+            !conceptLower.includes('botellon') &&
+            !conceptLower.includes('botella') &&
+            conceptRaw.length >= 4 
+        ) {
+            let res = "Insumo / Variante " + numCounter;
+            numCounter++;
+            return res;
+        }
+        return conceptRaw;
+    }
+
     for (let i = 0; i < block.length; i++) {
         let r_dop = block[i];
         if (renderedConcepts.has(i)) continue;
 
-        let concept = r_dop.concept;
+        let conceptOriginal = r_dop.concept;
+        let concept = conceptOriginal;
         
         const normConcept = concept.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase()?.trim();
         if (normConcept.includes('TOTAL COSTO CON DEPRECIACI') ||
@@ -477,12 +585,15 @@ function renderCostoUnitarioResumen(monthIndex, prodType) {
             continue;
         }
 
-        if (prodType === 'botellon' && concept.toUpperCase().includes('APA BOTELLON 18.9 LTS (X1)')) continue;
-        if (prodType === 'botella' && concept.toUpperCase().includes('AGUA PLANETA AZUL 16.9 OZ CLEAR (20/1)')) continue;
+        if (prodType === 'botellon' && concept.toUpperCase().includes('BOTELLON 18.9 LTS (X1)')) continue;
+        if (prodType === 'botella' && concept.toUpperCase().includes('AGUA 16.9 OZ CLEAR (20/1)')) continue;
         
+        // Obfuscate
+        concept = obfuscateConceptName(conceptOriginal);
+
         let unitRowIndex = -1;
         for (let j = i+1; j < Math.min(i+5, block.length); j++) {
-            if (block[j].concept === concept && block[j].colA === 'Costo Unitario') {
+            if (block[j].concept === conceptOriginal && block[j].colA === 'Costo Unitario') {
                 unitRowIndex = j;
                 break;
             }
@@ -587,4 +698,45 @@ function renderCostoUnitarioResumen(monthIndex, prodType) {
         `;
         tbody.appendChild(tr);
     });
+}
+
+export function resetCostoUnitarioEngine() {
+    costoUnitarioData = null;
+    lastParsedWorkbook = null;
+}
+
+export function setDemoCostoUnitarioData() {
+    costoUnitarioData = { botellon: [], botella: [] };
+    const createRows = () => {
+        let rows = [];
+        const baseVals = () => Array.from({length:12}, (_,i) => 10 + Math.random()*5);
+        rows.push({
+            concept: "Cantidad Producción por presentación",
+            colA: "",
+            real25: Array.from({length:12}, () => 800000 + Math.random()*50000),
+            real: Array.from({length:12}, () => 850000 + Math.random()*50000),
+            ppto: Array.from({length:12}, () => 870000 + Math.random()*50000)
+        });
+        for (let i = 1; i <= 6; i++) {
+            let r25 = baseVals(), r = baseVals(), p = baseVals();
+            rows.push({
+                concept: "Insumo Material " + i,
+                colA: "",
+                real25: r25, real: r, ppto: p
+            });
+            rows.push({ concept: "Insumo Material " + i, colA: "Costo Unitario", real25: r25.map(v=>v/800), real: r.map(v=>v/850), ppto: p.map(v=>v/870) });
+            rows.push({ concept: "Insumo Material " + i, colA: "Volumen / Eficiencia", real25: baseVals(), real: baseVals(), ppto: baseVals() });
+        }
+        
+        // Total Costo
+        let r25T = baseVals().map(v=>v*6), rT = baseVals().map(v=>v*6), pT = baseVals().map(v=>v*6);
+        rows.push({
+            concept: "Total Costo", colA: "", real25: r25T, real: rT, ppto: pT
+        });
+        rows.push({ concept: "Total Costo", colA: "Costo Unitario", real25: r25T.map(v=>v/800), real: rT.map(v=>v/850), ppto: pT.map(v=>v/870) });
+
+        return rows;
+    };
+    costoUnitarioData.botellon = createRows();
+    costoUnitarioData.botella = createRows();
 }

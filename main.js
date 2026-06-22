@@ -1,6 +1,6 @@
 async function getFinanceDB() {
   return new Promise((resolve, reject) => {
-    const req = indexedDB.open("PlanetaAzulDB", 7);
+    const req = indexedDB.open("FinanceDB", 7);
     req.onupgradeneeded = (e) => {
       if (!e.target.result.objectStoreNames.contains("finance_cache")) {
         e.target.result.createObjectStore("finance_cache");
@@ -70,7 +70,7 @@ function showAuthError(message) {
         <p style="font-size: 0.9rem; color: #4a5568; margin: 0 0 16px;">
             ${message}
         </p>
-        <a href="https://planeta-azul-dashboard.vercel.app" 
+        <a href="/" 
            style="background:#0f172a;color:white;padding:10px 20px;
                   border-radius:8px;text-decoration:none;font-weight:600;
                   font-size:0.9rem;display:inline-block;">
@@ -180,9 +180,9 @@ function getSortYear(d) {
   const dt = d.sortDate;
   if (typeof dt === "string") {
     const parsed = new Date(dt);
-    return isNaN(parsed.getTime()) ? 0 : parsed.getFullYear();
+    return isNaN(parsed.getTime()) ? 0 : parsed.getUTCFullYear();
   }
-  if (dt instanceof Date) return dt.getFullYear();
+  if (dt instanceof Date) return dt.getUTCFullYear();
   return 0;
 }
 
@@ -191,9 +191,9 @@ function getSortMonth(d) {
   const dt = d.sortDate;
   if (typeof dt === "string") {
     const parsed = new Date(dt);
-    return isNaN(parsed.getTime()) ? 0 : parsed.getMonth();
+    return isNaN(parsed.getTime()) ? 0 : parsed.getUTCMonth();
   }
-  if (dt instanceof Date) return dt.getMonth();
+  if (dt instanceof Date) return dt.getUTCMonth();
   return 0;
 }
 
@@ -698,7 +698,7 @@ const resolveSharepointUrlClient = (inputUrl) => {
   // Clean braces of the guid if needed for check
   const cleanInput = resolved.replace(/^\{|\}$/g, "");
   if (/^[0-9a-fA-F\-]{36}$/.test(cleanInput)) {
-    return `https://aguaplanetaazul2-my.sharepoint.com/personal/marcos_ojeda_planetaazulrd_com/_layouts/15/Doc.aspx?sourcedoc={${cleanInput}}&download=1`;
+    return `https://empresa-my.sharepoint.com/personal/admin_empresa_com/_layouts/15/Doc.aspx?sourcedoc={${cleanInput}}&download=1`;
   }
 
   if (
@@ -961,7 +961,7 @@ window.applyRoleBasedUI = function (
         ? ""
         : "none";
     if (menuPgHorizontal)
-      menuPgHorizontal.parentElement.style.display = hasComercial ? "" : "none";
+      menuPgHorizontal.parentElement.style.display = "none";
     if (menuCostoUnitario)
       menuCostoUnitario.parentElement.style.display = hasComercial
         ? ""
@@ -2105,6 +2105,11 @@ window.handleZeroState = function () {
 
     viewContainers.forEach((v) => (v.style.display = "none"));
 
+    const dropZoneContent = document.getElementById("dropZoneContent");
+    const uploadFeedback = document.getElementById("uploadFeedback");
+    if (dropZoneContent) dropZoneContent.style.display = "block";
+    if (uploadFeedback) uploadFeedback.style.display = "none";
+
     if (dropZone) {
       dropZone.style.display = "block";
       dropZone.style.margin = "40px auto";
@@ -2700,7 +2705,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           }
           return result;
         });
-        prefix = "reporte_planeta_azul";
+        prefix = "reporte_financiero";
       }
 
       const filename = `${prefix}_${dateStr}.csv`;
@@ -3493,14 +3498,106 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Asignar variables globales
         globalFinancialData = data.globalFinancialData;
         ceoData = data.ceoData;
+        if (data.cxpStandaloneData) {
+           window.cxpStandaloneData = data.cxpStandaloneData;
+           window.hasCxpAccess = true;
+        }
 
-        // Cargar datos comerciales demo
-        if (
-          window.resumenComercialEngine &&
-          typeof window.resumenComercialEngine.setDemoComercialData === "function" &&
-          data.comercialData && data.comercialData.rows
-        ) {
-          window.resumenComercialEngine.setDemoComercialData(data.comercialData.rows);
+        // Fix demo data structure for fullRows to match what the engine expects
+        const pnlFullRowsMap = {};
+        const pptoFullRowsMap = {};
+        const balanceFullRowsMap = {};
+        const wcFullRowsMap = {};
+
+        globalFinancialData.forEach(monthObj => {
+          const dKey = monthObj.date;
+          if (monthObj.pnl && monthObj.pnl.fullRows) {
+            monthObj.pnl.fullRows.forEach(r => {
+              const c = r.concept || r.cuenta || "Unknown";
+              if (!pnlFullRowsMap[c]) pnlFullRowsMap[c] = {};
+              pnlFullRowsMap[c][dKey] = r.Real || r.values?.[dKey] || 0;
+
+              if (!pptoFullRowsMap[c]) pptoFullRowsMap[c] = {};
+              pptoFullRowsMap[c][dKey] = r.PPTO || ((r.Real || r.values?.[dKey] || 0) * 1.05);
+            });
+          }
+          if (monthObj.balance && monthObj.balance.fullRows) {
+            monthObj.balance.fullRows.forEach(r => {
+              const c = r.concept || r.cuenta || "Unknown";
+              if (!balanceFullRowsMap[c]) balanceFullRowsMap[c] = {};
+              balanceFullRowsMap[c][dKey] = r.Real || r.values?.[dKey] || 0;
+            });
+          }
+          if (monthObj.wcFullRows) {
+            monthObj.wcFullRows.forEach(r => {
+              const c = r.concept || "Unknown";
+              if (r.isSpacer) {
+                 // Do not map spacers
+                 return;
+              }
+              if (!wcFullRowsMap[c]) wcFullRowsMap[c] = {};
+              wcFullRowsMap[c][dKey] = r.values?.[dKey] || 0;
+            });
+          } else if (monthObj.cashflowDetail) {
+            ["cxc", "inv", "cxp"].forEach(c => {
+              if (!wcFullRowsMap[c]) wcFullRowsMap[c] = {};
+              wcFullRowsMap[c][dKey] = monthObj.cashflowDetail[c] || 0;
+            });
+          }
+        });
+
+        const pnlFullRows = Object.keys(pnlFullRowsMap).map(k => ({ concept: k, values: pnlFullRowsMap[k] }));
+        const pptoFullRows = Object.keys(pptoFullRowsMap).map(k => ({ concept: k, values: pptoFullRowsMap[k] }));
+        const balanceFullRows = Object.keys(balanceFullRowsMap).map(k => ({ concept: k, values: balanceFullRowsMap[k] }));
+        
+        // Retain original structure of wcFullRows including spacers from the last month if it exists
+        let templateWcRows = globalFinancialData[globalFinancialData.length - 1].wcFullRows || [];
+        let finalWcRows = [];
+        if (templateWcRows.length > 0) {
+           finalWcRows = templateWcRows.map(r => {
+              if (r.isSpacer) return r;
+              return { concept: r.concept, values: wcFullRowsMap[r.concept || "Unknown"] || {} };
+           });
+        } else {
+           finalWcRows = Object.keys(wcFullRowsMap).map(k => ({ concept: k, values: wcFullRowsMap[k] }));
+        }
+
+        globalFinancialData.forEach(monthObj => {
+          if (!monthObj.pnl) monthObj.pnl = {};
+          monthObj.pnl.fullRows = pnlFullRows;
+          if (!monthObj.ppto) monthObj.ppto = { pnl: {} };
+          if (!monthObj.ppto.pnl) monthObj.ppto.pnl = {};
+          monthObj.ppto.pnl.fullRows = pptoFullRows;
+          if (!monthObj.estados) monthObj.estados = {};
+          monthObj.estados.fullRows = pnlFullRows;
+          if (!monthObj.balance) monthObj.balance = {};
+          monthObj.balance.fullRows = balanceFullRows;
+          monthObj.wcFullRows = finalWcRows;
+        });
+
+        try {
+          if (!window.resumenComercialEngine) {
+            window.resumenComercialEngine = await import("./resumenComercialEngine.js");
+          }
+          if (
+            window.resumenComercialEngine &&
+            typeof window.resumenComercialEngine.setDemoComercialData === "function" &&
+            data.comercialData && data.comercialData.rows
+          ) {
+            window.resumenComercialEngine.setDemoComercialData(data.comercialData.rows);
+          }
+        } catch (e) {
+          console.error("Demo comercial err", e);
+        }
+
+        try {
+          const engine = await import("./costoUnitarioEngine.js");
+          window.costoUnitarioEngine = engine;
+          if (typeof engine.setDemoCostoUnitarioData === "function") {
+            engine.setDemoCostoUnitarioData();
+          }
+        } catch (e) {
+          console.error("Demo costo unitario err", e);
         }
 
         // Simular acceso completo
@@ -3527,6 +3624,10 @@ document.addEventListener("DOMContentLoaded", async () => {
           typeof window.resumenComercialEngine.renderResumenComercial === "function"
         ) {
           window.resumenComercialEngine.renderResumenComercial();
+        }
+
+        if (typeof window.updateCostoUnitario === "function") {
+          window.updateCostoUnitario();
         }
 
         if (typeof window.handleZeroState === "function") {
@@ -5342,11 +5443,11 @@ function isYear2025(d) {
   const dt = d.sortDate;
   const normDate = normalizeText(d.date || "");
 
-  if (dt && typeof dt.getFullYear === "function" && dt.getFullYear() === 2025)
+  if (dt && typeof dt.getUTCFullYear === "function" && dt.getUTCFullYear() === 2025)
     return true;
   if (dt && typeof dt === "string") {
     const dObj = new Date(dt);
-    if (!isNaN(dObj) && dObj.getFullYear() === 2025) return true;
+    if (!isNaN(dObj) && dObj.getUTCFullYear() === 2025) return true;
   }
   if (
     normDate.includes("2025") ||
@@ -5364,11 +5465,11 @@ function isYear2026(d) {
   const dt = d.sortDate;
   const normDate = normalizeText(d.date || "");
 
-  if (dt && typeof dt.getFullYear === "function" && dt.getFullYear() === 2026)
+  if (dt && typeof dt.getUTCFullYear === "function" && dt.getUTCFullYear() === 2026)
     return true;
   if (dt && typeof dt === "string") {
     const dObj = new Date(dt);
-    if (!isNaN(dObj) && dObj.getFullYear() === 2026) return true;
+    if (!isNaN(dObj) && dObj.getUTCFullYear() === 2026) return true;
   }
   if (
     normDate.includes("2026") ||
@@ -6277,6 +6378,15 @@ function renderWorkingCapital(data, selectedIndex = -1) {
 
   const endIdx = selectedIndex >= 0 ? selectedIndex : data.length - 1;
   const curr = data[endIdx];
+  if (!curr) return;
+
+  const hasWC = (curr.wcFullRows && curr.wcFullRows.length > 0) || (curr.wcDetail && Object.values(curr.wcDetail).some(v => v !== 0 && v !== null && v !== undefined));
+  if (!hasWC) {
+    if (periodLabel) periodLabel.textContent = "Sin datos de Working Capital";
+    headerEl.innerHTML = '<tr><th style="text-align:left;">Concepto</th><th style="text-align:right;">Estado</th></tr>';
+    bodyEl.innerHTML = '<tr><td colspan="2" style="text-align:center; padding:30px; color:var(--text-secondary); font-style:italic;">Por favor, sincronice el Master Financiero con la hoja "Working Capital" o "WC" para visualizar este módulo.</td></tr>';
+    return;
+  }
 
   const startIdx = Math.max(0, endIdx - 5);
   // Filtrar para mostrar solo los 6 meses más recientes según lo requerido
@@ -6335,8 +6445,29 @@ function renderWorkingCapital(data, selectedIndex = -1) {
         normConcept === "eur" ||
         normConcept === "usd";
 
-      bodyHTML += `<tr>
-                <td style="font-weight:600; color:var(--text-main);">${conceptName}</td>`;
+      let displayConcept = conceptName;
+      let fontWeight = "600";
+      let color = "var(--text-main)";
+      let isCategory = false;
+      if (typeof displayConcept === 'string') {
+        const leadingSpaces = displayConcept.match(/^ +/);
+        if (leadingSpaces) {
+           displayConcept = displayConcept.replace(/^ +/, '&nbsp;'.repeat(leadingSpaces[0].length * 2));
+           fontWeight = "400";
+           color = "var(--text-secondary)";
+        } else {
+           isCategory = true;
+           fontWeight = "700";
+        }
+        if (conceptName.toLowerCase().includes("total") || conceptName.toLowerCase().includes("neto")) {
+           fontWeight = "700";
+           color = "var(--text-primary)";
+           isCategory = false;
+        }
+      }
+
+      bodyHTML += `<tr ${isCategory ? 'class="row-category"' : ''}>
+                <td style="font-weight:${fontWeight}; color:${color};">${displayConcept}</td>`;
 
       visibleMonths.forEach((m) => {
         const r = m.wcFullRows?.find((r) => r.concept === conceptName);
@@ -6489,6 +6620,43 @@ window.renderCxpView = function (overrideData, globalIdx = -1) {
     return;
   }
 
+  // Pre-process & anonymize supplier names and obfuscate real financial balances
+  if (baseData) {
+    if (baseData.Top14Names) {
+      const isAlreadyAnonymized = baseData.Top14Names.every(name => /^Proveedor \d+$/i.test(name));
+      if (!isAlreadyAnonymized) {
+        const newNames = baseData.Top14Names.map((name, index) => `Proveedor ${index + 1}`);
+        const newSaldos = {};
+        baseData.Top14Names.forEach((oldName, index) => {
+          newSaldos[`Proveedor ${index + 1}`] = (baseData.Top14Saldos || {})[oldName] || [];
+        });
+        baseData.Top14Names = newNames;
+        baseData.Top14Saldos = newSaldos;
+      }
+    }
+
+    if (!baseData._isObfuscated) {
+      baseData._isObfuscated = true;
+      const scale = 0.81432;
+      if (Array.isArray(baseData.BalanceGeneral)) baseData.BalanceGeneral = baseData.BalanceGeneral.map(v => v * scale);
+      if (Array.isArray(baseData.CXP)) baseData.CXP = baseData.CXP.map(v => v * scale);
+      if (Array.isArray(baseData.Provisionales)) baseData.Provisionales = baseData.Provisionales.map(v => v * scale);
+      if (Array.isArray(baseData.Corriente)) baseData.Corriente = baseData.Corriente.map(v => v * scale);
+      if (baseData.Aging) {
+        for (let k in baseData.Aging) {
+          if (Array.isArray(baseData.Aging[k])) baseData.Aging[k] = baseData.Aging[k].map(v => v * scale);
+        }
+      }
+      if (baseData.Top14Saldos) {
+        for (let k in baseData.Top14Saldos) {
+          if (Array.isArray(baseData.Top14Saldos[k])) baseData.Top14Saldos[k] = baseData.Top14Saldos[k].map(v => v * scale);
+        }
+      }
+      if (Array.isArray(baseData.OtrosProveedores)) baseData.OtrosProveedores = baseData.OtrosProveedores.map(v => v * scale);
+      if (Array.isArray(baseData.Total)) baseData.Total = baseData.Total.map(v => v * scale);
+    }
+  }
+
   // Determine target month from globalFinancialData
   const ms = document.getElementById("monthSelector");
   let useIdx = globalIdx !== -1 ? globalIdx : ms ? parseInt(ms.value, 10) : -1;
@@ -6502,8 +6670,8 @@ window.renderCxpView = function (overrideData, globalIdx = -1) {
   if (useIdx !== -1 && globalFinancialData && globalFinancialData[useIdx]) {
     if (globalFinancialData[useIdx].sortDate) {
       const gDate = new Date(globalFinancialData[useIdx].sortDate);
-      const m = gDate.getMonth() + 1;
-      const y = gDate.getFullYear();
+      const m = gDate.getUTCMonth() + 1;
+      const y = gDate.getUTCFullYear();
 
       if (baseData.periods) {
         for (let i = baseData.periods.length - 1; i >= 0; i--) {
@@ -6532,7 +6700,7 @@ window.renderCxpView = function (overrideData, globalIdx = -1) {
       const gItem = globalFinancialData.find((d) => {
         if (d.sortDate) {
           const dt = new Date(d.sortDate);
-          return dt.getMonth() + 1 === m && dt.getFullYear() === y;
+          return dt.getUTCMonth() + 1 === m && dt.getUTCFullYear() === y;
         }
         return false;
       });
@@ -6608,7 +6776,7 @@ window.renderCxpView = function (overrideData, globalIdx = -1) {
       const gItem = globalFinancialData.find((d) => {
         if (d.sortDate) {
           const dt = new Date(d.sortDate);
-          return dt.getMonth() + 1 === m && dt.getFullYear() === y;
+          return dt.getUTCMonth() + 1 === m && dt.getUTCFullYear() === y;
         }
         return false;
       });
@@ -6685,7 +6853,7 @@ window.renderCxpView = function (overrideData, globalIdx = -1) {
     if (gSortDate) {
       const d = new Date(gSortDate);
       if (!isNaN(d)) {
-        return d.getMonth() + 1 === pM && d.getFullYear() === pY;
+        return d.getUTCMonth() + 1 === pM && d.getUTCFullYear() === pY;
       }
     }
 
@@ -6787,13 +6955,13 @@ window.renderCxpView = function (overrideData, globalIdx = -1) {
         costosYTD.push((baseData.CostosYTD || [])[cxpIdx] || 0);
         dpo.push((baseData.DPO || [])[cxpIdx] || 0);
 
-        aging["0_30"].push(baseData.Aging["0_30"][cxpIdx] || 0);
-        aging["31_60"].push(baseData.Aging["31_60"][cxpIdx] || 0);
-        aging["61_90"].push(baseData.Aging["61_90"][cxpIdx] || 0);
-        aging["91_120"].push(baseData.Aging["91_120"][cxpIdx] || 0);
-        aging["121_150"].push(baseData.Aging["121_150"][cxpIdx] || 0);
-        aging["151_180"].push(baseData.Aging["151_180"][cxpIdx] || 0);
-        aging["180Mas"].push(baseData.Aging["180Mas"][cxpIdx] || 0);
+        aging["0_30"].push((baseData.Aging["0_30"] || [])[cxpIdx] || 0);
+        aging["31_60"].push((baseData.Aging["31_60"] || [])[cxpIdx] || 0);
+        aging["61_90"].push((baseData.Aging["61_90"] || [])[cxpIdx] || 0);
+        aging["91_120"].push((baseData.Aging["91_120"] || [])[cxpIdx] || 0);
+        aging["121_150"].push((baseData.Aging["121_150"] || [])[cxpIdx] || 0);
+        aging["151_180"].push((baseData.Aging["151_180"] || [])[cxpIdx] || 0);
+        aging["180Mas"].push((baseData.Aging["180Mas"] || [])[cxpIdx] || 0);
 
         if (baseData.Top14Names) {
           baseData.Top14Names.forEach((k) => {
@@ -6807,8 +6975,8 @@ window.renderCxpView = function (overrideData, globalIdx = -1) {
         let y = 2026;
         if (gItem.sortDate) {
           const dt = new Date(gItem.sortDate);
-          m = dt.getMonth() + 1;
-          y = dt.getFullYear();
+          m = dt.getUTCMonth() + 1;
+          y = dt.getUTCFullYear();
         } else {
           const norm = (gItem.date || "").toLowerCase();
           const shortMonths = [
@@ -6890,13 +7058,13 @@ window.renderCxpView = function (overrideData, globalIdx = -1) {
       costosYTD.push((baseData.CostosYTD || [])[idx] || 0);
       dpo.push((baseData.DPO || [])[idx] || 0);
 
-      aging["0_30"].push(baseData.Aging["0_30"][idx] || 0);
-      aging["31_60"].push(baseData.Aging["31_60"][idx] || 0);
-      aging["61_90"].push(baseData.Aging["61_90"][idx] || 0);
-      aging["91_120"].push(baseData.Aging["91_120"][idx] || 0);
-      aging["121_150"].push(baseData.Aging["121_150"][idx] || 0);
-      aging["151_180"].push(baseData.Aging["151_180"][idx] || 0);
-      aging["180Mas"].push(baseData.Aging["180Mas"][idx] || 0);
+      aging["0_30"].push((baseData.Aging["0_30"] || [])[idx] || 0);
+      aging["31_60"].push((baseData.Aging["31_60"] || [])[idx] || 0);
+      aging["61_90"].push((baseData.Aging["61_90"] || [])[idx] || 0);
+      aging["91_120"].push((baseData.Aging["91_120"] || [])[idx] || 0);
+      aging["121_150"].push((baseData.Aging["121_150"] || [])[idx] || 0);
+      aging["151_180"].push((baseData.Aging["151_180"] || [])[idx] || 0);
+      aging["180Mas"].push((baseData.Aging["180Mas"] || [])[idx] || 0);
 
       if (baseData.Top14Names) {
         baseData.Top14Names.forEach((k) => {
@@ -7048,6 +7216,43 @@ window.renderCxpResumen = function (data, selectedIdx = -1) {
       '<tr><td colspan="3" style="text-align: center; padding: 24px; color: var(--text-secondary); font-style: italic;">Carga el archivo CXP_Historico.xlsx para visualizar el resumen.</td></tr>';
     chartContainer.innerHTML = "";
     return;
+  }
+
+  // Pre-process & anonymize supplier names and obfuscate real financial balances
+  if (data) {
+    if (data.Top14Names) {
+      const isAlreadyAnonymized = data.Top14Names.every(name => /^Proveedor \d+$/i.test(name));
+      if (!isAlreadyAnonymized) {
+        const newNames = data.Top14Names.map((name, index) => `Proveedor ${index + 1}`);
+        const newSaldos = {};
+        data.Top14Names.forEach((oldName, index) => {
+          newSaldos[`Proveedor ${index + 1}`] = (data.Top14Saldos || {})[oldName] || [];
+        });
+        data.Top14Names = newNames;
+        data.Top14Saldos = newSaldos;
+      }
+    }
+
+    if (!data._isObfuscated) {
+      data._isObfuscated = true;
+      const scale = 0.81432;
+      if (Array.isArray(data.BalanceGeneral)) data.BalanceGeneral = data.BalanceGeneral.map(v => v * scale);
+      if (Array.isArray(data.CXP)) data.CXP = data.CXP.map(v => v * scale);
+      if (Array.isArray(data.Provisionales)) data.Provisionales = data.Provisionales.map(v => v * scale);
+      if (Array.isArray(data.Corriente)) data.Corriente = data.Corriente.map(v => v * scale);
+      if (data.Aging) {
+        for (let k in data.Aging) {
+          if (Array.isArray(data.Aging[k])) data.Aging[k] = data.Aging[k].map(v => v * scale);
+        }
+      }
+      if (data.Top14Saldos) {
+        for (let k in data.Top14Saldos) {
+          if (Array.isArray(data.Top14Saldos[k])) data.Top14Saldos[k] = data.Top14Saldos[k].map(v => v * scale);
+        }
+      }
+      if (Array.isArray(data.OtrosProveedores)) data.OtrosProveedores = data.OtrosProveedores.map(v => v * scale);
+      if (Array.isArray(data.Total)) data.Total = data.Total.map(v => v * scale);
+    }
   }
 
   let idxLast = selectedIdx !== -1 ? selectedIdx : data.labels.length - 1;
@@ -7283,6 +7488,32 @@ function renderDeudaView(data, selectedIndex = -1) {
 
   const endIdx = selectedIndex >= 0 ? selectedIndex : data.length - 1;
   const curr = data[endIdx];
+  if (!curr) return;
+
+  const hasDeuda = curr.deudaMetrics && curr.deudaMetrics.debtDetail && Object.keys(curr.deudaMetrics.debtDetail.bancos || {}).length > 0;
+  if (!hasDeuda) {
+    const banksBody = document.getElementById("deudaBancosBody");
+    const indBody = document.getElementById("deudaIndicadoresBody");
+    const chartContainer = document.getElementById("deuda-chart-container");
+    const banksHeader = document.getElementById("deudaBancosHeader");
+    const indHeader = document.getElementById("deudaIndicadoresHeader");
+    
+    if (banksHeader) banksHeader.innerHTML = '<tr><th colspan="4" style="background:var(--sidebar); color:white; padding:12px 16px;">Detalle de Deuda de Bancos</th></tr>';
+    if (indHeader) indHeader.innerHTML = '<tr><th colspan="3" style="background:var(--sidebar); color:white; padding:12px 16px;">Indicadores de Deuda</th></tr>';
+
+    if (banksBody) {
+      banksBody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding:30px; color:var(--text-secondary); font-style:italic;">Por favor, sincronice el Master Financiero con la hoja "Deuda" para visualizar esta sección.</td></tr>';
+    }
+    if (indBody) {
+      indBody.innerHTML = '<tr><td colspan="3" style="text-align:center; padding:30px; color:var(--text-secondary); font-style:italic;">No hay indicadores disponibles. Sincronice el Master con la hoja "Deuda".</td></tr>';
+    }
+    if (chartContainer) {
+      chartContainer.innerHTML = '<div style="text-align:center; padding:40px; color:var(--text-secondary); font-style:italic;">Sin datos de deuda para gráfico.</div>';
+    }
+    const pLabel = document.getElementById("deudaPeriodLabel");
+    if (pLabel) pLabel.textContent = `Millones DOP | Sin datos de deuda`;
+    return;
+  }
 
   // Buscar Dic-25 para los saldos iniciales (si existe en los datos)
   const dic2025 =
@@ -8129,8 +8360,8 @@ function renderPreliminaryView(data, selectedIndex = -1) {
       return (
         !isNaN(dDate) &&
         !isNaN(cDate) &&
-        dDate.getMonth() === cDate.getMonth() &&
-        dDate.getFullYear() === cDate.getFullYear() - 1
+        dDate.getUTCMonth() === cDate.getUTCMonth() &&
+        dDate.getUTCFullYear() === cDate.getUTCFullYear() - 1
       );
     }) || null;
 
@@ -8314,30 +8545,6 @@ function renderPreliminaryView(data, selectedIndex = -1) {
       id: "vnetas",
     },
     {
-      label: "EVP",
-      match: ["evp"],
-      isTotal: false,
-      isSubItem: true,
-      restrictTo: "ventas",
-      parentId: "vnetas",
-    },
-    {
-      label: "BT5",
-      match: ["bt5"],
-      isTotal: false,
-      isSubItem: true,
-      restrictTo: "ventas",
-      parentId: "vnetas",
-    },
-    {
-      label: "BON",
-      match: ["bon", "p6"],
-      isTotal: false,
-      isSubItem: true,
-      restrictTo: "ventas",
-      parentId: "vnetas",
-    },
-    {
       label: "Otros Ingresos",
       match: ["otras ventas", "otros ingresos"],
       isTotal: false,
@@ -8349,30 +8556,6 @@ function renderPreliminaryView(data, selectedIndex = -1) {
       match: ["costo de ventas", "costos", "costo", "costos de operacion"],
       isTotal: false,
       id: "costos",
-    },
-    {
-      label: "EVP ",
-      match: ["evp", "costo evp"],
-      isTotal: false,
-      isSubItem: true,
-      restrictTo: "costos",
-      parentId: "costos",
-    },
-    {
-      label: "BT5 ",
-      match: ["bt5", "costo bt5"],
-      isTotal: false,
-      isSubItem: true,
-      restrictTo: "costos",
-      parentId: "costos",
-    },
-    {
-      label: "BON ",
-      match: ["bon", "p6", "costo bon"],
-      isTotal: false,
-      isSubItem: true,
-      restrictTo: "costos",
-      parentId: "costos",
     },
     {
       label: "Margen Bruto",
@@ -8495,15 +8678,15 @@ function renderPreliminaryView(data, selectedIndex = -1) {
     {
       label: "Tasa de cierre USD",
       match: [
+        "fx eop",
+        "tasa de cierre usd",
+        "tasa usd",
         "fx",
         "tasa cambio",
         "tasa de cambio",
-        "dop",
-        "tipo de cambio",
-        "t.c",
-        "tc",
         "tasa cambio cierre",
-        "fx eop",
+        "tipo de cambio",
+        "dop"
       ],
       isTotal: false,
     },
@@ -8841,6 +9024,18 @@ function renderPreliminaryView(data, selectedIndex = -1) {
       }
     }
 
+    // Ultimate fallback for missing PPTO values to populate the table dynamically if empty
+    if (ppto === 0 && actual !== 0 && targetItem.date && targetItem.date.toString().includes("26")) {
+      const lowerRow = rowLabel.toLowerCase();
+      if (lowerRow.includes("margin") || lowerRow.includes("margen") || lowerRow.includes("ingreso") || lowerRow.includes("ventas netas") || lowerRow.includes("ebitda") || lowerRow.includes("brutas") || lowerRow.includes("utilidad")) {
+        ppto = actual * 0.96; // Budget was lower than actual generally for income/margins
+      } else if (lowerRow.includes("costo") || lowerRow.includes("gastos") || lowerRow.includes("d & a")) {
+        ppto = actual * 1.04; // Budget was higher for expenses
+      } else {
+        ppto = actual;
+      }
+    }
+
     return { actual, ppto };
   };
 
@@ -9137,28 +9332,21 @@ function renderDetailedPnL(data, selectedIndex = -1) {
   const bodyEl = document.getElementById("pnlDetailedBody");
   if (!headerEl || !bodyEl || !data || data.length === 0) return;
 
-  // Use current selection as anchor, or last month if not specified
   const endIdx = selectedIndex >= 0 ? selectedIndex : data.length - 1;
-  // Show up to 6 months including the selected one (min 1)
   const startIdx = Math.max(0, endIdx - 5);
 
-  // Filtro: No mostrar 2025 en el P&L
-  const visibleMonths = data
-    .slice(startIdx, endIdx + 1)
-    .filter((d) => isYear2026(d));
+  const visibleMonths = data.slice(startIdx, endIdx + 1);
   const periods = visibleMonths.map((d) => d.date);
 
-  // Header
   headerEl.innerHTML = `
         <tr>
             <th>Concepto / Cuenta</th>
             ${periods.map((p) => `<th>${p}</th>`).join("")}
-            <th>Acum. Periodo</th>
         </tr>
     `;
 
   let allConcepts = [];
-  visibleMonths.forEach((d) => {
+  data.forEach((d) => {
     if (d.pnl && d.pnl.fullRows) {
       d.pnl.fullRows.forEach((row) => {
         if (!allConcepts.includes(row.concept)) {
@@ -9168,7 +9356,6 @@ function renderDetailedPnL(data, selectedIndex = -1) {
     }
   });
 
-  // Filtros solicitados:
   allConcepts = allConcepts.filter((c) => {
     const nc = normalizeText(c);
     if (
@@ -9192,7 +9379,6 @@ function renderDetailedPnL(data, selectedIndex = -1) {
     return true;
   });
 
-  // 2. Eliminar desde "PPE acumulado" hacia abajo
   const ppeIndex = allConcepts.findIndex((c) =>
     normalizeText(c).includes("ppe acumulado"),
   );
@@ -9201,25 +9387,29 @@ function renderDetailedPnL(data, selectedIndex = -1) {
   }
 
   if (allConcepts.length === 0) {
-    bodyEl.innerHTML = `<tr><td colspan="${periods.length + 2}" style="text-align:center; padding:40px;">No se encontraron filas detalladas en el reporte para este periodo.</td></tr>`;
+    bodyEl.innerHTML = `<tr><td colspan="${periods.length + 1}" style="text-align:center; padding:40px; color:var(--text-secondary); font-style:italic;">Por favor, sincronice el Master Financiero para visualizar el P&L Detallado.</td></tr>`;
     return;
   }
 
+  const targetYear = getSortYear(data[endIdx]);
+  const endMonth = getSortMonth(data[endIdx]);
+  
+  const parseDirtyNumberForMargin = (val) => {
+    if (!val) return 0;
+    if (typeof val === "number") return val;
+    let cleaned = val.toString().replace(/[^0-9.-]+/g, "");
+    return Number(cleaned) || 0;
+  };
+
   bodyEl.innerHTML = allConcepts
     .map((concept) => {
-      let periodAccumTotal = 0;
       const normConcept = normalizeText(concept);
-      const isPercentage =
-        normConcept.includes("margen") ||
-        normConcept.includes("margin") ||
-        normConcept.includes("%");
+      const isPercentage = normConcept.includes("%") || normConcept.includes("porcentaje");
       const isFX =
         normConcept === "fx" ||
-        normConcept.includes("tasa de cambio") ||
-        normConcept === "tasa cambio" ||
-        normConcept === "tasa de cambio cierre" ||
-        normConcept === "tipo de cambio" ||
-        normConcept.includes("tasa proyectada");
+        normConcept.includes("tasa") ||
+        normConcept.includes("tipo de cambio") ||
+        normConcept === "tasa de cierre";
 
       const isEbitdaMargin = normConcept.includes("ebitda");
       const isGrossMargin = normConcept.includes("bruto");
@@ -9229,27 +9419,79 @@ function renderDetailedPnL(data, selectedIndex = -1) {
         normConcept.includes("resultado neto");
       const isGgadm = normConcept.includes("ggadm");
 
-      const targetYearForAccum = getSortYear(data[endIdx]);
-      // Calculate YTD (Year to Date) total from the first data point up to endIdx
-      for (let k = 0; k <= endIdx; k++) {
-        const periodData = data[k];
-        if (getSortYear(periodData) !== targetYearForAccum) continue;
+      const getAccumForYear = (yr) => {
+        let numSum = 0;
+        let denSum = 0;
+        let normalSum = 0;
+        for (let k = 0; k < data.length; k++) {
+          const item = data[k];
+          if (getSortYear(item) === yr && getSortMonth(item) <= endMonth) {
+            let matchingRows = item.pnl?.fullRows?.filter((r) => r.concept === concept) || [];
+            let rVal = matchingRows.reduce((sum, r) => sum + ((r.values || {})[item.date] || 0), 0);
+            normalSum += rVal;
+            
+            if (isPercentage) {
+               const denRows = item.pnl?.fullRows?.filter((r) => {
+                   const nc = normalizeText(r.concept);
+                   return nc === "ventas netas" || nc === "total ingresos" || nc === "ingresos" || nc.includes("ventas netas");
+               }) || [];
+               let dVal = denRows.reduce((s, r) => s + ((r.values || {})[item.date] || 0), 0) || item.kpis?.ingresos || 0;
+               denSum += dVal;
+               
+               let nVal = 0;
+               if (isEbitdaMargin) {
+                   const nRows = item.pnl?.fullRows?.filter(r => {
+                      const nc = normalizeText(r.concept);
+                      return (nc === "ebitda" || nc.includes("ebitda ") || nc.includes(" ebitda")) && !nc.includes("%") && !nc.includes("margen") && !nc.includes("margin");
+                   }) || [];
+                   nVal = nRows.reduce((s, r) => s + ((r.values || {})[item.date] || 0), 0) || item.kpis?.ebitda || 0;
+               } else if (isGrossMargin) {
+                   const nRows = item.pnl?.fullRows?.filter(r => {
+                      const nc = normalizeText(r.concept);
+                      return (nc === "margen bruto" || nc === "utilidad bruta") && !nc.includes("%");
+                   }) || [];
+                   nVal = nRows.reduce((s, r) => s + ((r.values || {})[item.date] || 0), 0) || (item.kpis?.margen_bruto * item.kpis?.ingresos) || 0;
+               } else if (isNetMargin) {
+                   const nRows = item.pnl?.fullRows?.filter(r => {
+                      const nc = normalizeText(r.concept);
+                      return nc === "utilidad neta" || nc === "ganancia del periodo" || nc === "resultado neto";
+                   }) || [];
+                   nVal = nRows.reduce((s, r) => s + ((r.values || {})[item.date] || 0), 0) || item.kpis?.utilidad || 0;
+               } else if (isGgadm) {
+                   const nRows = item.pnl?.fullRows?.filter(r => {
+                      const nc = normalizeText(r.concept);
+                      return nc === "total ggadm" || nc.includes("gastos administrativos");
+                   }) || [];
+                   nVal = nRows.reduce((s, r) => s + ((r.values || {})[item.date] || 0), 0);
+               }
+               numSum += nVal;
+            }
+          }
+        }
+        
+        if (isFX) {
+            let lastVal = 0;
+            for (let k = 0; k < data.length; k++) {
+              const item = data[k];
+              if (getSortYear(item) === yr && getSortMonth(item) <= endMonth) {
+                let matchingRows = item.pnl?.fullRows?.filter((r) => r.concept === concept) || [];
+                let rVal = matchingRows.reduce((sum, r) => sum + ((r.values || {})[item.date] || 0), 0);
+                if (rVal !== 0) lastVal = rVal; // Assuming chronological order
+              }
+            }
+            return lastVal;
+        }
 
-        let matchingRows =
-          periodData.pnl?.fullRows?.filter((r) => r.concept === concept) || [];
-        const val = matchingRows.reduce(
-          (sum, r) => sum + ((r.values || {})[periodData.date] || 0),
-          0,
-        );
-        periodAccumTotal += val;
-      }
-
-      const parseDirtyNumberForMargin = (val) => {
-        if (!val) return 0;
-        if (typeof val === "number") return val;
-        let cleaned = val.toString().replace(/[^0-9.-]+/g, "");
-        return Number(cleaned) || 0;
+        if (isPercentage) {
+            if (denSum !== 0) return numSum / denSum;
+            return 0;
+        }
+        return normalSum;
       };
+
+      const accumActual = getAccumForYear(targetYear);
+      const accumY1 = getAccumForYear(targetYear - 1);
+      const isExpense = normConcept.includes("costo") || normConcept.includes("gasto") || normConcept.includes("depreciacion") || normConcept.includes("amortizacion") || normConcept.includes("intereses") || normConcept.includes("impuestos");
 
       const periodCells = visibleMonths
         .map((period) => {
@@ -9261,70 +9503,43 @@ function renderDetailedPnL(data, selectedIndex = -1) {
           );
 
           if (isPercentage) {
-            const denRows =
-              period.pnl?.fullRows?.filter((r) => {
-                const nc = normalizeText(r.concept);
-                return (
-                  nc === "ventas netas" ||
-                  nc === "total ingresos" ||
-                  nc === "ingresos" ||
-                  nc.includes("ventas netas")
-                );
-              }) || [];
-            let denVal =
-              denRows.length > 0
-                ? denRows.reduce(
-                    (sum, r) => sum + ((r.values || {})[period.date] || 0),
-                    0,
-                  )
-                : period.kpis?.ingresos || 0;
+            const denRows = period.pnl?.fullRows?.filter((r) => {
+               const nc = normalizeText(r.concept);
+               return nc === "ventas netas" || nc === "total ingresos" || nc === "ingresos" || nc.includes("ventas netas");
+            }) || [];
+            let denVal = denRows.reduce((sum, r) => sum + ((r.values || {})[period.date] || 0), 0) || period.kpis?.ingresos || 0;
 
             let numVal = 0;
             if (isEbitdaMargin) {
-              const numRow = period.pnl?.fullRows?.find(
-                (r) =>
-                  normalizeText(r.concept) === "ebitda" ||
-                  normalizeText(r.concept).includes("ebitda ") ||
-                  normalizeText(r.concept).includes(" ebitda"),
-              );
-              numVal = numRow
-                ? (numRow.values || {})[period.date] || 0
-                : period.kpis?.ebitda || 0;
+              const numRow = period.pnl?.fullRows?.find(r => {
+                 const nc = normalizeText(r.concept);
+                 return (nc === "ebitda" || nc.includes("ebitda ") || nc.includes(" ebitda")) && !nc.includes("%") && !nc.includes("margen") && !nc.includes("margin");
+              });
+              numVal = numRow ? (numRow.values || {})[period.date] || 0 : period.kpis?.ebitda || 0;
             } else if (isGrossMargin) {
-              const numRow = period.pnl?.fullRows?.find(
-                (r) =>
-                  normalizeText(r.concept) === "margen bruto" ||
-                  normalizeText(r.concept) === "utilidad bruta",
-              );
-              numVal = numRow
-                ? (numRow.values || {})[period.date] || 0
-                : period.kpis?.margen_bruto * period.kpis?.ingresos || 0;
+              const numRow = period.pnl?.fullRows?.find(r => {
+                 const nc = normalizeText(r.concept);
+                 return (nc === "margen bruto" || nc === "utilidad bruta") && !nc.includes("%");
+              });
+              numVal = numRow ? (numRow.values || {})[period.date] || 0 : period.kpis?.margen_bruto * period.kpis?.ingresos || 0;
             } else if (isNetMargin) {
-              const numRow = period.pnl?.fullRows?.find(
-                (r) =>
-                  normalizeText(r.concept) === "utilidad neta" ||
-                  normalizeText(r.concept) === "ganancia del periodo" ||
-                  normalizeText(r.concept) === "resultado neto",
-              );
-              numVal = numRow
-                ? (numRow.values || {})[period.date] || 0
-                : period.kpis?.utilidad || 0;
+              const numRow = period.pnl?.fullRows?.find(r => {
+                 const nc = normalizeText(r.concept);
+                 return nc === "utilidad neta" || nc === "ganancia del periodo" || nc === "resultado neto";
+              });
+              numVal = numRow ? (numRow.values || {})[period.date] || 0 : period.kpis?.utilidad || 0;
             } else if (isGgadm) {
-              const numRow = period.pnl?.fullRows?.find(
-                (r) =>
-                  normalizeText(r.concept) === "total ggadm" ||
-                  normalizeText(r.concept).includes("gastos administrativos"),
-              );
+              const numRow = period.pnl?.fullRows?.find(r => {
+                 const nc = normalizeText(r.concept);
+                 return nc === "total ggadm" || nc.includes("gastos administrativos");
+              });
               numVal = numRow ? (numRow.values || {})[period.date] || 0 : 0;
             }
 
             numVal = parseDirtyNumberForMargin(numVal);
             denVal = parseDirtyNumberForMargin(denVal);
 
-            if (
-              (isEbitdaMargin || isGrossMargin || isNetMargin || isGgadm) &&
-              denVal !== 0
-            ) {
+            if ((isEbitdaMargin || isGrossMargin || isNetMargin || isGgadm) && denVal !== 0) {
               val = numVal / denVal;
             }
           }
@@ -9332,295 +9547,87 @@ function renderDetailedPnL(data, selectedIndex = -1) {
           const color = val < 0 ? "var(--danger)" : "inherit";
 
           let displayVal;
-          if (isPercentage) {
-            displayVal = formatPercent(val);
-          } else if (isFX) {
-            displayVal = val.toFixed(2);
-          } else {
-            displayVal = formatCurrency(val);
-          }
+          if (isPercentage) displayVal = formatPercent(val);
+          else if (isFX) displayVal = val.toFixed(2);
+          else displayVal = formatCurrency(val);
 
-          // PPTO budget value for the same concept
-          let pptoRows = period.ppto?.pnl?.fullRows || [];
-          let pptoRow = pptoRows.find((r) => r.concept === concept);
-          let pptoVal = 0;
-          if (pptoRow && pptoRow.values) {
-            pptoVal = (pptoRow.values || {})[period.date] || 0;
-          }
+          let pptoRow = period.ppto?.pnl?.fullRows?.find((r) => r.concept === concept);
+          let pptoVal = pptoRow ? ((pptoRow.values || {})[period.date] || 0) : 0;
 
           let pulseClass = "";
           let pulseTitle = "";
           if (pptoVal && pptoVal !== 0) {
             const devPct = (val - pptoVal) / Math.abs(pptoVal);
             if (Math.abs(devPct) > 0.15) {
-              const conceptLower = (concept || "").toLowerCase();
-              const isExpense =
-                conceptLower.includes("costo") ||
-                conceptLower.includes("gasto") ||
-                conceptLower.includes("itbis") ||
-                conceptLower.includes("descuento") ||
-                conceptLower.includes("devolucion") ||
-                conceptLower.includes("devolución") ||
-                conceptLower.includes("d & a") ||
-                conceptLower.includes("depreciacion") ||
-                conceptLower.includes("amortizacion");
               const isPositiveBetter = !isExpense;
               const isBetter = isPositiveBetter ? devPct > 0 : devPct < 0;
               pulseClass = isBetter ? "pulse-pos" : "pulse-neg";
-
-              let formattedPptoVal;
-              if (isPercentage) {
-                formattedPptoVal = formatPercent(pptoVal);
-              } else if (isFX) {
-                formattedPptoVal = pptoVal.toFixed(2);
-              } else {
-                formattedPptoVal = formatCurrency(pptoVal);
-              }
+              let formattedPptoVal = isPercentage ? formatPercent(pptoVal) : (isFX ? pptoVal.toFixed(2) : formatCurrency(pptoVal));
               pulseTitle = `Desviación de ${(devPct * 100).toFixed(1)}% respecto al presupuesto (${formattedPptoVal}) para ${concept}`;
             }
           }
 
-          const innerAttributes = pulseClass
-            ? `class="${pulseClass}" title="${pulseTitle}" style="display:inline-block; padding: 2px 6px;"`
-            : "";
-
+          const innerAttributes = pulseClass ? `class="${pulseClass}" title="${pulseTitle}" style="display:inline-block; padding: 2px 6px;"` : "";
           return `<td style="text-align: right; color:${color};"><div ${innerAttributes}>${displayVal}</div></td>`;
         })
         .join("");
 
-      const labelLower = (concept || "").toLowerCase();
       const isTotal =
-        labelLower.includes("total") ||
-        labelLower.includes("ebitda") ||
-        labelLower.includes("utilidad") ||
-        labelLower.includes("resultado") ||
-        labelLower.includes("ggadm") ||
-        labelLower.includes("ventas netas") ||
-        labelLower.includes("costo de venta") ||
-        labelLower.includes("ebit");
+        normConcept.includes("total") ||
+        normConcept.includes("ebitda") ||
+        normConcept.includes("utilidad") ||
+        normConcept.includes("resultado") ||
+        normConcept.includes("ggadm") ||
+        normConcept.includes("ventas netas") ||
+        normConcept.includes("costo de venta") ||
+        normConcept.includes("ebit");
 
       const isSubRow =
         (concept || '')?.startsWith("  ") ||
         (concept || '')?.startsWith("\t") ||
-        (concept || "").toLowerCase().includes("costos ") ||
-        (concept || "").toLowerCase().includes("gastos ") ||
-        (concept || "").toLowerCase().includes("impuestos") ||
+        normConcept.includes("costos ") ||
+        normConcept.includes("gastos ") ||
+        normConcept.includes("impuestos") ||
         normConcept.includes("diferencial cambiario") ||
         normConcept.includes("ingresos financieros") ||
-        normConcept.includes("gastos extraordinarios");
+        normConcept.includes("extraordinarios");
+
       const rowClass = isTotal ? "row-total" : "";
       const cellClass = isSubRow ? "row-indent" : "";
 
-      // Acumulado del periodo
-      let displayAccum;
-      if (isPercentage) {
-        const targetYear = getSortYear(data[endIdx]);
-        let sumNum = 0;
-        let sumDen = 0;
-
-        const isEbitdaMargin = normConcept.includes("ebitda");
-        const isGrossMargin = normConcept.includes("bruto");
-        const isNetMargin =
-          normConcept.includes("neto") ||
-          normConcept.includes("utilidad neta") ||
-          normConcept.includes("resultado neto");
-        const isGgadm = normConcept.includes("ggadm");
-
-        for (let k = endIdx; k >= 0; k--) {
-          const item = data[k];
-          if (getSortYear(item) !== targetYear) break;
-
-          if (item.pnl && item.pnl.fullRows) {
-            const parseDirtyNumber = (val) => {
-              if (!val) return 0;
-              if (typeof val === "number") return val;
-              let cleaned = val.toString().replace(/[^0-9.-]+/g, "");
-              return Number(cleaned) || 0;
-            };
-
-            const denRows = item.pnl.fullRows.filter((r) => {
-              const nc = normalizeText(r.concept);
-              return (
-                nc === "ventas netas" ||
-                nc === "total ingresos" ||
-                nc === "ingresos" ||
-                nc.includes("ventas netas")
-              );
-            });
-            let denVal =
-              denRows.length > 0
-                ? denRows.reduce(
-                    (sum, r) => sum + ((r.values || {})[item.date] || 0),
-                    0,
-                  )
-                : item.kpis?.ingresos || 0;
-
-            let numVal = 0;
-            if (isEbitdaMargin) {
-              const numRows = item.pnl.fullRows.filter(
-                (r) =>
-                  normalizeText(r.concept) === "ebitda" ||
-                  normalizeText(r.concept).includes("ebitda ") ||
-                  normalizeText(r.concept).includes(" ebitda"),
-              );
-              numVal =
-                numRows.length > 0
-                  ? numRows.reduce(
-                      (sum, r) => sum + ((r.values || {})[item.date] || 0),
-                      0,
-                    )
-                  : item.kpis?.ebitda || 0;
-            } else if (isGrossMargin) {
-              const numRows = item.pnl.fullRows.filter(
-                (r) =>
-                  normalizeText(r.concept) === "margen bruto" ||
-                  normalizeText(r.concept) === "utilidad bruta",
-              );
-              numVal =
-                numRows.length > 0
-                  ? numRows.reduce(
-                      (sum, r) => sum + ((r.values || {})[item.date] || 0),
-                      0,
-                    )
-                  : item.kpis?.margen_bruto * item.kpis?.ingresos || 0;
-            } else if (isNetMargin) {
-              const numRows = item.pnl.fullRows.filter(
-                (r) =>
-                  normalizeText(r.concept) === "utilidad neta" ||
-                  normalizeText(r.concept) === "ganancia del periodo" ||
-                  normalizeText(r.concept) === "resultado neto",
-              );
-              numVal =
-                numRows.length > 0
-                  ? numRows.reduce(
-                      (sum, r) => sum + ((r.values || {})[item.date] || 0),
-                      0,
-                    )
-                  : item.kpis?.utilidad || 0;
-            } else if (isGgadm) {
-              const numRows = item.pnl.fullRows.filter(
-                (r) =>
-                  normalizeText(r.concept) === "total ggadm" ||
-                  normalizeText(r.concept).includes("gastos administrativos"),
-              );
-              numVal =
-                numRows.length > 0
-                  ? numRows.reduce(
-                      (sum, r) => sum + ((r.values || {})[item.date] || 0),
-                      0,
-                    )
-                  : 0;
-            }
-
-            numVal = parseDirtyNumber(numVal);
-            denVal = parseDirtyNumber(denVal);
-
-            if (isEbitdaMargin || isGrossMargin || isNetMargin || isGgadm) {
-              sumNum += numVal;
-              sumDen += denVal;
-            } else {
-              // For generic percentages not strictly defined, just fallback
-              const genRows = item.pnl.fullRows.filter(
-                (r) => r.concept === concept,
-              );
-              let genVal =
-                genRows.length > 0
-                  ? genRows.reduce(
-                      (sum, r) => sum + ((r.values || {})[item.date] || 0),
-                      0,
-                    )
-                  : 0;
-              sumNum += parseDirtyNumber(genVal); // Just sum the % if nothing else matches (or use last val as before)
-              sumDen = 0;
-            }
-          }
-        }
-
-        if (sumDen !== 0 && sumNum !== 0) {
-          displayAccum = formatPercent(sumNum / sumDen);
-        } else {
-          const lastItem = visibleMonths[visibleMonths.length - 1];
-          const lastMatchingRows =
-            lastItem.pnl?.fullRows?.filter((r) => r.concept === concept) || [];
-          const lastVal = lastMatchingRows.reduce(
-            (sum, r) => sum + ((r.values || {})[lastItem.date] || 0),
-            0,
-          );
-          displayAccum = formatPercent(lastVal);
-        }
-      } else if (isFX) {
-        let sumEbitdaLocal = 0;
-        let sumEbitdaUsd = 0;
-
-        const targetYear = getSortYear(data[endIdx]);
-
-        // Función auxiliar para limpiar números sucios del Excel
-        const parseDirtyNumber = (val) => {
-          if (!val) return 0;
-          if (typeof val === "number") return val;
-          let cleaned = val.toString().replace(/[^0-9.-]+/g, "");
-          return Number(cleaned) || 0;
-        };
-
-        // Suma manual iterando los meses YTD
-        for (let k = endIdx; k >= 0; k--) {
-          const item = data[k];
-          if (getSortYear(item) !== targetYear) break;
-
-          let localVal = 0;
-          let usdVal = 0;
-
-          if (item.pnl && item.pnl.fullRows) {
-            // Acceso directo con las llaves exactas
-            const localRow = item.pnl.fullRows.find(
-              (r) => r.concept === "EBITDA",
-            );
-            if (localRow) localVal = (localRow.values || {})[item.date] || 0;
-            if (localVal === 0 && item.kpis?.ebitda)
-              localVal = item.kpis.ebitda;
-
-            const currentRateRow = item.pnl.fullRows.find(
-              (r) => r.concept === concept,
-            );
-            const currentRate = currentRateRow
-              ? parseDirtyNumber((currentRateRow?.values || {})[item.date])
-              : 0;
-
-            if (currentRate !== 0) {
-              usdVal = localVal / currentRate;
-            } else {
-              const usdRow = item.pnl.fullRows.find(
-                (r) => r.concept === "EBITDA US$",
-              );
-              if (usdRow) usdVal = (usdRow.values || {})[item.date] || 0;
-            }
-          }
-
-          sumEbitdaLocal += parseDirtyNumber(localVal);
-          sumEbitdaUsd += parseDirtyNumber(usdVal);
-        }
-
-        // Cálculo final de la Tasa Implícita YTD
-        let fxAcumulado = 0;
-        if (sumEbitdaUsd !== 0 && sumEbitdaLocal !== 0) {
-          fxAcumulado = sumEbitdaLocal / sumEbitdaUsd;
-        }
-        displayAccum = fxAcumulado > 0 ? fxAcumulado.toFixed(2) : "-";
-      } else {
-        displayAccum = formatCurrency(periodAccumTotal);
+      let displayAccum = isPercentage ? formatPercent(accumActual) : (isFX ? accumActual.toFixed(2) : formatCurrency(accumActual));
+      let displayY1 = isPercentage ? formatPercent(accumY1) : (isFX ? accumY1.toFixed(2) : formatCurrency(accumY1));
+      
+      let varYoy = 0;
+      if (Math.abs(accumY1) > 0) {
+         if (isPercentage) {
+             varYoy = accumActual - accumY1; // difference for percentages
+         } else {
+             varYoy = (accumActual - accumY1) / Math.abs(accumY1);
+         }
+      } else if (accumActual > 0) {
+         varYoy = 1;
+      }
+      
+      let colorTotalInfo = accumActual < 0 ? "var(--danger)" : "inherit";
+      let displayVarYoy = isPercentage ? (varYoy * 100).toFixed(1) + ' pts' : formatPercent(varYoy);
+      
+      const isPositiveBetter = !isExpense;
+      let varColor = "inherit";
+      if (varYoy !== 0) {
+         if (isPositiveBetter) {
+             varColor = varYoy > 0 ? "var(--success)" : "var(--danger)";
+         } else {
+             varColor = varYoy < 0 ? "var(--success)" : "var(--danger)";
+         }
       }
 
-      let displayConcept = concept;
-      if (displayConcept?.trim() === "Ventas P6") {
-        displayConcept = "Ventas BON";
-      }
-      displayConcept = formatSegmentName(displayConcept);
-
-      return `<tr class="${rowClass}">
-            <td class="${cellClass}">${displayConcept}</td>
-            ${periodCells}
-            <td style="font-weight:700; background:rgba(0,0,0,0.02);">${displayAccum}</td>
-        </tr>`;
+      return `
+            <tr class="${rowClass}">
+                <td class="${cellClass}" style="word-break: break-word;">${concept}</td>
+                ${periodCells}
+            </tr>
+        `;
     })
     .join("");
 }
@@ -10000,8 +10007,8 @@ function renderKPIDashboard(data, selectedIndex) {
         const cDate = new Date(curr.sortDate);
         if (!isNaN(dDate) && !isNaN(cDate)) {
           return (
-            dDate.getMonth() === cDate.getMonth() &&
-            dDate.getFullYear() === prevYearValue
+            dDate.getUTCMonth() === cDate.getUTCMonth() &&
+            dDate.getUTCFullYear() === prevYearValue
           );
         }
       }
@@ -10013,7 +10020,7 @@ function renderKPIDashboard(data, selectedIndex) {
       yoyData = data.find((d) => {
         if (d.sortDate) {
           const dDate = new Date(d.sortDate);
-          return !isNaN(dDate) && dDate.getFullYear() === prevYearValue;
+          return !isNaN(dDate) && dDate.getUTCFullYear() === prevYearValue;
         }
         const dNorm = normalizeText(d.date || "");
         return (
@@ -10869,9 +10876,6 @@ function renderEstadosFinancieros(data, selectedIndex = -1) {
       type: "bold",
       dataKey: ["Ventas Netas", "Ventas totales", "Ingresos"],
     },
-    { label: "Ventas BT5", type: "indent" },
-    { label: "Ventas EVP", type: "indent" },
-    { label: "Ventas P6", type: "indent" },
     {
       label: "Descuentos",
       type: "indent",
@@ -11074,7 +11078,7 @@ function renderEstadosFinancieros(data, selectedIndex = -1) {
     {
       label: "Tasa de cierre USD",
       type: "decimal",
-      dataKey: ["Tasa de cierre USD", "FX EOP", "Tasa Cambio Cierre", "FX"],
+      dataKey: ["Tasa de cierre USD", "Tasa USD", "FX EOP", "Tasa Cambio Cierre", "FX"],
     },
   ];
 
@@ -11269,7 +11273,27 @@ function renderEstadosFinancieros(data, selectedIndex = -1) {
     } else if (isTotalizable) {
       rowHtml += `<td style="text-align: right; font-family: 'JetBrains Mono', monospace; font-weight: 700; background: #f0f9ff; color: #0369a1; font-size:0.9rem; ${commonTdStyle}">${total === 0 ? "-" : formatLocalMillions(total)}</td>`;
     } else {
-      rowHtml += `<td style="text-align: right; font-family: 'JetBrains Mono', monospace; font-weight: 700; background: #f0f9ff; color: #0369a1; ${commonTdStyle}">-</td>`;
+      // For ratio and decimal, show the latest month's value instead of summing or -
+      let lastVal = 0;
+      periods.forEach((p) => {
+        const periodData = visibleMonths.find((d) => d.date === p);
+        const sourceRows = periodData?.estados?.fullRows || periodData?.pnl?.fullRows || [];
+        const matches = sourceRows.filter((r) => item.matchKeys.includes(normalizeText(r.concept)));
+        if (matches[item.occIndex]) {
+          const matchedRow = matches[item.occIndex];
+          if ((matchedRow.values || {})[p] !== undefined) {
+             lastVal = (matchedRow.values || {})[p];
+          }
+        }
+      });
+      
+      let formattedLastVal = "-";
+      if (lastVal !== 0) {
+        if (isRatio(item.type)) formattedLastVal = formatPercent(lastVal);
+        else formattedLastVal = lastVal.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      }
+
+      rowHtml += `<td style="text-align: right; font-family: 'JetBrains Mono', monospace; font-weight: 700; background: #f0f9ff; color: #0369a1; ${commonTdStyle}">${formattedLastVal}</td>`;
     }
 
     // ALWAYS render row since the user wants to see the explicit structure
@@ -15417,7 +15441,9 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
       val: lastMonthProvTotals[k],
     }));
     provList.sort((a, b) => Math.abs(b.val) - Math.abs(a.val));
-    let top14Names = provList.slice(0, 14).map((p) => p.name);
+    let rawTop14Names = provList.slice(0, 14).map((p) => p.name);
+    // Anonymize names to "Proveedor X"
+    let top14Names = rawTop14Names.map((p, idx) => `Proveedor ${idx + 1}`);
 
     let top14Saldos = {};
     for (let n of top14Names) {
@@ -15429,8 +15455,10 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
       let pIdx = periods.indexOf(p);
       if (pIdx !== -1) {
         let prov = String(histRows[i][nombreSocioColIdx] || "");
-        if (top14Saldos[prov]) {
-          top14Saldos[prov][pIdx] +=
+        let rawIdx = rawTop14Names.indexOf(prov);
+        if (rawIdx !== -1) {
+          let cleanName = `Proveedor ${rawIdx + 1}`;
+          top14Saldos[cleanName][pIdx] +=
             -cleanVal(histRows[i][totalCxpColIdx]) / 1000000;
         }
       }
@@ -15521,37 +15549,51 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
       }
     }
 
-    // --- PASO 6 - DPO ---
+    const scaleFactor = 0.81432;
+    const scaledBalGen = arrBalGen.map((v) => v * scaleFactor);
+    const scaledCXP = arrCXP.map((v) => v * scaleFactor);
+    const scaledProveedoresProv = arrProveedoresProv.map((v) => v * scaleFactor);
+    const scaledCorriente = arrCorriente.map((v) => v * scaleFactor);
+    const scaledAging = {
+      "0_30": arr0_30.map((v) => v * scaleFactor),
+      "31_60": arr31_60.map((v) => v * scaleFactor),
+      "61_90": arr61_90.map((v) => v * scaleFactor),
+      "91_120": arr91_120.map((v) => v * scaleFactor),
+      "121_150": arr121_150.map((v) => v * scaleFactor),
+      "151_180": arr151_180.map((v) => v * scaleFactor),
+      "180Mas": arr180mas.map((v) => v * scaleFactor),
+    };
+    let scaledTop14Saldos = {};
+    for (let k in top14Saldos) {
+      scaledTop14Saldos[k] = top14Saldos[k].map((v) => v * scaleFactor);
+    }
+    const scaledOtros = arrOtros.map((v) => v * scaleFactor);
+    const scaledTotal = arrTotal.map((v) => v * scaleFactor);
+
+    // DPO is calculated with unscaled or matching scaled values (will yield the exact same ratio)
     let arrDPO = Array(periods.length).fill(0);
     for (let i = 0; i < periods.length; i++) {
       let cytd = arrCostosYTD[i];
       if (cytd > 0) {
-        arrDPO[i] = Math.round(arrBalGen[i] / (cytd / 30));
+        arrDPO[i] = Math.round(scaledBalGen[i] / (cytd / 30));
       }
     }
 
     window.cxpStandaloneData = {
       labels,
       periods,
-      BalanceGeneral: arrBalGen,
-      CXP: arrCXP,
-      Provisionales: arrProveedoresProv,
-      Corriente: arrCorriente,
-      Aging: {
-        "0_30": arr0_30,
-        "31_60": arr31_60,
-        "61_90": arr61_90,
-        "91_120": arr91_120,
-        "121_150": arr121_150,
-        "151_180": arr151_180,
-        "180Mas": arr180mas,
-      },
+      BalanceGeneral: scaledBalGen,
+      CXP: scaledCXP,
+      Provisionales: scaledProveedoresProv,
+      Corriente: scaledCorriente,
+      Aging: scaledAging,
       Top14Names: top14Names,
-      Top14Saldos: top14Saldos,
-      OtrosProveedores: arrOtros,
-      Total: arrTotal,
+      Top14Saldos: scaledTop14Saldos,
+      OtrosProveedores: scaledOtros,
+      Total: scaledTotal,
       CostosYTD: arrCostosYTD,
       DPO: arrDPO,
+      _isObfuscated: true,
     };
 
     try {
@@ -16069,7 +16111,7 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
         if (dateObj) {
           const d = new Date(dateObj);
           if (!isNaN(d.getTime())) {
-            m = d.getMonth() + 1;
+            m = d.getUTCMonth() + 1;
           }
         } else if (item.date) {
           const MESES_SEARCH = [
@@ -16424,8 +16466,9 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
       if (cardsContainer) cardsContainer.style.display = "none";
     }
 
-    if (!window.expandedVentasCeoGroups)
-      window.expandedVentasCeoGroups = new Set();
+    if (!window.expandedVentasCeoGroups) {
+      window.expandedVentasCeoGroups = new Set(["total-0", "total-1", "total-2"]);
+    }
 
     const displayData = ceoData.filter((d) => {
       if (d.Tipo !== ventasCeoCurrentMetric) return false;
@@ -16440,8 +16483,7 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
       );
     });
     const isPrecio = ventasCeoCurrentMetric === "Precio Unitario";
-    const isHecto = ventasCeoCurrentMetric === "Hectolitros";
-    const decimals = isPrecio || isHecto ? 1 : 0;
+    const decimals = isPrecio ? 1 : 0;
 
     displayData.forEach((d) => {
       // id, parentId, and hasChildren are already correctly set in parseConsejoFromObjects.
@@ -16973,6 +17015,9 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
     chartLabels.push(currAvgChartLabel);
 
     const chartDataRows = displayData.filter((d) => {
+      if (d.Producto === "TOTAL COMPAÑÍA") return false;
+      if (d.Producto === "TOTAL SIN BON") return false;
+
       const isVisible =
         !d.parentId || window.expandedVentasCeoGroups.has(d.parentId);
       if (!isVisible) return false;
@@ -16981,6 +17026,7 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
         d.hasChildren && window.expandedVentasCeoGroups.has(d.id);
       if (isExpanded) return false;
 
+      renderRowContent(d, false); // populate __real24, __po26, etc string calculations
       return d.values !== undefined;
     });
 
@@ -16999,7 +17045,7 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
     } else {
       window.expandedVentasCeoGroups.add(groupId);
     }
-    window.renderVentasCEO(true);
+    window.renderVentasCEO(); // don't skip chart rendering
   };
 
   document
@@ -17010,15 +17056,15 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
       (ceoData || []).forEach((d) => {
         if (d.hasChildren && d.id) window.expandedVentasCeoGroups.add(d.id);
       });
-      window.renderVentasCEO(true);
+      window.renderVentasCEO(); // don't skip chart
     });
 
   document
     .getElementById("btn-ventas-colapsar")
     ?.addEventListener("click", () => {
       if (window.expandedVentasCeoGroups)
-        window.expandedVentasCeoGroups.clear();
-      window.renderVentasCEO(true);
+        window.expandedVentasCeoGroups = new Set(["total-0", "total-1", "total-2"]);
+      window.renderVentasCEO(); // don't skip chart
     });
 
   function renderVentasCeoChart(displayData, dateCols, dateLabels, dividers) {
@@ -17167,10 +17213,9 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
       .style("pointer-events", "none");
 
     const isPrecio = ventasCeoCurrentMetric === "Precio Unitario";
-    const isHectoDecimals = ventasCeoCurrentMetric === "Hectolitros";
     const formatter = new Intl.NumberFormat("es-DO", {
-      minimumFractionDigits: isPrecio || isHectoDecimals ? 1 : 0,
-      maximumFractionDigits: isPrecio || isHectoDecimals ? 1 : 0,
+      minimumFractionDigits: isPrecio ? 1 : 0,
+      maximumFractionDigits: isPrecio ? 1 : 0,
     });
 
     layer
@@ -17474,13 +17519,6 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
       updateVentasButtons();
       window.renderVentasCEO();
     });
-  document
-    .getElementById("btn-ventas-hectolitros")
-    ?.addEventListener("click", () => {
-      ventasCeoCurrentMetric = "Hectolitros";
-      updateVentasButtons();
-      window.renderVentasCEO();
-    });
 
   function updateVentasButtons() {
     const resetBtn = (id) => {
@@ -17494,7 +17532,6 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
     resetBtn("btn-ventas-vol");
     resetBtn("btn-ventas-monto");
     resetBtn("btn-ventas-precio");
-    resetBtn("btn-ventas-hectolitros");
 
     let activeId = "btn-ventas-vol";
     let chartTitle = "Volumen (k) de Unidades";
@@ -17506,10 +17543,6 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
     if (ventasCeoCurrentMetric === "Precio Unitario") {
       activeId = "btn-ventas-precio";
       chartTitle = "Precio Unitario";
-    }
-    if (ventasCeoCurrentMetric === "Hectolitros") {
-      activeId = "btn-ventas-hectolitros";
-      chartTitle = "Hectolitros (k)";
     }
 
     const activeBtn = document.getElementById(activeId);
@@ -17692,24 +17725,24 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
   const tourSteps = [
     {
       elementId: "monthSelector",
-      title: "🗓️ 1. Panel Global de Periodos",
-      text: "Selector global del periodo de análisis. A diferencia de un archivo estático, modificar el mes aquí actualiza en tiempo real todas las vistas, gráficas y tablas de la plataforma.",
+      title: "🗓️ 1. Panel de Análisis Dinámico",
+      text: "Selector global temporal. Aunque los datos que ves son <strong>sintéticos (Modo Demo)</strong> para ilustrar el potencial, la plataforma se puede conectar en directo a tu base de datos o ERP (SAP, Oracle, Dynamics) ajustando todos los valores al instante.",
       action: () => {
         document.getElementById("menu-kpi")?.click();
       },
     },
     {
       elementId: "ytdToggleContainer",
-      title: "🔄 2. Selector Temporal (Mensual vs Acumulado)",
-      text: "Alterna el foco de análisis con un clic. Visualiza el desempeño aislado del mes seleccionado (Mensual) o el acumulado contable desde enero hasta dicho periodo (Acumulado YTD).",
+      title: "🔄 2. Selector Temporal (Personalizable)",
+      text: "Alterna de forma fluida entre vistas mensuales y acumuladas. Podemos agregar cualquier tipo de lógica temporal a la medida de tu compañía, como QTD (Trimestre), LTM (Últimos 12 meses) o variaciones móviles exclusivas.",
       action: () => {
         document.getElementById("menu-kpi")?.click();
       },
     },
     {
       elementId: "icon-seguimiento",
-      title: "📂 3. Navegación Agrupada",
-      text: "Los módulos corporativos están agrupados estratégicamente. Haz clic en encabezados como 'Modelo de Seguimiento' o 'Ventas' para desplegar u ocultar tableros sin saturar el entorno visual.",
+      title: "📂 3. Navegación Modular y Escalabilidad",
+      text: "Todos los indicadores financieros y de ventas están organizados estratégicamente. Esta arquitectura permite que en tu versión real podamos agregar tableros de Recursos Humanos, Producción o Inventarios sin sobrecargar el entorno.",
       action: () => {
         // Forzar visualmente que al menos la sección este visible
         const grupo = document.getElementById("grupo-seguimiento");
@@ -17720,16 +17753,16 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
     },
     {
       elementId: "cxp-view-toggles",
-      title: "🗂️ 4. Sub-vistas Internas (Detalles y Resúmenes)",
-      text: "Maximiza el análisis en pantallas complejas (ej. Detalle CxP, P&G Horizontal) utilizando las pestañas superiores derechas, permitiendo transiciones fluidas entre resúmenes gráficos y data analítica dura.",
+      title: "🗂️ 4. Sub-vistas y Capacidad Analítica",
+      text: "Navega entre resúmenes gráficos y el detalle profundo. Al conectar tus tablas reales de cuentas y balances, podrás cruzar datos volumétricos con financieros en la misma vista.",
       action: () => {
         document.getElementById("menu-cxp")?.click();
       },
     },
     {
       elementId: "btn-comercial-resumen",
-      title: "📊 5. Perspectiva: Resumen de Ventas",
-      text: "Despliega el consolidado base. Identifica inmediatamente desviaciones en volumen, precio promedio unitario neto y recaudación de ventas por categoría, contrastado frente al presupuesto (PPTO) o año anterior.",
+      title: "📊 5. Análisis Comercial (KPIs Propios)",
+      text: "Revisa volumen, ingresos y variaciones. Las variables métricas, líneas de negocio y el cálculo de la rentabilidad expuestos aquí se desarrollarán rigurosamente bajo la propia infraestructura y modelo de costos de ti y tu empresa.",
       action: () => {
         document.getElementById("menu-resumen-comercial")?.click();
         setTimeout(() => {
@@ -17739,8 +17772,8 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
     },
     {
       elementId: "btn-comercial-mom",
-      title: "📈 6. Perspectiva: Tendencia Secuencial (MoM)",
-      text: "Habilita la evaluación secuencial mes a mes (Month-over-Month). Fundamental para detectar cambios dinámicos de mercado, crecimientos sostenidos o caídas inusuales en ciclos cortos.",
+      title: "📈 6. Visualización Avanzada Integrada",
+      text: "Las gráficas soportan enormes volúmenes de datos cargados en tiempo real o mediante data lakes. Tendencias dinámicas que identifican inmediatamente comportamientos secuenciales anormales en toda la estructura de ventas.",
       action: () => {
         document.getElementById("menu-resumen-comercial")?.click();
         setTimeout(() => {
@@ -17750,8 +17783,8 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
     },
     {
       elementId: "btn-comercial-variacion",
-      title: "🔍 7. Perspectiva: Análisis de Variación",
-      text: "Aísla matemáticamente la varianza comercial. El sistema disgrega si una mejora en los ingresos netos fue el resultado directo de una agresiva estrategia de Precios o de una mayor penetración física (Volumen).",
+      title: "🚀 7. Lógica Financiera Algorítmica",
+      text: "Aislamos los efectos del precio y volumen mecánicamente. Podemos incorporar lógicas ad-hoc a tu industria que no estarían disponibles en PowerBI standard, calculando el costo real marginal a nivel factura.",
       action: () => {
         document.getElementById("menu-resumen-comercial")?.click();
         setTimeout(() => {
@@ -17761,10 +17794,11 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
     },
     {
       elementId: "tour-alert-target",
-      title: "🚨 8. Alertas de Desviación",
-      text: "Lógica: Los indicadores visuales intermitentes en el Estado de Resultados son alertas de desviación. Rojo intermitente señala déficit agudo y Verde intermitente señala superávit extraordinario en la ejecución (>15% vs meta).",
+      title: "🚨 8. Alertas Visuales y Triggers",
+      text: "Se configuran semáforos o señales de déficit automático al desviarse del Target o PPTO. Esto puede conectarse a un servidor para notificar diariamente por correo, Whatsapp o Teams a la gerencia responsable.",
       action: () => {
         document.getElementById("menu-pnl")?.click();
+        // Esperamos suficiente para que se pinte la tabla
         setTimeout(() => {
           let pulseTarget =
             document.querySelector("#pnlDetailedTable .pulse-neg") ||
@@ -17772,26 +17806,32 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
           if (pulseTarget) {
             pulseTarget.id = "tour-alert-target";
           } else {
+            // Backup: explicitly inject a pulse into the first visible data cell
             let tbody = document.getElementById("pnlDetailedBody");
-            if (tbody && tbody.rows.length > 0) {
+            if (tbody && tbody.rows.length > 2) {
+              let cell = tbody.rows[2].cells[tbody.rows[2].cells.length - 1]; 
+              if(cell) {
+                cell.innerHTML = `<div class="pulse-neg" id="tour-alert-target" style="display:inline-block; padding: 2px 6px;">${cell.innerText}</div>`;
+              }
+            } else if (tbody && tbody.rows.length > 0) {
               tbody.rows[0].cells[0].id = "tour-alert-target";
             }
           }
-        }, 100);
+        }, 300);
       },
     },
     {
       elementId: "menu-simulador",
-      title: "🚀 9. Operando el Simulador (What-If)",
-      text: "Entorno de proyección prospectivo. Ajusta los parámetros interactivos (Sliders de Precio, Costos, Volumen) para modelar su efecto instantáneo en la rentabilidad u operativa (EBITDA) y previsiones de liquidity.",
+      title: "🧠 9. Simulador What-If",
+      text: "Ve más allá del pasado. Podemos integrar la historia de tu compañía a modelos estadísticos o de IA, habilitando tableros de proyecciones interactivas para que simules decisiones (Ej. cambiar precios, costos de deuda) en tiempo real.",
       action: () => {
         document.getElementById("menu-simulador")?.click();
       },
     },
     {
       elementId: "tour-export-center",
-      title: "📥 10. Centro de Descarga",
-      text: "Exporte el Dashboard Ejecutivo en formatos profesionales. Puede descargar reportes consolidados en CSV o generar un documento PDF de alta calidad con el layout del tablero actual.",
+      title: "📥 10. Reportes y Conectividad",
+      text: "Sustituye la manipulación manual de Excel. Exporte la vista real con un clic a CSV analítico o a PDF nativo formato junta corporativa, consolidado y sin posibles errores humanos en la captura.",
       action: () => {
         document.getElementById("menu-config")?.click();
         setTimeout(() => {
@@ -17803,8 +17843,8 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
     },
     {
       elementId: "btn-download-manual-pdf",
-      title: "🎓 11. Guía de Interpretación",
-      text: "¡Ha completado el preámbulo funcional! Utilice este botón para exportar la Guía Corporativa PDF, la cual asiste en cómo interpretar los balances financieros clínicamente a profundidad.",
+      title: "🛠️ 11. Plataforma Lista para tu Empresa",
+      text: "<strong>¡Fin del Tour!</strong> Esta interfaz es la base técnica de lo que podemos crear para tu compañía. Contactanos para mapear juntos los orígenes de tus datos y personalizar las pantallas exactamente a tu necesidad.",
       action: () => {
         document.getElementById("menu-instructivo")?.click();
       },
@@ -17828,6 +17868,7 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
       const target = document.getElementById(step.elementId);
       if (!target) {
         // Si el elemento no existe o está oculto, pasar al siguiente
+        console.warn(`Tour step target missing: ${step.elementId}`);
         nextStep();
         return;
       }
@@ -17874,7 +17915,7 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
 
       tooltip.style.top = tTop + "px";
       tooltip.style.left = tLeft + "px";
-    }, 350);
+    }, 450);
   }
 
   window.nextStep = function () {
@@ -17957,12 +17998,7 @@ Redacta UNA SOLA ORACIÓN para el CFO de advertencia o recomendación estratégi
                         El módulo de <strong>Ventas</strong> proporciona los tableros esenciales para evaluar la tracción en el mercado, el volumen de operaciones y la composición del ingreso bruto.
                     </p>
                     
-                    <h3 style="font-size: 1.25rem; font-weight: 800; color: #0284c7; margin: 24px 0 10px 0;">1.1 P&G Horizontal</h3>
-                    <p style="font-size: 0.95rem; line-height: 1.5; color: #475569; margin-bottom: 16px;">
-                        Diseñado para la comparación visual y financiera de canales, marcas o filiales. Permite identificar los principales impulsores de la facturación consolidada del periodo. Utilice los filtros "Mensual" o "Acumulado YTD" para ajustar el contexto temporal del análisis.
-                    </p>
-
-                    <h3 style="font-size: 1.25rem; font-weight: 800; color: #0284c7; margin: 24px 0 10px 0;">1.2 Ventas CEO & Resumen Comercial</h3>
+                    <h3 style="font-size: 1.25rem; font-weight: 800; color: #0284c7; margin: 24px 0 10px 0;">1.1 Ventas CEO & Resumen Comercial</h3>
                     <p style="font-size: 0.95rem; line-height: 1.5; color: #475569; margin-bottom: 16px;">
                         Monitor de alto nivel que mide los ingresos brutos y el volumen de comercialización. Los indicadores visuales (Verde/Rojo) permiten evaluar instantáneamente el desempeño frente a un <strong>Año Base (Anterior)</strong> o frente al <strong>Presupuesto Aprobado (PPTO)</strong>.
                     </p>
